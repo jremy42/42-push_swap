@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 17:48:36 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/05 19:09:06 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ void	ft_rotate_ab(t_data *data);
 void	ft_stackadd_back(t_stack **alst, t_stack *new);
 void	ft_size_stack(t_data *data);
 void	ft_revrotate_a(t_data *data);
-
+void	ft_revrotate_b(t_data *data);
+void	ft_revrotate_ab(t_data *data);
 // parsing 
 int		ft_atol(const char *nb, t_data *data);
 void	ft_parsing(char **input, t_data *data);

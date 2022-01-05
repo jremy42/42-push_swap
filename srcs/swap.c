@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 12:10:39 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 17:05:54 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/05 19:00:18 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_swap_a(t_data *data)
 {
 	t_stack	*tmp;
 
-	if (!data->a)
+	if (!data->a || !data->a->next)
 		return ;
 	tmp = data->a;
 	data->a = data->a->next;
@@ -29,7 +29,7 @@ void	ft_swap_b(t_data *data)
 {
 	t_stack	*tmp;
 
-	if (!data->b)
+	if (!data->b || !data->b->next)
 		return ;
 	tmp = data->b;
 	data->b = data->b->next;
@@ -41,8 +41,7 @@ void	ft_swap_b(t_data *data)
 void	ft_swap_ab_a(t_data *data)
 {
 	t_stack	*tmp;
-
-	if (!data->a)
+	if (!data->a || !data->a->next)
 		return ;
 	tmp = data->a;
 	data->a = data->a->next;
@@ -55,7 +54,7 @@ void	ft_swap_ab_b(t_data *data)
 {
 	t_stack	*tmp;
 
-	if (!data->b)
+	if (!data->b || !data->b->next)
 		return ;
 	tmp = data->b;
 	data->b = data->b->next;

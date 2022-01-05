@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:43:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 17:48:19 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/05 19:09:59 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ int	main(int ac, char **av)
 	ft_swap_a(&data);
 	//printf("======\n");
 	//print_list(data.a, data.b);
-	ft_push_a(&data);
+	printf("2\n");
 	ft_push_a(&data);
 	ft_push_a(&data);
 	ft_push_a(&data);
 	//printf("======\n");
 	//print_list(data.a, data.b);
 	ft_swap_ab(&data);
+	printf("4\n");
 	printf("======\n");
 	print_list(data.a, data.b);
 	ft_rotate_ab(&data);
@@ -39,4 +40,9 @@ int	main(int ac, char **av)
 	printf("======\n");
 	print_list(data.a, data.b);
 	ft_revrotate_a(&data);
+	printf("======\n");
+	print_list(data.a, data.b);
+	ft_revrotate_ab(&data);
+	printf("======\n");
+	print_list(data.a, data.b);
 }
