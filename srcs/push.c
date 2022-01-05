@@ -1,48 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation.c                                        :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 12:10:39 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 12:51:50 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/05 17:02:44 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_swap_a(t_stack *stack)
+void	ft_push_a(t_data *data)
 {
 	t_stack	*tmp;
 
-	tmp = stack;
-	stack = stack->next;
-	tmp->next = stack->next;
-	stack->next = tmp;
-	return (stack);
+	if (!data->a)
+		return ;
+	tmp = data->a->next;
+	ft_stack_add_front(&data->b, data->a);
+	data->a = tmp;
 }
 
-
-t_stack	*ft_swap_b(t_stack *stack)
+void	ft_push_b(t_data *data)
 {
 	t_stack	*tmp;
 
-	tmp = stack;
-	stack = stack->next;
-	tmp->next = stack->next;
-	stack->next = tmp;
-	return (stack);
-}
-
-
-t_stack	*ft_swap_ab(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	stack = stack->next;
-	tmp->next = stack->next;
-	stack->next = tmp;
-	return (stack);
+	if (!data->b)
+		return ;
+	tmp = data->b->next;
+	ft_stack_add_front(&data->a, data->b);
+	data->b = tmp;
 }

@@ -3,7 +3,11 @@ SRC = srcs/atol.c \
 		srcs/push_swap.c\
 		srcs/debug_list.c\
 		srcs/stack_utils.c\
-		srcs/operation.c
+		srcs/swap.c\
+		srcs/push.c\
+		srcs/rotate.c\
+		srcs/revrot.c
+
 		
 IFLAGS = -I includes/
 CFLAGS = -Wall -Wextra -Werror
@@ -34,4 +38,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean rbonus
+.PHONY: all clean fclean
