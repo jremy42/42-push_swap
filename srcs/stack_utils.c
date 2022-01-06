@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 09:58:42 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 17:41:42 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 19:40:22 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,23 @@ void ft_size_stack(t_data *data)
 	}
 	data->size_a = a;
 	data->size_b = b;
+}
+
+int ft_tmp_sort(t_data *data)
+{
+	t_stack *tmp;
+	int i;
+
+	i = 0;
+	ft_size_stack(data);
+	tmp = data->a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->nb < tmp->next->nb)
+			i++;
+		tmp = tmp->next;
+	}
+	if ( i == data->size_a - 1)
+		return (1);
+	return (0);
 }

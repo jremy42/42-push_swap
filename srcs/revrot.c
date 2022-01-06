@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:27:38 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 19:08:41 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 18:44:47 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_revrotate_a(t_data *data)
 {
+	printf("rra\n");
 	t_stack	*tmp;
 	t_stack *tmp2;
 	int		i;
@@ -35,6 +36,7 @@ void	ft_revrotate_a(t_data *data)
 
 void	ft_revrotate_b(t_data *data)
 {
+	printf("rrb\n");
 	t_stack	*tmp;
 	t_stack	*tmp2;
 	int		i;
@@ -80,7 +82,7 @@ void	ft_revrotate_ab_b(t_data *data)
 	t_stack	*tmp;
 	t_stack	*tmp2;
 	int		i;
-
+	
 	ft_size_stack(data);
 	if (!data->b || data->size_b < 2)
 		return ;
@@ -98,6 +100,7 @@ void	ft_revrotate_ab_b(t_data *data)
 
 void	ft_revrotate_ab(t_data *data)
 {
+	printf("rrr\n");
 	ft_revrotate_a(data);
 	ft_revrotate_b(data);
 }

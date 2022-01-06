@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 12:10:39 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 19:00:18 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 18:45:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_swap_a(t_data *data)
 {
 	t_stack	*tmp;
 
+	printf("sa\n");
 	if (!data->a || !data->a->next)
 		return ;
 	tmp = data->a;
@@ -29,6 +30,7 @@ void	ft_swap_b(t_data *data)
 {
 	t_stack	*tmp;
 
+	printf("sb\n");
 	if (!data->b || !data->b->next)
 		return ;
 	tmp = data->b;
@@ -65,6 +67,7 @@ void	ft_swap_ab_b(t_data *data)
 
 void	ft_swap_ab(t_data *data)
 {
+	printf("ss\n");
 	ft_swap_ab_a(data);
 	ft_swap_ab_b(data);
 	return ;

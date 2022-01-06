@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 10:03:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 16:44:06 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 19:26:44 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,21 @@ void	print_stack(t_stack *stack_a)
 			stack_a = stack_a->next;
 		printf("\n");
 	}
+}
+
+void stack_is_sort(t_data *data)
+{
+	t_stack *tmp;
+	int i;
+
+	i = 0;
+	ft_size_stack(data);
+	tmp = data->a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->nb < tmp->next->nb)
+			i++;
+		tmp = tmp->next;
+	}
+	printf("liste trier a %d %% \n", i);
 }

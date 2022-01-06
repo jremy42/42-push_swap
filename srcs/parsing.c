@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:52:38 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/04 18:18:30 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 18:54:43 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_check(char **str, t_data *data)
 	i = 0;
 	while (str[i])
 	{
+			printf("=> %d\n",i);
 		if (ft_atol(str[i], data) == -1)
 			return (-1);
 		i++;

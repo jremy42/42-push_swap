@@ -7,7 +7,8 @@ SRC = srcs/atol.c \
 		srcs/push.c\
 		srcs/rotate.c\
 		srcs/revrot.c\
-		srcs/algo.c
+		srcs/algo.c\
+		srcs/median.c
 
 		
 IFLAGS = -I includes/
@@ -30,7 +31,7 @@ $(NAME): $(OBJ) ${HEADER} ${LIBFT}
 
 clean:
 	rm -f $(OBJ)
-	@make clean -C $(LIBFT)
+	#@make clean -C $(LIBFT)
 
 fclean: clean
 	rm -f $(NAME)

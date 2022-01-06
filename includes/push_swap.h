@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/06 11:22:26 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 19:39:09 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,18 @@ void	ft_revrotate_ab(t_data *data);
 int		ft_atol(const char *nb, t_data *data);
 void	ft_parsing(char **input, t_data *data);
 t_stack	*ft_stacknew(int *content);
-void	print_list(t_stack *stack_a, t_stack *stack_b);
 int		is_present(int nb, t_stack *stack);
 
 // utils
 void	print_stack(t_stack *stack_a);
 void	print_list(t_stack *stack_a, t_stack *stack_b);
+void stack_is_sort(t_data *data);
+int ft_tmp_sort(t_data *data);
 
 //algo
 
 int ft_algo(t_data *data);
+int ft_find_median_ab(t_data *data);
 
 
 #endif 
