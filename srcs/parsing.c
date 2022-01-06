@@ -38,7 +38,7 @@ int	ft_check(char **str, t_data *data)
 	i = 0;
 	while (str[i])
 	{
-			printf("=> %d\n",i);
+			//printf("=> %d\n",i);
 		if (ft_atol(str[i], data) == -1)
 			return (-1);
 		i++;

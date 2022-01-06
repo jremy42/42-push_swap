@@ -30,6 +30,8 @@ t_stack	*ft_stacknew(int *content)
 
 int	is_present(int nb, t_stack *stack)
 {
+	if (!stack)
+		return(0);
 	while (stack != NULL)
 	{
 		if (stack->nb == nb)

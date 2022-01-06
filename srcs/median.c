@@ -31,7 +31,7 @@ int ft_median(int *tab, int size)
 		i++;
 	}
 	i = 0;	
-	if (size % 2 == 0)
+	if ((size - 1) % 2 == 0)
 		return (tab[size / 2]);
 	else
 		return(tab[(size / 2) + 1]);

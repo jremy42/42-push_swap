@@ -71,6 +71,7 @@ int ft_tmp_sort(t_data *data);
 
 int ft_algo(t_data *data);
 int ft_find_median_ab(t_data *data);
+int ft_something_push(t_data *data);
 
 
 #endif 

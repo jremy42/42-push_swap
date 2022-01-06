@@ -8,11 +8,12 @@ SRC = srcs/atol.c \
 		srcs/rotate.c\
 		srcs/revrot.c\
 		srcs/algo.c\
+		srcs/algo_utils.c\
 		srcs/median.c
 
 		
 IFLAGS = -I includes/
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 OBJ = $(SRC:.c=.o)
 HEADER = includes/push_swap.h

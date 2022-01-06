@@ -56,7 +56,7 @@ void ft_quick_sort_b(t_data *data)
 	tmp = 0;
 
 	ft_find_median_ab(data);
-	//print_list(data->a,data->b);
+	print_list(data->a,data->b);
 
 	if(data->size_b < 4)
 	{
@@ -104,33 +104,34 @@ void ft_quick_sort_last_a(t_data *data)
 
 void ft_quick_sort_a(t_data *data)
 {
+	int i;
 	int tmp;
-	int 	i;
 
 	i = 0;
 	tmp = 0;
 
 	ft_find_median_ab(data);
+	printf("data->size_a = %d\n median = %d\n", data->size_a, data->median_a);
+	print_stack(data->a);
 	if(data->size_a < 4)
 	{
-		print_list(data->a,data->b);
 		ft_quick_sort_last_a(data);
 		return;
 	}
-	while(tmp != data->a->nb)
+	while (tmp != data->a->nb || ft_something_push(data) == 1)
 	{
-		if (data->a->nb <= data->median_a)
+		if (data->a->nb < data->median_a)
 			ft_push_a(data);
 		else
-		{ 
-			if (i == 0)
-				{
-					tmp = data->a->nb;
-					i++;
-				}
+		{
+			if (i == 0)	
+			{
+				tmp = data->a->nb;
+				i++;
+			}
 			ft_rotate_a(data);
 		}
-		//if (ft_tmp_sort(data) == 1)
+					//if (ft_tmp_sort(data) == 1)
 			//ft_quick_sort_b(data);
 	}
 		ft_quick_sort_a(data);
