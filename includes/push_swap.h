@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 19:09:06 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:22:26 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_data
 {
 	int size_a;
 	int size_b;
+	int median_a;
+	int median_b;
 	t_stack	*a;
 	t_stack	*b;
 }	t_data;
@@ -63,5 +65,10 @@ int		is_present(int nb, t_stack *stack);
 // utils
 void	print_stack(t_stack *stack_a);
 void	print_list(t_stack *stack_a, t_stack *stack_b);
+
+//algo
+
+int ft_algo(t_data *data);
+
 
 #endif 

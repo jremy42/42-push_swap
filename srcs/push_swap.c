@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:43:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 19:09:59 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:23:10 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	main(int ac, char **av)
 
 	(void)ac;
 	ft_parsing(av, &data);
+	ft_algo(&data);
+	/*
 	//print_list(data.a, data.b);
 	ft_swap_a(&data);
 	//printf("======\n");
@@ -45,4 +47,5 @@ int	main(int ac, char **av)
 	ft_revrotate_ab(&data);
 	printf("======\n");
 	print_list(data.a, data.b);
+	*/
 }
