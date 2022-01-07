@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 10:03:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/06 19:26:44 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/07 19:24:25 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	print_list(t_stack *stack_a, t_stack *stack_b)
 {
-	printf("stack_a | stack_b\n");
+	printf("stack_a                |           stack_b\n");
 	while (stack_a != NULL || stack_b != NULL)
 	{
 		if(stack_a != NULL)
 		{
-			printf(" %d ",stack_a->nb);
+			printf(" %d | index = %d | sort = %d",stack_a->nb, stack_a->index, stack_a->sort);
 			stack_a = stack_a->next;
 		}
 		printf(" | ");
 		if(stack_b != NULL)
 		{
-			printf("  %d  ", stack_b->nb);
+			printf("  %d  | index = %d | sort = %d", stack_b->nb, stack_b->index, stack_b->sort);
 			stack_b = stack_b->next;
 		}
 		printf("\n");
@@ -49,7 +49,7 @@ void stack_is_sort(t_data *data)
 	int i;
 
 	i = 0;
-	ft_size_stack(data);
+	ft_size_stack_ab(data);
 	tmp = data->a;
 	while (tmp->next != NULL)
 	{
@@ -58,4 +58,15 @@ void stack_is_sort(t_data *data)
 		tmp = tmp->next;
 	}
 	printf("liste trier a %d %% \n", i);
+}
+
+void	print_pivot(t_stack *stack_a)
+{
+	printf("pivot \n");
+	while (stack_a != NULL)
+	{
+			printf(" %d ",stack_a->nb);
+			stack_a = stack_a->next;
+		printf("\n");
+	}
 }

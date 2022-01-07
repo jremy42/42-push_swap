@@ -9,6 +9,8 @@ SRC = srcs/atol.c \
 		srcs/revrot.c\
 		srcs/algo.c\
 		srcs/algo_utils.c\
+		srcs/index.c\
+		srcs/quick_sort3.c\
 		srcs/median.c
 
 		

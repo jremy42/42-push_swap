@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/06 19:39:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/07 19:10:59 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_stack
 	int				min;
 	int				max;
 	int				index;
+	int				sort;
 	int				nb;
 	char			*cmd;
 	struct s_stack	*next;
@@ -32,29 +33,30 @@ typedef struct s_data
 {
 	int size_a;
 	int size_b;
-	int median_a;
-	int median_b;
+	int pivot_a;
+	int pivot_b;
+	t_stack *median;
 	t_stack	*a;
 	t_stack	*b;
 }	t_data;
 
 // operation 
-void	ft_swap_a(t_data *data);
-void	ft_swap_b(t_data *data);
-void	ft_swap_ab_a(t_data *data);
-void	ft_swap_ab_b(t_data *data);
-void	ft_swap_ab(t_data *data);
+void	ft_sa(t_data *data);
+void	ft_sb(t_data *data);
+void	ft_ss_a(t_data *data);
+void	ft_ss_b(t_data *data);
+void	ft_ss(t_data *data);
 void	ft_stack_add_front(t_stack **alst, t_stack *new);
-void	ft_push_a(t_data *data);
-void	ft_push_b(t_data *data);
-void	ft_rotate_a(t_data *data);
-void	ft_rotate_b(t_data *data);
-void	ft_rotate_ab(t_data *data);
+void	ft_pb(t_data *data);
+void	ft_pa(t_data *data);
+void	ft_ra(t_data *data);
+void	ft_rb(t_data *data);
+void	ft_rr(t_data *data);
 void	ft_stackadd_back(t_stack **alst, t_stack *new);
-void	ft_size_stack(t_data *data);
-void	ft_revrotate_a(t_data *data);
-void	ft_revrotate_b(t_data *data);
-void	ft_revrotate_ab(t_data *data);
+void	ft_size_stack_ab(t_data *data);
+void	ft_rra(t_data *data);
+void	ft_rrb(t_data *data);
+void	ft_rrr(t_data *data);
 // parsing 
 int		ft_atol(const char *nb, t_data *data);
 void	ft_parsing(char **input, t_data *data);
@@ -70,8 +72,13 @@ int ft_tmp_sort(t_data *data);
 //algo
 
 int ft_algo(t_data *data);
-int ft_find_median_ab(t_data *data);
-int ft_something_push(t_data *data);
-
+int ft_find_pivot_ab(t_data *data);
+int ft_something_push_a(t_stack *stack, int pivot);
+int ft_something_push_b(t_stack *stack, int pivot);
+int ft_stack_is_sort(t_stack *stack);
+int ft_index(t_data *data);
+void ft_quick_sort_last_b(t_data *data);
+void ft_quick_sort_last_a(t_data *data);
+void	print_pivot(t_stack *stack_a);
 
 #endif 

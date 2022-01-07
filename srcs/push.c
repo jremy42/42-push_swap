@@ -6,16 +6,17 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 12:10:39 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/05 17:02:44 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/07 10:14:25 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_push_a(t_data *data)
+void	ft_pb(t_data *data)
 {
 	t_stack	*tmp;
 
+	printf("pb\n");
 	if (!data->a)
 		return ;
 	tmp = data->a->next;
@@ -23,10 +24,11 @@ void	ft_push_a(t_data *data)
 	data->a = tmp;
 }
 
-void	ft_push_b(t_data *data)
+void	ft_pa(t_data *data)
 {
 	t_stack	*tmp;
 
+	printf("pa\n");
 	if (!data->b)
 		return ;
 	tmp = data->b->next;

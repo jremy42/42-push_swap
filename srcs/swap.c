@@ -6,13 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 12:10:39 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/06 18:45:51 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/07 10:14:25 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_swap_a(t_data *data)
+void	ft_sa(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -26,7 +26,7 @@ void	ft_swap_a(t_data *data)
 	return ;
 }
 
-void	ft_swap_b(t_data *data)
+void	ft_sb(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -40,7 +40,7 @@ void	ft_swap_b(t_data *data)
 	return ;
 }
 
-void	ft_swap_ab_a(t_data *data)
+void	ft_ss_a(t_data *data)
 {
 	t_stack	*tmp;
 	if (!data->a || !data->a->next)
@@ -52,7 +52,7 @@ void	ft_swap_ab_a(t_data *data)
 	return ;
 }
 
-void	ft_swap_ab_b(t_data *data)
+void	ft_ss_b(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -65,10 +65,10 @@ void	ft_swap_ab_b(t_data *data)
 	return ;
 }
 
-void	ft_swap_ab(t_data *data)
+void	ft_ss(t_data *data)
 {
 	printf("ss\n");
-	ft_swap_ab_a(data);
-	ft_swap_ab_b(data);
+	ft_ss_a(data);
+	ft_ss_b(data);
 	return ;
 }

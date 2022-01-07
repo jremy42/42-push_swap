@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 09:58:42 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/06 19:40:22 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/07 17:43:10 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_stack	*ft_stacknew(int *content)
 	newlst->min = 0;
 	newlst->max = 0;
 	newlst->index = 0;
+	newlst->sort = 0;
 	newlst->cmd = NULL;
 	newlst->next = NULL;
 	return (newlst);
@@ -65,7 +66,7 @@ void	ft_stack_add_front(t_stack **alst, t_stack *new)
 	(*alst) = new;
 }
 
-void ft_size_stack(t_data *data)
+void ft_size_stack_ab(t_data *data)
 {
 	t_stack *tmp;
 	int		a;
@@ -95,7 +96,7 @@ int ft_tmp_sort(t_data *data)
 	int i;
 
 	i = 0;
-	ft_size_stack(data);
+	ft_size_stack_ab(data);
 	tmp = data->a;
 	while (tmp->next != NULL)
 	{

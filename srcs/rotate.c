@@ -6,13 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:06:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/06 18:46:58 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/07 10:14:25 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rotate_a(t_data *data)
+void	ft_ra(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -25,7 +25,7 @@ void	ft_rotate_a(t_data *data)
 	ft_stackadd_back(&data->a, tmp);
 }
 
-void	ft_rotate_b(t_data *data)
+void	ft_rb(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -38,7 +38,7 @@ void	ft_rotate_b(t_data *data)
 	ft_stackadd_back(&data->b, tmp);
 }
 
-void	ft_rotate_ab_a(t_data *data)
+void	ft_rr_a(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -50,7 +50,7 @@ void	ft_rotate_ab_a(t_data *data)
 	ft_stackadd_back(&data->a, tmp);
 }
 
-void	ft_rotate_ab_b(t_data *data)
+void	ft_rr_b(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -62,9 +62,9 @@ void	ft_rotate_ab_b(t_data *data)
 	ft_stackadd_back(&data->b, tmp);
 }
 
-void	ft_rotate_ab(t_data *data)
+void	ft_rr(t_data *data)
 {
-		printf("rr\n");
-	ft_rotate_ab_b(data);
-	ft_rotate_ab_a(data);
+	printf("rr\n");
+	ft_rr_b(data);
+	ft_rr_a(data);
 }
