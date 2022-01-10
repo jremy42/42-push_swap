@@ -6,13 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:13:19 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 12:35:06 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 14:58:09 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_insert_index(t_data *data, int *tab)
+void __insert_index(t_data *data, int *tab)
 {
 	t_stack *tmp;
 	int		i;
@@ -35,7 +35,7 @@ void ft_insert_index(t_data *data, int *tab)
 
 }
 
-void ft_sort(t_data *data, int *tab)
+void __sort(t_data *data, int *tab)
 {
 	int i;
 	int j;
@@ -61,10 +61,10 @@ void ft_sort(t_data *data, int *tab)
 		j = 0;
 		i++;
 	}
-	ft_insert_index(data, tab);
+	__insert_index(data, tab);
 }
 
-int ft_index(t_data *data)
+int __index(t_data *data)
 {
 	int i;
 	int *tab;
@@ -74,7 +74,7 @@ int ft_index(t_data *data)
 	if (!data->a)
 		return (0);
 	tmp = data->a;
-	ft_size_stack_ab(data);
+	__size_stack_ab(data);
 	tab = malloc(sizeof(int) * data->size_a);
 	if (!tab)
 		return (-1);
@@ -84,7 +84,7 @@ int ft_index(t_data *data)
 		tmp = tmp->next;
 		i++;
 	}
-	ft_sort(data,tab);
+	__sort(data,tab);
 	free(tab);
 	return (0);
 }

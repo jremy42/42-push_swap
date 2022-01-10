@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   __substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 18:02:06 by jremy             #+#    #+#             */
-/*   Updated: 2021/11/24 16:55:28 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*__substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
 	size_t	lenstr;
@@ -21,13 +21,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	n = 0;
-	if (start >= ft_strlen(s))
+	if (start >= __strlen(s))
 		lenstr = 0;
-	else if (ft_strlen(s) - start < len)
-		lenstr = ft_strlen(s) - start;
+	else if (__strlen(s) - start < len)
+		lenstr = __strlen(s) - start;
 	else
 		lenstr = len;
-	result = ft_calloc(lenstr + 1, sizeof(char));
+	result = __calloc(lenstr + 1, sizeof(char));
 	if (!result)
 		return (NULL);
 	while (s[start] && n < lenstr)

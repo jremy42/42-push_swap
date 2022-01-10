@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   __strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:48:19 by jremy             #+#    #+#             */
-/*   Updated: 2021/11/25 10:29:24 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *find, size_t len)
+char	*__strnstr(const char *str, const char *find, size_t len)
 {
 	size_t		find_len;
 	size_t		i;
@@ -20,10 +20,10 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 
 	i = 0;
 	p = str;
-	find_len = ft_strlen(find);
+	find_len = __strlen(find);
 	if (*find == '\0')
 		return ((char *)p);
-	if (*p == '\0' || len == 0 || ft_strlen(str) < find_len)
+	if (*p == '\0' || len == 0 || __strlen(str) < find_len)
 		return (NULL);
 	if (*find == '\0')
 		return ((char *)p);
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 	{
 		if (*p == *find)
 		{
-			if (ft_strncmp((char *)p, (char *)find, find_len) == 0)
+			if (__strncmp((char *)p, (char *)find, find_len) == 0)
 				return ((char *)p);
 		}
 		p++;

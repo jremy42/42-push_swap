@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   __strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:41:48 by jremy             #+#    #+#             */
-/*   Updated: 2021/11/25 10:08:12 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strnlen(char *dst, size_t n)
+static size_t	__strnlen(char *dst, size_t n)
 {
 	size_t	i;
 
@@ -22,15 +22,15 @@ static size_t	ft_strnlen(char *dst, size_t n)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+size_t	__strlcat(char *dst, const char *src, size_t n)
 {
 	size_t	len_dst;
 	size_t	len_src;
 	size_t	result;
 	size_t	i;
 
-	len_dst = ft_strnlen(dst, n);
-	len_src = ft_strlen(src);
+	len_dst = __strnlen(dst, n);
+	len_src = __strlen(src);
 	i = 0;
 	if (n == 0)
 		return (len_src);

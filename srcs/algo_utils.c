@@ -6,13 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 09:04:50 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 12:48:46 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 16:10:38 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_something_push_a(t_stack *stack, int pivot)
+int __something_push_a(t_stack *stack, int pivot)
 {
     t_stack *tmp;
 
@@ -26,7 +26,7 @@ int ft_something_push_a(t_stack *stack, int pivot)
     return (-1);
 }
 
-int ft_something_push_b(t_stack *stack, int pivot)
+int __something_push_b(t_stack *stack, int pivot)
 {
     t_stack *tmp;
 
@@ -40,7 +40,7 @@ int ft_something_push_b(t_stack *stack, int pivot)
     return (-1);
 }
 
-int ft_size_stack(t_stack *stack)
+int __size_stack(t_stack *stack)
 {
 	t_stack *tmp;
 	int		a;
@@ -53,4 +53,26 @@ int ft_size_stack(t_stack *stack)
 		a++;
 	}
 	return (a);
+}
+
+int __find_next_pivot(t_data *data)
+{
+	int pivot;
+	t_stack *tmp;
+
+	pivot = 0;
+	if(data->median == NULL)
+	{
+		////printf("find pivot b\n");
+		__find_pivot_ab(data);
+		pivot = data->pivot_b;
+	}
+	else 
+	{	
+		pivot = data->median->nb;
+		tmp = data->median;
+		data->median = data->median->next;
+		free(tmp);
+	}
+	return (pivot);
 }

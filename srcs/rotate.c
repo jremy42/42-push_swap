@@ -6,13 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:06:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 10:14:25 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 16:11:49 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_ra(t_data *data)
+void	__ra(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -22,10 +22,10 @@ void	ft_ra(t_data *data)
 	tmp = data->a;
 	data->a = data->a->next;
 	tmp->next = NULL;
-	ft_stackadd_back(&data->a, tmp);
+	__stackadd_back(&data->a, tmp);
 }
 
-void	ft_rb(t_data *data)
+void	__rb(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -35,10 +35,10 @@ void	ft_rb(t_data *data)
 	tmp = data->b;
 	data->b = data->b->next;
 	tmp->next = NULL;
-	ft_stackadd_back(&data->b, tmp);
+	__stackadd_back(&data->b, tmp);
 }
 
-void	ft_rr_a(t_data *data)
+void	__rr_a(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -47,10 +47,10 @@ void	ft_rr_a(t_data *data)
 	tmp = data->a;
 	data->a = data->a->next;
 	tmp->next = NULL;
-	ft_stackadd_back(&data->a, tmp);
+	__stackadd_back(&data->a, tmp);
 }
 
-void	ft_rr_b(t_data *data)
+void	__rr_b(t_data *data)
 {
 	t_stack	*tmp;
 
@@ -59,12 +59,12 @@ void	ft_rr_b(t_data *data)
 	tmp = data->b;
 	data->b = data->b->next;
 	tmp->next = NULL;
-	ft_stackadd_back(&data->b, tmp);
+	__stackadd_back(&data->b, tmp);
 }
 
-void	ft_rr(t_data *data)
+void	__rr(t_data *data)
 {
 	printf("rr\n");
-	ft_rr_b(data);
-	ft_rr_a(data);
+	__rr_b(data);
+	__rr_a(data);
 }

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   __atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:49:42 by jremy             #+#    #+#             */
-/*   Updated: 2021/11/23 17:50:33 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isisspace(char c)
+static int	__isisspace(char c)
 {
 	if ((c > 0 && c < 18) || (c == 32))
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(const char *nb)
+int	__atoi(const char *nb)
 {
 	size_t	result;
 	size_t	sign;
@@ -28,7 +28,7 @@ int	ft_atoi(const char *nb)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (ft_isisspace(nb[i]))
+	while (__isisspace(nb[i]))
 		i++;
 	if (nb[i] == '-' || nb[i] == '+')
 	{
@@ -36,7 +36,7 @@ int	ft_atoi(const char *nb)
 			sign = -1;
 		i++;
 	}
-	while (ft_isdigit(nb[i]) && nb[i])
+	while (__isdigit(nb[i]) && nb[i])
 	{
 		result = result * 10 + (nb[i] - '0');
 		i++;

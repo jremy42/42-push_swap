@@ -13,7 +13,8 @@ SRC = srcs/atol.c \
 		srcs/quick_sort3.c\
 		srcs/median.c\
 		srcs/stack_sort_a.c\
-		srcs/stack_sort_b.c
+		srcs/stack_sort_b.c\
+		srcs/rotate_stack.c
 
 		
 IFLAGS = -I includes/

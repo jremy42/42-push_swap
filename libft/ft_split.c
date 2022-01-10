@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   __split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:39:25 by jremy             #+#    #+#             */
-/*   Updated: 2021/11/24 17:12:51 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_freetab(char**tab, int index)
+static char	**__freetab(char**tab, int index)
 {
 	int	i;
 
@@ -30,7 +30,7 @@ static char	**ft_freetab(char**tab, int index)
 	return (NULL);
 }
 
-static size_t	ft_count_word(const char *s, char c)
+static size_t	__count_word(const char *s, char c)
 {
 	size_t	i;
 	size_t	count_word;
@@ -51,7 +51,7 @@ static size_t	ft_count_word(const char *s, char c)
 	return (count_word);
 }
 
-static char	*ft_getnextstr(const char *s, char c, size_t *len_nextstr)
+static char	*__getnextstr(const char *s, char c, size_t *len_nextstr)
 {
 	size_t	i;
 
@@ -74,7 +74,7 @@ static char	*ft_getnextstr(const char *s, char c, size_t *len_nextstr)
 	return ((char *)s + i);
 }
 
-static char	*ft_strncpy(char *dst, const char *src, size_t count)
+static char	*__strncpy(char *dst, const char *src, size_t count)
 {
 	size_t	i;
 
@@ -92,7 +92,7 @@ static char	*ft_strncpy(char *dst, const char *src, size_t count)
 	return (dst);
 }
 
-char	**ft_split(const char *s, char c)
+char	**__split(const char *s, char c)
 {
 	char	**result;
 	size_t	count_word;
@@ -103,17 +103,17 @@ char	**ft_split(const char *s, char c)
 	len_nextstr = 0;
 	if (!s)
 		return (NULL);
-	count_word = ft_count_word(s, c);
+	count_word = __count_word(s, c);
 	result = malloc(sizeof(char *) * (count_word + 1));
 	if (!result)
 		return (NULL);
 	while (i < count_word)
 	{
-		s = ft_getnextstr(s + len_nextstr, c, &len_nextstr);
-		result[i] = ft_calloc(len_nextstr + 1, sizeof(char));
+		s = __getnextstr(s + len_nextstr, c, &len_nextstr);
+		result[i] = __calloc(len_nextstr + 1, sizeof(char));
 		if (! result[i])
-			return (ft_freetab(result, i));
-		result[i] = ft_strncpy(result[i], s, len_nextstr);
+			return (__freetab(result, i));
+		result[i] = __strncpy(result[i], s, len_nextstr);
 		result[i][len_nextstr] = '\0';
 		i++;
 	}

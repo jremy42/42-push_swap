@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 10:03:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 11:43:54 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 16:14:45 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ void	print_list(t_stack *stack_a, t_stack *stack_b)
 
 void	print_stack(t_stack *stack_a)
 {
-	printf("stack_a \n");
+	//printf("stack_b \n");
 	while (stack_a != NULL)
 	{
-			printf(" %d ",stack_a->nb);
+			//printf(" %d ",stack_a->nb);
 			stack_a = stack_a->next;
-		printf("\n");
+		//printf("\n");
 	}
 }
 
@@ -51,7 +51,7 @@ void stack_is_sort(t_data *data)
 	int i;
 
 	i = 0;
-	ft_size_stack_ab(data);
+	__size_stack_ab(data);
 	tmp = data->a;
 	while (tmp->next != NULL)
 	{
@@ -59,16 +59,14 @@ void stack_is_sort(t_data *data)
 			i++;
 		tmp = tmp->next;
 	}
-	printf("liste trier a %d %% \n", i);
 }
 
 void	print_pivot(t_stack *stack_a)
 {
-	printf("pivot \n");
 	while (stack_a != NULL)
 	{
-			printf(" %d ",stack_a->nb);
+			//printf(" %d ",stack_a->nb);
 			stack_a = stack_a->next;
-		printf("\n");
+		//printf("\n");
 	}
 }

@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   __memcpy.c                                        :+:      :+:    :+:   */
+/*   rotate_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 16:22:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
+/*   Created: 2022/01/10 16:49:15 by jremy             #+#    #+#             */
+/*   Updated: 2022/01/10 17:15:09 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	*__memcpy(void *dst, const void *src, size_t n)
+void	__rotate_stack_a(t_data *data)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	int i;
+	int j;
+	t_stack *tmp;
 
-	if (!dst && !src)
-		return (dst);
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
+	tmp = data->a;
 	i = 0;
-	while (i < n)
+	j = 0;
+	while (tmp != NULL)
 	{
-		*d++ = *s++;
-		i++;
+		//printf("tmp->sort ==%d\n",tmp->sort);
+		if (tmp->sort == 1)
+			i++;
+		tmp = tmp->next;
+		j++;
 	}
-	return (dst);
+	//printf(" i = %d et j = %d\n",i,j);
+	if ( (j - 1) == i)
+		__quick_sort_b(data);
+	else
+		{
+			while(data->a->sort == 1)
+				__rb(data);
+			return ;
+		}
 }

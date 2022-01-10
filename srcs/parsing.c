@@ -6,13 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:52:38 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 10:14:25 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 16:10:38 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_exit(char**str, t_data *data)
+void	__exit(char**str, t_data *data)
 {
 	int	i;
 
@@ -27,42 +27,42 @@ void	ft_exit(char**str, t_data *data)
 		free(str);
 	}
 	(void)data;
-	printf("Error \n");
+	//printf("Error \n");
 	exit(0);
 }
 
-int	ft_check(char **str, t_data *data)
+int	__check(char **str, t_data *data)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-			//printf("=> %d\n",i);
-		if (ft_atol(str[i], data) == -1)
+			////printf("=> %d\n",i);
+		if (__atol(str[i], data) == -1)
 			return (-1);
 		i++;
 	}
 	return (0);
 }
 
-void	ft_parsing(char **input, t_data *data)
+void	__parsing(char **input, t_data *data)
 {
 	int		i;
 	char	*tmp;
 	char	**split_tmp;
 
 	i = 1;
-	tmp = ft_strdup(" ");
+	tmp = __strdup(" ");
 	while (input[i])
 	{
-		tmp = ft_strjoin(tmp, input[i]);
-		tmp = ft_strjoin(tmp, " ");
+		tmp = __strjoin(tmp, input[i]);
+		tmp = __strjoin(tmp, " ");
 		i++;
 	}
-	split_tmp = ft_split(tmp, ' ');
+	split_tmp = __split(tmp, ' ');
 	free(tmp);
 	i = 0;
-	if (ft_check(&split_tmp[i], data) == -1)
-		ft_exit(split_tmp, data);
+	if (__check(&split_tmp[i], data) == -1)
+		__exit(split_tmp, data);
 }

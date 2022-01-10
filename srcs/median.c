@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int ft_pivot(int *tab, int size)
+int __pivot_a(int *tab, int size)
 {
 	int i;
 	int j;
@@ -41,7 +41,36 @@ int ft_pivot(int *tab, int size)
 	return (tab[size / 2]);	
 }
 
-int ft_find_pivot_a(t_stack *stack, int size, t_data *data)
+int __pivot_b(int *tab, int size)
+{
+	int i;
+	int j;
+	int tmp;
+
+	i = 0;
+	j = 0;
+	tmp = 0;
+	while (i < size - 1)
+	{
+		while (j < size - 1)
+		{
+			if(tab[j] > tab[j + 1])
+			{
+				tmp = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = tmp;
+			}
+		j++;
+		}
+		j = 0;
+		i++;
+	}
+	if (size % 2 == 0)
+		return (tab[(size / 2) + 1]);	
+	return (tab[size / 2]);	
+}
+
+int __find_pivot_a(t_stack *stack, int size, t_data *data)
 {
 	int i;
 	int *tab;
@@ -60,12 +89,12 @@ int ft_find_pivot_a(t_stack *stack, int size, t_data *data)
 		tmp = tmp->next;
 		i++;
 	}
-	data->pivot_a = ft_pivot(tab, size);
+	data->pivot_a = __pivot_a(tab, size);
 	free(tab);
 	return (0);
 }
 
-int ft_find_pivot_b(t_stack *stack, int size, t_data *data)
+int __find_pivot_b(t_stack *stack, int size, t_data *data)
 {
 	int i;
 	int *tab;
@@ -84,16 +113,16 @@ int ft_find_pivot_b(t_stack *stack, int size, t_data *data)
 		tmp = tmp->next;
 		i++;
 	}
-	data->pivot_b = ft_pivot(tab, size);
+	data->pivot_b = __pivot_b(tab, size);
 	return (0);
 }
 
-int ft_find_pivot_ab(t_data *data)
+int __find_pivot_ab(t_data *data)
 {
-	ft_size_stack_ab(data);
+	__size_stack_ab(data);
 	if (data->a)
-		ft_find_pivot_a(data->a, data->size_a, data);
+		__find_pivot_a(data->a, data->size_a, data);
 	if (data->b)
-		ft_find_pivot_b(data->b, data->size_b, data);
+		__find_pivot_b(data->b, data->size_b, data);
 	return (1);
 }

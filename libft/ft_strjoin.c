@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   __strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 18:06:59 by jremy             #+#    #+#             */
-/*   Updated: 2021/11/24 17:11:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:51 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcpy(char *dst, const char *src)
+static char	*__strcpy(char *dst, const char *src)
 {
 	size_t	i;
 
@@ -26,24 +26,24 @@ static char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-static char	*ft_strcat(char *dst, const char *src)
+static char	*__strcat(char *dst, const char *src)
 {
-	ft_strcpy(dst + ft_strlen(dst), src);
+	__strcpy(dst + __strlen(dst), src);
 	return (dst);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*__strjoin(char const *s1, char const *s2)
 {
 	size_t	size;
 	char	*result;
 
 	if (!s1 || !s2)
 		return (NULL);
-	size = ft_strlen(s1) + ft_strlen(s2);
-	result = ft_calloc(size + 1, sizeof(char));
+	size = __strlen(s1) + __strlen(s2);
+	result = __calloc(size + 1, sizeof(char));
 	if (!result)
 		return (NULL);
-	result = ft_strcpy(result, s1);
-	result = ft_strcat(result, s2);
+	result = __strcpy(result, s1);
+	result = __strcat(result, s2);
 	return (result);
 }
