@@ -1,2 +1,3 @@
 # push_swap
-![norminette](https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME_OR_FILE>/badge.svg)
+[![Norme](https://github.com/Carni13/push_swap/actions/workflows/main.yml/badge.svg)](https://github.com/Carni13/push_swap/actions/workflows/main.yml)
+
