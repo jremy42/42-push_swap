@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 19:10:59 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 13:13:26 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 
 typedef struct s_stack
 {
-	int				min;
-	int				max;
 	int				index;
 	int				sort;
 	int				nb;
@@ -35,6 +33,8 @@ typedef struct s_data
 	int size_b;
 	int pivot_a;
 	int pivot_b;
+	int	min;
+	int	max;
 	t_stack *median;
 	t_stack	*a;
 	t_stack	*b;
@@ -71,14 +71,17 @@ int ft_tmp_sort(t_data *data);
 
 //algo
 
-int ft_algo(t_data *data);
-int ft_find_pivot_ab(t_data *data);
-int ft_something_push_a(t_stack *stack, int pivot);
-int ft_something_push_b(t_stack *stack, int pivot);
-int ft_stack_is_sort(t_stack *stack);
-int ft_index(t_data *data);
-void ft_quick_sort_last_b(t_data *data);
-void ft_quick_sort_last_a(t_data *data);
+int		ft_algo(t_data *data);
+int		ft_find_pivot_ab(t_data *data);
+int		ft_something_push_a(t_stack *stack, int pivot);
+int		ft_something_push_b(t_stack *stack, int pivot);
+int		ft_stack_is_sort_a(t_data *data);
+int		ft_stack_is_sort_b(t_data *data);
+int		ft_index(t_data *data);
+void	ft_quick_sort_last_b(t_data *data);
+void	ft_quick_sort_last_a(t_data *data);
 void	print_pivot(t_stack *stack_a);
+int		ft_size_stack(t_stack *stack);
+void	ft_quick_sort_b(t_data *data);
 
 #endif 

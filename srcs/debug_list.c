@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 10:03:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 19:24:25 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 11:43:54 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	print_list(t_stack *stack_a, t_stack *stack_b)
 			printf(" %d | index = %d | sort = %d",stack_a->nb, stack_a->index, stack_a->sort);
 			stack_a = stack_a->next;
 		}
+		else
+			printf("%26c",' '); 
 		printf(" | ");
 		if(stack_b != NULL)
 		{

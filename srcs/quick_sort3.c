@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:31:46 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 19:19:36 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 13:18:08 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ void ft_quick_sort_last_b(t_data *data)
 	int k;
 
 	printf("quick_sort_last_b\n");
-	print_list(data->a,data->b);
-
 	i = data->b->nb;
 	j = data->b->next->nb;
 	k = data->b->next->next->nb;
+	ft_stack_is_sort_b(data);
 	if( i > j && j > k)
 		return ;
 	if (i > j && j > k)
@@ -43,6 +42,7 @@ void ft_quick_sort_last_b(t_data *data)
 	}
 	if( i < j && j > k && k < i)
 		ft_sb(data);
+	ft_stack_is_sort_b(data);
 	return;
 }
 
@@ -73,7 +73,7 @@ void ft_quick_sort_last_a(t_data *data)
 	}
 	if (i > j && j < k && i > k)
 		ft_ra(data);
-	ft_stack_is_sort(data->a);
+	ft_stack_is_sort_a(data);
 
-	//ft_quick_sort_b(data);
+	ft_quick_sort_b(data);
 }

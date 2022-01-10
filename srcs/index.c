@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:13:19 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 17:01:19 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 12:35:06 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void ft_insert_index(t_data *data, int *tab)
 
 	i = 0;
 	tmp = data->a;
+	data->min = tab[0];
+	data->max = tab[data->size_a - 1];
 	while (tmp != NULL)
 	{
 		while(i < data->size_a)

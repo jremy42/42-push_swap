@@ -11,16 +11,24 @@ SRC = srcs/atol.c \
 		srcs/algo_utils.c\
 		srcs/index.c\
 		srcs/quick_sort3.c\
-		srcs/median.c
+		srcs/median.c\
+		srcs/stack_sort_a.c\
+		srcs/stack_sort_b.c
 
 		
 IFLAGS = -I includes/
 CFLAGS = -Wall -Wextra -Werror
 CC = gcc
-OBJ = $(SRC:.c=.o)
+OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))
 HEADER = includes/push_swap.h
 LIBFT = ./libft
+OBJS_PATH = ./objs/
 NAME = push_swap
+
+# Create obj and dir
+$(OBJS_PATH)%.o: %.c
+		mkdir -p $(dir $@)
+		$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 all: $(NAME)
 
@@ -29,11 +37,8 @@ $(NAME): $(OBJ) ${HEADER} ${LIBFT}
 		@cp libft/libft.a  ./libft.a
 		$(CC) $(CFLAGS) ${OBJ} -Llibft -lft -o $(NAME)
 
-%.o:%.c
-	$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
-
 clean:
-	rm -f $(OBJ)
+	rm -rf ${OBJS_PATH}
 	#@make clean -C $(LIBFT)
 
 fclean: clean

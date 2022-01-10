@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 09:58:42 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/07 17:43:10 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/10 12:33:58 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ t_stack	*ft_stacknew(int *content)
 	newlst = malloc(sizeof(t_stack));
 	if (!newlst)
 		return (NULL);
-	newlst->nb = *content;
-	newlst->min = 0;
-	newlst->max = 0;
+	newlst->nb = *content;	
 	newlst->index = 0;
 	newlst->sort = 0;
 	newlst->cmd = NULL;
