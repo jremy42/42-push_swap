@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 16:49:15 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 17:15:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/11 18:28:35 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,12 @@ void	__rotate_stack_a(t_data *data)
 		tmp = tmp->next;
 		j++;
 	}
-	//printf(" i = %d et j = %d\n",i,j);
 	if ( (j - 1) == i)
 		__quick_sort_b(data);
 	else
 		{
 			while(data->a->sort == 1)
-				__rb(data);
+				__ra(data);
 			return ;
 		}
 }

@@ -20,7 +20,7 @@ SRC = srcs/parsing/atol.c \
 
 		
 IFLAGS = -I includes/
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
 CC = gcc
 OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))
 HEADER = includes/push_swap.h

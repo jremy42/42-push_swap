@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 12:42:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 14:58:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/11 17:05:58 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int __stack_is_sort_b(t_data *data)
 
 	i = 0;
 	size = __size_stack(data->b);
+	if (data->size_b < 2)
+		return (0);
 	tmp = data->b;
 	while(tmp->next != NULL)
 	{

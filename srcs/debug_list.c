@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 10:03:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 16:14:45 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/11 16:29:09 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_list(t_stack *stack_a, t_stack *stack_b)
 {
-	printf("stack_a                |           stack_b\n");
+	printf("stack_a           |           stack_b \n");
 	while (stack_a != NULL || stack_b != NULL)
 	{
 		if(stack_a != NULL)

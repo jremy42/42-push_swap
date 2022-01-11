@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 17:41:43 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/11 17:48:43 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ int		__size_stack(t_stack *stack);
 void	__quick_sort_b(t_data *data);
 void	__rotate_stack_a(t_data *data);
 int		__next_pivot(t_stack *stack);
+int		__pivot_size(t_stack *stack);
+
 
 
 #endif 

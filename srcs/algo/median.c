@@ -21,7 +21,7 @@ int __pivot_a(int *tab, int size)
 	i = 0;
 	j = 0;
 	tmp = 0;
-	while (i < size - 1)
+	while (i < size - 2)
 	{
 		while (j < size - 1)
 		{
@@ -50,7 +50,7 @@ int __pivot_b(int *tab, int size)
 	i = 0;
 	j = 0;
 	tmp = 0;
-	while (i < size - 1)
+	while (i < size - 2)
 	{
 		while (j < size - 1)
 		{
@@ -65,6 +65,9 @@ int __pivot_b(int *tab, int size)
 		j = 0;
 		i++;
 	}
+
+	if (i == 0)
+		return (tab[i + 1]);
 	if (size % 2 == 0)
 		return (tab[(size / 2) + 1]);	
 	return (tab[size / 2]);	
@@ -77,13 +80,13 @@ int __find_pivot_a(t_stack *stack, int size, t_data *data)
 	t_stack *tmp;
 
 	i = 0;
-	if (!stack)
+	if (!stack || size == 0)
 		return (0);
 	tmp = stack;
 	tab = malloc(sizeof(int) * size);
 	if (!tab)
 		return (-1);
-	while (tmp != NULL)
+	while (tmp != NULL && i < size)
 	{
 		tab[i] = tmp->nb;
 		tmp = tmp->next;
@@ -102,12 +105,12 @@ int __find_pivot_b(t_stack *stack, int size, t_data *data)
 
 	i = 0;
 	tmp = stack;
-	if (!stack)
+	if (!stack || size == 0)
 		return (0);
 	tab = malloc(sizeof(int) * size);
 	if (!tab)
 		return (-1);
-	while (tmp->next != NULL)
+	while (tmp->next != NULL && i < size)
 	{
 		tab[i] = tmp->nb;
 		tmp = tmp->next;
@@ -117,12 +120,31 @@ int __find_pivot_b(t_stack *stack, int size, t_data *data)
 	return (0);
 }
 
+int	__pivot_size(t_stack *stack)
+{
+	t_stack *tmp;
+	int i;
+
+	i = 0;
+	tmp = stack;
+	while (tmp != NULL && tmp->sort < 1)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	return (i);
+}
+
 int __find_pivot_ab(t_data *data)
 {
 	__size_stack_ab(data);
+	//printf("data->size_a %d et size_pivot %d \n",data->size_a,__pivot_size(data->a));
 	if (data->a)
-		__find_pivot_a(data->a, data->size_a, data);
+		__find_pivot_a(data->a, __pivot_size(data->a), data);
 	if (data->b)
-		__find_pivot_b(data->b, data->size_b, data);
+		__find_pivot_b(data->b, __pivot_size(data->b), data);
+	//print_list(data->a,data->b);
+	//printf("pivot a = %d\n",data->pivot_a);
+	//printf("pivot b = %d\n",data->pivot_b);
 	return (1);
 }

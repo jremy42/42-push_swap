@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:31:46 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 19:01:28 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/11 18:42:48 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void __quick_sort_last_b(t_data *data)
 	int k;
 
 	//printf("quick_sort_last_b\n");
-	//print_list(data->a, data->b);
+	////print_list(data->a, data->b);
 
 	i = data->b->nb;
 	j = data->b->next->nb;
@@ -34,11 +34,11 @@ void __quick_sort_last_b(t_data *data)
 	__stack_is_sort_b(data);
 	if( i > j && j > k && i > k)
 		__replace_b(data) ;
-	else if (i > j && j > k)
+	else if (i > j && j < k && i < k)
 		__rrb(data);
 	if (i < j && j > k && k > i)
 		__rb(data);
-	if (i > j && j < k)
+	if (i > j && j < k && i > k)
 	{
 		__pa(data);
 		__rb(data);
@@ -63,12 +63,21 @@ void __quick_sort_last_a(t_data *data)
 	i = data->a->nb;
 	j = data->a->next->nb;
 	k = data->a->next->next->nb;
+	
 	if( i < j && j < k)
 		__quick_sort_b(data);
 	if (i > j && j < k && i < k)
 		__sa(data);
 	if (i < j && j > k && i > k)
-		__rra(data);
+	{
+		__pb(data);
+		__sa(data);
+		__pa(data);
+		__sa(data);
+		//print_list(data->a,data->b);
+		__quick_sort_b(data);
+
+	}
 	if (i > j && j > k && i > k)
 	{
 		__sa(data);

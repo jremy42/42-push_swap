@@ -34,7 +34,7 @@ int __kth_pivot(t_stack *stack, int index_max)
     t_stack *tmp;
     int next_pivot;
 
-    printf("index max = %d\n",index_max);
+    //printf("index max = %d\n",index_max);
     next_pivot = 0;
     tmp = stack;
     while (tmp->index != index_max)
