@@ -36,12 +36,12 @@ void	print_list(t_stack *stack_a, t_stack *stack_b)
 
 void	print_stack(t_stack *stack_a)
 {
-	//printf("stack_b \n");
+	printf("stack_b \n");
 	while (stack_a != NULL)
 	{
-			//printf(" %d ",stack_a->nb);
+			printf(" %d | index %d",stack_a->nb, stack_a->index);
 			stack_a = stack_a->next;
-		//printf("\n");
+		printf("\n");
 	}
 }
 

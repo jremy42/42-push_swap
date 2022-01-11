@@ -16,36 +16,17 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 
-	(void)ac;
+	int test;
+
+	test = 0;
+	if (ac < 1)
+	{
+		__putstr_fd("Error\n Needs input",0);
+	}
 	__parsing(av, &data);
+	//__index(&data);
+	//test = __next_pivot(data.a);
+	//printf("next pivot = %d\n",test);
+	//print_stack(data.a);
 	__algo(&data);
-	/*
-	//print_list(data.a, data.b);
-	__sa(&data);
-	////printf("======\n");
-	//print_list(data.a, data.b);
-	//printf("2\n");
-	__pb(&data);
-	__pb(&data);
-	__pb(&data);
-	////printf("======\n");
-	//print_list(data.a, data.b);
-	__ss(&data);
-	//printf("4\n");
-	//printf("======\n");
-	print_list(data.a, data.b);
-	__rr(&data);
-	//printf("======\n");
-	print_list(data.a, data.b);
-	__size_stack_ab(&data);
-	//printf(" stack_a = %d\n stack_b = %d\n",data.size_a, data.size_b);
-	//printf("======\n");
-	print_list(data.a, data.b);
-	__rra(&data);
-	//printf("======\n");
-	print_list(data.a, data.b);
-	__rrr(&data);
-	//printf("======\n");
-	print_list(data.a, data.b);
-	*/
 }

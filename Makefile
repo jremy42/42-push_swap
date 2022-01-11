@@ -1,20 +1,22 @@
-SRC = srcs/atol.c \
-		srcs/parsing.c\
+SRC = srcs/parsing/atol.c \
+		srcs/parsing/parsing.c\
 		srcs/push_swap.c\
 		srcs/debug_list.c\
-		srcs/stack_utils.c\
-		srcs/swap.c\
-		srcs/push.c\
-		srcs/rotate.c\
-		srcs/revrot.c\
-		srcs/algo.c\
-		srcs/algo_utils.c\
-		srcs/index.c\
-		srcs/quick_sort3.c\
-		srcs/median.c\
-		srcs/stack_sort_a.c\
-		srcs/stack_sort_b.c\
-		srcs/rotate_stack.c
+		srcs/stack_utils/stack_utils.c\
+		srcs/operations/swap.c\
+		srcs/operations/push.c\
+		srcs/operations/rotate.c\
+		srcs/operations/revrot.c\
+		srcs/algo/algo.c\
+		srcs/algo/algo_utils.c\
+		srcs/algo/index.c\
+		srcs/algo/quick_sort3.c\
+		srcs/algo/median.c\
+		srcs/algo/stack_sort_a.c\
+		srcs/algo/stack_sort_b.c\
+		srcs/algo/rotate_stack.c\
+		srcs/algo/next_pivot.c
+
 
 		
 IFLAGS = -I includes/

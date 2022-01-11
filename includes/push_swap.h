@@ -46,17 +46,15 @@ void	__sb(t_data *data);
 void	__ss_a(t_data *data);
 void	__ss_b(t_data *data);
 void	__ss(t_data *data);
-void	__stack_add_front(t_stack **alst, t_stack *new);
 void	__pb(t_data *data);
 void	__pa(t_data *data);
 void	__ra(t_data *data);
 void	__rb(t_data *data);
 void	__rr(t_data *data);
-void	__stackadd_back(t_stack **alst, t_stack *new);
-void	__size_stack_ab(t_data *data);
 void	__rra(t_data *data);
 void	__rrb(t_data *data);
 void	__rrr(t_data *data);
+
 // parsing 
 int		__atol(const char *nb, t_data *data);
 void	__parsing(char **input, t_data *data);
@@ -70,9 +68,12 @@ void stack_is_sort(t_data *data);
 int __tmp_sort(t_data *data);
 int __find_next_pivot(t_data *data);
 void __size_stack_pivot(t_data *data);
+void	__stack_add_front(t_stack **alst, t_stack *new);
+void	__stackadd_back(t_stack **alst, t_stack *new);
+void	__size_stack_ab(t_data *data);
+
 
 //algo
-
 int		__algo(t_data *data);
 int		__find_pivot_ab(t_data *data);
 int		__something_push_a(t_stack *stack, int pivot);
@@ -86,5 +87,7 @@ void	print_pivot(t_stack *stack_a);
 int		__size_stack(t_stack *stack);
 void	__quick_sort_b(t_data *data);
 void	__rotate_stack_a(t_data *data);
+int		__next_pivot(t_stack *stack);
+
 
 #endif 

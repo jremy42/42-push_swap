@@ -15,12 +15,18 @@
 void	__quick_sort_b(t_data *data)
 {
 	int len;
-	int pivot;
-	
-	pivot = __find_next_pivot(data);
+	int pivot;	
+	pivot = __next_pivot(data->b);
 	__size_stack_ab(data);
 	len = 0;
 	__stack_is_sort_b(data);
+	
+	if (pivot == 0)
+	{
+		__pa(data);
+		return;
+	}
+	/*
 	if (data->size_b < 4 || data->b->sort == 2)
 	{
 		if (data->size_b == 2)
@@ -28,9 +34,10 @@ void	__quick_sort_b(t_data *data)
 		__quick_sort_last_b(data);
 		return;
 	}
-	//printf("pivot =%d size_b = %d\n",pivot,data->size_b);
-
-	while (__something_push_b(data->b, pivot) != -1 && data->b->sort != 2)
+	*/
+	printf("pivot =%d\n",pivot);
+	print_list(data->a,data->b);
+	while (__something_push_b(data->b, pivot) != -1 && pivot != 0)
 	{
 		if (data->b->nb >= pivot)
 		{
@@ -47,7 +54,9 @@ void	__quick_sort_b(t_data *data)
 	}
 	if (__something_push_b(data->b, pivot) == -1 && len > 0 )
 		__rra(data);
+	
 	__quick_sort_b(data);
+	return ;
 }
 
 void	__quick_sort_a(t_data *data)
@@ -91,9 +100,9 @@ int __algo(t_data *data)
 	////printf("int min = %d et int max =%d\n",data->min, data->max);
 	stack_is_sort(data);
 	__quick_sort_a(data);
-	stack_is_sort(data);
-	__stack_is_sort_a(data);
-	__stack_is_sort_b(data);
+	//stack_is_sort(data);
+	//__stack_is_sort_a(data);
+	//__stack_is_sort_b(data);
 	print_list(data->a,data->b);
 	return (0);
 }
