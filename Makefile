@@ -19,6 +19,7 @@ SRC = srcs/parsing/atol.c \
 		srcs/algo/rotate_stack.c\
 		srcs/algo/insert.c\
 		srcs/algo/cost_calculatore.c\
+		srcs/algo/algo2_utils.c\
 		srcs/algo/next_pivot.c
 
 

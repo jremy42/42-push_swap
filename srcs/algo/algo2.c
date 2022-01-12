@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 08:13:51 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/12 09:53:15 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,26 +60,6 @@ void	__first_sort_a(t_data *data, int pivot)
 	__first_sort_b(data);
 }
 
-
-
-int	__find_min(t_stack *stack)
-{
-	t_stack *tmp;
-	int		min;
-	
-	
-	tmp = stack;
-	min = tmp->index;
-	while (tmp != NULL && tmp->sort != 2)
-	{
-		if(tmp->index < min)
-			min = tmp->index;
-		tmp = tmp->next;
-	}
-	return (min);
-}
-
-
 void	__second_sort_a(t_data *data)
 {
 	int next_index;
@@ -122,14 +102,20 @@ int __algo2(t_data *data)
 	__index(data);
 	pivot = __find_first_pivot(data);
 	__first_sort_a(data, pivot);
-	__repush_a(data, __first_insert(data, 0));
-
-	while(data->a->sort != 2)
+	printf("algo2\n");
+	print_list(data->a, data->b);
+	__repush_a(data, __first_insert(data, 0,__find_max(data->b)));	
+	while(data->a->index != 0)
 	{
-		__repush_a(data,__first_insert(data,__find_min(data->b)));
+		__repush_a(data,__first_insert(data,__find_min(data->b),__find_max(data->b)));
+		print_list(data->a, data->b);
 		__second_sort_a(data);
-		__repush_a(data,__first_insert(data,__find_min(data->b)));
-		__first_insert(data,__find_min(data->b));
+		print_list(data->a, data->b);
+		__repush_a(data,__first_insert(data,__find_min(data->b),__find_max(data->b)));
+		print_list(data->a, data->b);
+		__first_insert(data,__find_min(data->b), __find_max(data->b));
+		while (data->a->index != 0)
+			__ra(data);
 	}
 	print_list(data->a, data->b);
 	print_cmd_lst(data->cmd);	

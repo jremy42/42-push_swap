@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 09:16:07 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 10:42:21 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/12 09:14:01 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,5 @@ int __cost_calculatore(t_stack *stack,int to_find)
 	else
 		return (0);
 }
+
+

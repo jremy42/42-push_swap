@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 07:51:16 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/12 09:21:41 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,10 @@ int		is_present(int nb, t_stack *stack);
 // utils
 void	print_stack(t_stack *stack_a);
 void	print_list(t_stack *stack_a, t_stack *stack_b);
-void stack_is_sort(t_data *data);
-int __tmp_sort(t_data *data);
-int __find_next_pivot(t_data *data);
-void __size_stack_pivot(t_data *data);
+void	stack_is_sort(t_data *data);
+int		__tmp_sort(t_data *data);
+int		__find_next_pivot(t_data *data);
+void	__size_stack_pivot(t_data *data);
 void	__stack_add_front(t_stack **alst, t_stack *new);
 void	__stackadd_back(t_stack **alst, t_stack *new);
 void	__size_stack_ab(t_data *data);
@@ -116,11 +116,13 @@ int		__pivot_size(t_stack *stack);
 
 //algo2
 int		__algo2(t_data *data);
-int		__first_insert(t_data *data, int last_index);
+int		__first_insert(t_data *data, int last_index, int max_index);
 int		__cost_calculatore(t_stack *stack,int to_find);
 int		__next_value(t_stack *stack, int last_index);
 void 	__repush_a(t_data *data, int next_index);
-void	__hight_list_check(t_data *data);
+int		__find_max(t_stack *stack);
+int		__find_min(t_stack *stack);
+int		__cost_index(t_stack *stack, int next_index, int max_index);
 
 
 #endif 
