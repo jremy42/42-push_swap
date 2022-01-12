@@ -7,6 +7,8 @@ SRC = srcs/parsing/atol.c \
 		srcs/operations/push.c\
 		srcs/operations/rotate.c\
 		srcs/operations/revrot.c\
+		srcs/operations/list_op.c\
+		srcs/algo/algo2.c\
 		srcs/algo/algo.c\
 		srcs/algo/algo_utils.c\
 		srcs/algo/index.c\
@@ -15,6 +17,8 @@ SRC = srcs/parsing/atol.c \
 		srcs/algo/stack_sort_a.c\
 		srcs/algo/stack_sort_b.c\
 		srcs/algo/rotate_stack.c\
+		srcs/algo/insert.c\
+		srcs/algo/cost_calculatore.c\
 		srcs/algo/next_pivot.c
 
 

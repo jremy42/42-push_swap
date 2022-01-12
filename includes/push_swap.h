@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/11 17:48:43 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/12 07:51:16 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,18 @@
 # include <stdlib.h>
 # include <limits.h>
 # include "../libft/libft.h"
+# define PA 0
+# define PB 1
+# define RRA 2
+# define RRB 3
+# define RA 4
+# define RB 5
+# define SA 6
+# define SB 7
+# define RRR 8
+# define RR 9
+# define SS 10
+# define PIVOT 50
 
 typedef struct s_stack
 {
@@ -27,6 +39,12 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
+typedef struct s_cmd
+{
+	int				cmd;
+	struct s_cmd	*next;
+}	t_cmd;
+
 typedef struct s_data
 {
 	int size_a;
@@ -36,6 +54,7 @@ typedef struct s_data
 	int	min;
 	int	max;
 	t_stack *median;
+	t_cmd *cmd;
 	t_stack	*a;
 	t_stack	*b;
 }	t_data;
@@ -54,6 +73,9 @@ void	__rr(t_data *data);
 void	__rra(t_data *data);
 void	__rrb(t_data *data);
 void	__rrr(t_data *data);
+void __insert_cmd(t_data *data,int op);
+void	__cmdadd_back(t_cmd **alst, t_cmd *new);
+t_cmd	*__cmdnew(int cmd);
 
 // parsing 
 int		__atol(const char *nb, t_data *data);
@@ -71,6 +93,8 @@ void __size_stack_pivot(t_data *data);
 void	__stack_add_front(t_stack **alst, t_stack *new);
 void	__stackadd_back(t_stack **alst, t_stack *new);
 void	__size_stack_ab(t_data *data);
+void	print_cmd(int cmd);
+void	print_cmd_lst(t_cmd *cmd);
 
 
 //algo
@@ -90,6 +114,13 @@ void	__rotate_stack_a(t_data *data);
 int		__next_pivot(t_stack *stack);
 int		__pivot_size(t_stack *stack);
 
+//algo2
+int		__algo2(t_data *data);
+int		__first_insert(t_data *data, int last_index);
+int		__cost_calculatore(t_stack *stack,int to_find);
+int		__next_value(t_stack *stack, int last_index);
+void 	__repush_a(t_data *data, int next_index);
+void	__hight_list_check(t_data *data);
 
 
 #endif 

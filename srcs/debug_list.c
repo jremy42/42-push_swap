@@ -6,11 +6,13 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 10:03:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/11 16:29:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/12 06:26:44 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+
 
 void	print_list(t_stack *stack_a, t_stack *stack_b)
 {
