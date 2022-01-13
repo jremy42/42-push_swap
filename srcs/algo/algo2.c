@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 10:29:58 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 12:55:50 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,14 +87,51 @@ void	__second_sort_a(t_data *data)
 	__first_sort_b(data);	
 }
 
-int __find_first_pivot(t_data *data)
+int __nb_sort(t_stack *stack)
 {
+	int sort;
 	t_stack *tmp;
 
+	tmp = stack;
+	sort = 0;
+	while (tmp != NULL)
+	{
+		if (tmp->sort == 2)
+			sort++;
+		tmp = tmp->next;
+	}
+	return(sort);
+}
+
+int __size_stack_piv(t_stack *stack)
+{
+	t_stack *tmp;
+	int		a;
+
+	a = 0;	
+	tmp = stack;
+	while (tmp != NULL && tmp->sort != 2)
+	{
+		tmp = tmp->next;
+		a++;
+	}
+	return (a);
+}
+
+int __find_first_piv(t_data *data)
+{
+	t_stack *tmp;
+	int	size;
+	int next_pivot;
+	
+	size = __size_stack_piv(data->a);
+	printf("size = %d\n",size);
+	next_pivot = size/PIVOT;
+	next_pivot += __nb_sort(data->a);
 	tmp = data->a;
 	while (tmp != NULL)
 	{
-		if(tmp->index == PIVOT)
+		if(tmp->index == next_pivot)
 			return (tmp->nb);
 		tmp = tmp->next;
 	}
@@ -104,17 +141,22 @@ int __find_first_pivot(t_data *data)
 int __algo2(t_data *data)
 {
 	int		pivot;
+	int ex;
 
+	ex = 0;
 	__index(data);
-	while (1)
-	{
-	pivot = __find_first_pivot(data);
-	__first_sort_a(data, pivot);
-	if (__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b))) == 1)
-		break ;
-	}
 
-		
+	// changer pivot en chunks
+	git 
+	print_list(data->a, data->b);
+	pivot = __find_first_piv(data);
+	__first_sort_a(data, pivot);
+	print_list(data->a, data->b);
+	__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b)));
+	print_list(data->a, data->b);
+	__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b)));
+	print_list(data->a, data->b);
+	exit(0);
 	while (data->a->index != 0)
 			__ra(data);
 	print_list(data->a, data->b);

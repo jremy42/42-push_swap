@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 09:58:42 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 11:43:49 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define RRR 8
 # define RR 9
 # define SS 10
-# define PIVOT 50
+# define PIVOT 2
 
 typedef struct s_stack
 {
