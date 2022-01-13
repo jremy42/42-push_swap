@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insert.c                                           :+:      :+:    :+:   */
+/*   insert2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 17:11:07 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 17:12:01 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*
+
 int __stack_is_sort(t_data *data)
 {
 	t_stack *tmp;
@@ -48,7 +48,7 @@ int __repush_a(t_data *data, int next_index)
 	return (0);
 }
 
-int __first_insert_min(t_data *data, int next_index)
+int __insert_min(t_data *data, int next_index)
 {
 		int rotate;
 
@@ -61,7 +61,6 @@ int __first_insert_min(t_data *data, int next_index)
 		data->b->sort = 2;
 		__pa(data);
 		__ra(data);
-		//__hight_list_check(data);
 	}
 	else 
 	{
@@ -70,13 +69,12 @@ int __first_insert_min(t_data *data, int next_index)
 		data->b->sort = 2;
 		__pa(data);
 		__ra(data);
-		//__hight_list_check(data);
 	}
 
 		return (1);
 }
 
-int __first_insert_max(t_data *data, int max_index)
+int __insert_max(t_data *data, int max_index)
 {
 		int rotate;
 
@@ -88,7 +86,6 @@ int __first_insert_max(t_data *data, int max_index)
 			__rb(data);
 		data->b->sort = 2;
 		__pa(data);
-		//__hight_list_check(data);
 	}
 	else 
 	{
@@ -96,13 +93,12 @@ int __first_insert_max(t_data *data, int max_index)
 			__rrb(data);
 		data->b->sort = 2;
 		__pa(data);
-		//__hight_list_check(data);
 	}
 
 		return (1);
 }
 
-int	__first_insert(t_data *data, int next_index, int max_index)
+int	__insert(t_data *data, int next_index, int max_index)
 {
 	int min;
 	int max;
@@ -111,13 +107,9 @@ int	__first_insert(t_data *data, int next_index, int max_index)
 		return (next_index);
 	min = 0;
 	max = 0;
-	//write(1,"NTM",3);
-	//printf("next_index = %d et max_index = %d",next_index, max_index);
 	if (__cost_index(data->b, next_index, max_index) == 1)
-		min = __first_insert_min(data, next_index);
+		min = __insert_min(data, next_index);
 	else
-		max = __first_insert_max(data, max_index);
-	print_list(data->a,data->b);	
-	return (__first_insert(data, next_index + min, max_index - max));
+		max = __insert_max(data, max_index);	
+	return (__insert(data, next_index + min, max_index - max));
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:43:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 11:44:24 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 16:35:22 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	main(int ac, char **av)
 	//__index(&data);
 	//test = __next_pivot(data.a);
 	//printf("next pivot = %d\n",test);
-	print_stack(data.a);
-	__algo2(&data);
+	//print_stack(data.a);
+	__algo3(&data);
 }

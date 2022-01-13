@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 12:55:50 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 16:18:17 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	__first_sort_a(t_data *data, int pivot)
 	int next_index;
 
 	next_index = __find_min(data->a);
+	//printf("pivot = %d\n",pivot);
 	size = __pivot_size(data->a);
 	__size_stack_ab(data);
 	len = 0;
@@ -72,6 +73,8 @@ void	__first_sort_a(t_data *data, int pivot)
 		}
 		len++;
 	}
+	printf("=== end first a ======\n");
+	//print_list(data->a, data->b);
 	__first_sort_b(data);
 }
 
@@ -118,48 +121,67 @@ int __size_stack_piv(t_stack *stack)
 	return (a);
 }
 
-int __find_first_piv(t_data *data)
+int __find_pivot_chunks(t_data *data, int chunks)
 {
 	t_stack *tmp;
-	int	size;
-	int next_pivot;
 	
-	size = __size_stack_piv(data->a);
-	printf("size = %d\n",size);
-	next_pivot = size/PIVOT;
-	next_pivot += __nb_sort(data->a);
 	tmp = data->a;
 	while (tmp != NULL)
 	{
-		if(tmp->index == next_pivot)
+		if(tmp->index == chunks - 1)
 			return (tmp->nb);
 		tmp = tmp->next;
 	}
 	return (0);
 }
 
+int __size_chunks(t_data *data)
+{
+	t_stack *tmp;
+	int size;
+	int i;
+
+	tmp = data->a;
+	i = 0;	
+	while (tmp != NULL)
+	{
+		i++;
+		tmp = tmp->next;
+	}
+	
+	data->size_final = i;
+	size = i / NB_CHUNKS;
+	return (size);
+}
+
+/*
 int __algo2(t_data *data)
 {
 	int		pivot;
-	int ex;
-
-	ex = 0;
+	int		chunks;
+	int		min;
+	
 	__index(data);
-
-	// changer pivot en chunks
-	git 
+	chunks = __size_chunks(data);
+	min = __find_mind(data->a);
+	while (chunks <= data->size_final)
+	{
+		//printf("===========================chunks = %d=====================\n",chunks);
+		pivot = __find_pivot_chunks(data, chunks);
+		//print_list(data->a, data->b);
+		__first_sort_a(data, pivot);
+		//print_list(data->a, data->b);
+		__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b)));
+		//print_list(data->a, data->b);
+		__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b)));
+		//print_list(data->a, data->b);
+		chunks += chunks;
+	}
 	print_list(data->a, data->b);
-	pivot = __find_first_piv(data);
-	__first_sort_a(data, pivot);
-	print_list(data->a, data->b);
-	__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b)));
-	print_list(data->a, data->b);
-	__repush_a(data, __first_insert(data, __find_min(data->b),__find_max(data->b)));
-	print_list(data->a, data->b);
-	exit(0);
 	while (data->a->index != 0)
 			__ra(data);
+	//print_cmd_lst(data->cmd);
 	print_list(data->a, data->b);
-	print_cmd_lst(data->cmd);	
 	return (0);
 }
+*/
