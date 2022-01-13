@@ -6,16 +6,34 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 09:40:07 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 10:03:20 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-void __repush_a(t_data *data, int next_index)
+int __stack_is_sort(t_data *data)
 {
-	//printf("next_index = %d", next_index);
+	t_stack *tmp;
+	int index;
+
+	index = 0;
+	tmp = data->a;
+	if (data->a->index != 0)
+		return (0);
+	while (tmp != NULL)
+	{
+		if (tmp->index != index)
+			return (0);
+		index++;
+		tmp = tmp->next;
+	}
+	return (1);
+}
+int __repush_a(t_data *data, int next_index)
+{
+	if (__stack_is_sort(data) == 1)
+		return (1);
 	while(data->a->sort == 2)
 			__ra(data);
 	while(data->a->sort == 1)
@@ -26,9 +44,8 @@ void __repush_a(t_data *data, int next_index)
 			next_index++;
 		}
 		__pb(data);
-		//__hight_list_check(data);
 	}
-	return ;
+	return (0);
 }
 
 int __first_insert_min(t_data *data, int next_index)

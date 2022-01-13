@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 09:21:41 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 09:58:42 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ int		__algo2(t_data *data);
 int		__first_insert(t_data *data, int last_index, int max_index);
 int		__cost_calculatore(t_stack *stack,int to_find);
 int		__next_value(t_stack *stack, int last_index);
-void 	__repush_a(t_data *data, int next_index);
+int 	__repush_a(t_data *data, int next_index);
 int		__find_max(t_stack *stack);
 int		__find_min(t_stack *stack);
 int		__cost_index(t_stack *stack, int next_index, int max_index);
