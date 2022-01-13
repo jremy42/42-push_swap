@@ -1,81 +1,1197 @@
-ra
-pa
-ra
-ra
-ra
-pa
-pa
-pa
-ra
-rra
-rra
-rra
-rra
-rra
-rb
-rb
-rb
-pa
-pa
-pa
-pa
-ra
-ra
-ra
-pa
-pa
-ra
-ra
-pa
-pa
-pa
-pa
-rra
-rb
-rb
-rb
-pa
-pa
-ra
-pa
-pa
-ra
-ra
-pa
-pa
-ra
 find min
 min = 0
 find min
 min = 0
-pivot = 3
+pivot = 25
 find min
 min = 0
 find max
-max = 2
+max = 24
+stack_a           |           stack_b 
+ 11 | index = 10 | sort = 2 | 
+ 12 | index = 11 | sort = 2 | 
+ 13 | index = 12 | sort = 2 | 
+ 14 | index = 13 | sort = 2 | 
+ 15 | index = 14 | sort = 2 | 
+ 16 | index = 15 | sort = 2 | 
+ 17 | index = 16 | sort = 2 | 
+ 18 | index = 17 | sort = 2 | 
+ 19 | index = 18 | sort = 2 | 
+ 20 | index = 19 | sort = 2 | 
+ 21 | index = 20 | sort = 2 | 
+ 22 | index = 21 | sort = 2 | 
+ 23 | index = 22 | sort = 2 | 
+ 24 | index = 23 | sort = 2 | 
+ 25 | index = 24 | sort = 2 | 
+ 45 | index = 43 | sort = 1 | 
+ 48 | index = 46 | sort = 1 | 
+ 31 | index = 30 | sort = 1 | 
+ 46 | index = 44 | sort = 1 | 
+ 36 | index = 34 | sort = 1 | 
+ 38 | index = 36 | sort = 1 | 
+ 28 | index = 27 | sort = 1 | 
+ 50 | index = 48 | sort = 1 | 
+ 32 | index = 31 | sort = 1 | 
+ 40 | index = 38 | sort = 1 | 
+ 29 | index = 28 | sort = 1 | 
+ 30 | index = 29 | sort = 1 | 
+ 43 | index = 41 | sort = 1 | 
+ 39 | index = 37 | sort = 1 | 
+ 47 | index = 45 | sort = 1 | 
+ 41 | index = 39 | sort = 1 | 
+ 33 | index = 32 | sort = 1 | 
+ 34 | index = 33 | sort = 1 | 
+ 26 | index = 25 | sort = 1 | 
+ 44 | index = 42 | sort = 1 | 
+ 37 | index = 35 | sort = 1 | 
+ 27 | index = 26 | sort = 1 | 
+ 42 | index = 40 | sort = 1 | 
+ 49 | index = 47 | sort = 1 | 
+ 52 | index = 50 | sort = 0 | 
+ 66 | index = 64 | sort = 0 | 
+ 68 | index = 66 | sort = 0 | 
+ 97 | index = 95 | sort = 0 | 
+ 56 | index = 54 | sort = 0 | 
+ 61 | index = 59 | sort = 0 | 
+ 63 | index = 61 | sort = 0 | 
+ 85 | index = 83 | sort = 0 | 
+ 84 | index = 82 | sort = 0 | 
+ 60 | index = 58 | sort = 0 | 
+ 81 | index = 79 | sort = 0 | 
+ 54 | index = 52 | sort = 0 | 
+ 67 | index = 65 | sort = 0 | 
+ 83 | index = 81 | sort = 0 | 
+ 93 | index = 91 | sort = 0 | 
+ 89 | index = 87 | sort = 0 | 
+ 53 | index = 51 | sort = 0 | 
+ 70 | index = 68 | sort = 0 | 
+ 95 | index = 93 | sort = 0 | 
+ 98 | index = 96 | sort = 0 | 
+ 69 | index = 67 | sort = 0 | 
+ 94 | index = 92 | sort = 0 | 
+ 71 | index = 69 | sort = 0 | 
+ 73 | index = 71 | sort = 0 | 
+ 57 | index = 55 | sort = 0 | 
+ 51 | index = 49 | sort = 0 | 
+ 55 | index = 53 | sort = 0 | 
+ 75 | index = 73 | sort = 0 | 
+ 92 | index = 90 | sort = 0 | 
+ 96 | index = 94 | sort = 0 | 
+ 82 | index = 80 | sort = 0 | 
+ 65 | index = 63 | sort = 0 | 
+ 78 | index = 76 | sort = 0 | 
+ 80 | index = 78 | sort = 0 | 
+ 64 | index = 62 | sort = 0 | 
+ 76 | index = 74 | sort = 0 | 
+ 77 | index = 75 | sort = 0 | 
+ 58 | index = 56 | sort = 0 | 
+ 59 | index = 57 | sort = 0 | 
+ 86 | index = 84 | sort = 0 | 
+ 62 | index = 60 | sort = 0 | 
+ 90 | index = 88 | sort = 0 | 
+ 88 | index = 86 | sort = 0 | 
+ 100 | index = 98 | sort = 0 | 
+ 72 | index = 70 | sort = 0 | 
+ 87 | index = 85 | sort = 0 | 
+ 99 | index = 97 | sort = 0 | 
+ 79 | index = 77 | sort = 0 | 
+ 91 | index = 89 | sort = 0 | 
+ 74 | index = 72 | sort = 0 | 
+ 1 | index = 0 | sort = 2 | 
+ 2 | index = 1 | sort = 2 | 
+ 3 | index = 2 | sort = 2 | 
+ 4 | index = 3 | sort = 2 | 
+ 5 | index = 4 | sort = 2 | 
+ 6 | index = 5 | sort = 2 | 
+ 7 | index = 6 | sort = 2 | 
+ 8 | index = 7 | sort = 2 | 
+ 9 | index = 8 | sort = 2 | 
+ 10 | index = 9 | sort = 2 | 
+next_index = 10
+avant second insert
+stack_a           |           stack_b 
+ 52 | index = 50 | sort = 0 |   49  | index = 47 | sort = 1
+ 66 | index = 64 | sort = 0 |   42  | index = 40 | sort = 1
+ 68 | index = 66 | sort = 0 |   37  | index = 35 | sort = 1
+ 97 | index = 95 | sort = 0 |   44  | index = 42 | sort = 1
+ 56 | index = 54 | sort = 0 |   34  | index = 33 | sort = 1
+ 61 | index = 59 | sort = 0 |   33  | index = 32 | sort = 1
+ 63 | index = 61 | sort = 0 |   41  | index = 39 | sort = 1
+ 85 | index = 83 | sort = 0 |   47  | index = 45 | sort = 1
+ 84 | index = 82 | sort = 0 |   39  | index = 37 | sort = 1
+ 60 | index = 58 | sort = 0 |   43  | index = 41 | sort = 1
+ 81 | index = 79 | sort = 0 |   30  | index = 29 | sort = 1
+ 54 | index = 52 | sort = 0 |   29  | index = 28 | sort = 1
+ 67 | index = 65 | sort = 0 |   40  | index = 38 | sort = 1
+ 83 | index = 81 | sort = 0 |   32  | index = 31 | sort = 1
+ 93 | index = 91 | sort = 0 |   50  | index = 48 | sort = 1
+ 89 | index = 87 | sort = 0 |   28  | index = 27 | sort = 1
+ 53 | index = 51 | sort = 0 |   38  | index = 36 | sort = 1
+ 70 | index = 68 | sort = 0 |   36  | index = 34 | sort = 1
+ 95 | index = 93 | sort = 0 |   46  | index = 44 | sort = 1
+ 98 | index = 96 | sort = 0 |   31  | index = 30 | sort = 1
+ 69 | index = 67 | sort = 0 |   48  | index = 46 | sort = 1
+ 94 | index = 92 | sort = 0 |   45  | index = 43 | sort = 1
+ 71 | index = 69 | sort = 0 | 
+ 73 | index = 71 | sort = 0 | 
+ 57 | index = 55 | sort = 0 | 
+ 51 | index = 49 | sort = 0 | 
+ 55 | index = 53 | sort = 0 | 
+ 75 | index = 73 | sort = 0 | 
+ 92 | index = 90 | sort = 0 | 
+ 96 | index = 94 | sort = 0 | 
+ 82 | index = 80 | sort = 0 | 
+ 65 | index = 63 | sort = 0 | 
+ 78 | index = 76 | sort = 0 | 
+ 80 | index = 78 | sort = 0 | 
+ 64 | index = 62 | sort = 0 | 
+ 76 | index = 74 | sort = 0 | 
+ 77 | index = 75 | sort = 0 | 
+ 58 | index = 56 | sort = 0 | 
+ 59 | index = 57 | sort = 0 | 
+ 86 | index = 84 | sort = 0 | 
+ 62 | index = 60 | sort = 0 | 
+ 90 | index = 88 | sort = 0 | 
+ 88 | index = 86 | sort = 0 | 
+ 100 | index = 98 | sort = 0 | 
+ 72 | index = 70 | sort = 0 | 
+ 87 | index = 85 | sort = 0 | 
+ 99 | index = 97 | sort = 0 | 
+ 79 | index = 77 | sort = 0 | 
+ 91 | index = 89 | sort = 0 | 
+ 74 | index = 72 | sort = 0 | 
+ 1 | index = 0 | sort = 2 | 
+ 2 | index = 1 | sort = 2 | 
+ 3 | index = 2 | sort = 2 | 
+ 4 | index = 3 | sort = 2 | 
+ 5 | index = 4 | sort = 2 | 
+ 6 | index = 5 | sort = 2 | 
+ 7 | index = 6 | sort = 2 | 
+ 8 | index = 7 | sort = 2 | 
+ 9 | index = 8 | sort = 2 | 
+ 10 | index = 9 | sort = 2 | 
+ 11 | index = 10 | sort = 2 | 
+ 12 | index = 11 | sort = 2 | 
+ 13 | index = 12 | sort = 2 | 
+ 14 | index = 13 | sort = 2 | 
+ 15 | index = 14 | sort = 2 | 
+ 16 | index = 15 | sort = 2 | 
+ 17 | index = 16 | sort = 2 | 
+ 18 | index = 17 | sort = 2 | 
+ 19 | index = 18 | sort = 2 | 
+ 20 | index = 19 | sort = 2 | 
+ 21 | index = 20 | sort = 2 | 
+ 22 | index = 21 | sort = 2 | 
+ 23 | index = 22 | sort = 2 | 
+ 24 | index = 23 | sort = 2 | 
+ 25 | index = 24 | sort = 2 | 
+ 26 | index = 25 | sort = 2 | 
+ 27 | index = 26 | sort = 2 | 
 find min
-min = 3
+min = 27
 find max
-max = 3
+max = 48
 find min
-min = 4
-pivot = 43
+min = 49
+pivot = 77
 find min
-min = 4
+min = 50
 find max
-max = 6
+max = 75
+stack_a           |           stack_b 
+ 64 | index = 62 | sort = 2 | 
+ 65 | index = 63 | sort = 2 | 
+ 66 | index = 64 | sort = 2 | 
+ 67 | index = 65 | sort = 2 | 
+ 68 | index = 66 | sort = 2 | 
+ 69 | index = 67 | sort = 2 | 
+ 70 | index = 68 | sort = 2 | 
+ 71 | index = 69 | sort = 2 | 
+ 72 | index = 70 | sort = 2 | 
+ 73 | index = 71 | sort = 2 | 
+ 74 | index = 72 | sort = 2 | 
+ 75 | index = 73 | sort = 2 | 
+ 76 | index = 74 | sort = 2 | 
+ 77 | index = 75 | sort = 2 | 
+ 97 | index = 95 | sort = 1 | 
+ 85 | index = 83 | sort = 1 | 
+ 84 | index = 82 | sort = 1 | 
+ 81 | index = 79 | sort = 1 | 
+ 83 | index = 81 | sort = 1 | 
+ 93 | index = 91 | sort = 1 | 
+ 89 | index = 87 | sort = 1 | 
+ 95 | index = 93 | sort = 1 | 
+ 98 | index = 96 | sort = 1 | 
+ 94 | index = 92 | sort = 1 | 
+ 92 | index = 90 | sort = 1 | 
+ 96 | index = 94 | sort = 1 | 
+ 82 | index = 80 | sort = 1 | 
+ 78 | index = 76 | sort = 1 | 
+ 80 | index = 78 | sort = 1 | 
+ 86 | index = 84 | sort = 1 | 
+ 90 | index = 88 | sort = 1 | 
+ 88 | index = 86 | sort = 1 | 
+ 87 | index = 85 | sort = 1 | 
+ 99 | index = 97 | sort = 1 | 
+ 79 | index = 77 | sort = 1 | 
+ 91 | index = 89 | sort = 1 | 
+ 100 | index = 98 | sort = 0 | 
+ 1 | index = 0 | sort = 2 | 
+ 2 | index = 1 | sort = 2 | 
+ 3 | index = 2 | sort = 2 | 
+ 4 | index = 3 | sort = 2 | 
+ 5 | index = 4 | sort = 2 | 
+ 6 | index = 5 | sort = 2 | 
+ 7 | index = 6 | sort = 2 | 
+ 8 | index = 7 | sort = 2 | 
+ 9 | index = 8 | sort = 2 | 
+ 10 | index = 9 | sort = 2 | 
+ 11 | index = 10 | sort = 2 | 
+ 12 | index = 11 | sort = 2 | 
+ 13 | index = 12 | sort = 2 | 
+ 14 | index = 13 | sort = 2 | 
+ 15 | index = 14 | sort = 2 | 
+ 16 | index = 15 | sort = 2 | 
+ 17 | index = 16 | sort = 2 | 
+ 18 | index = 17 | sort = 2 | 
+ 19 | index = 18 | sort = 2 | 
+ 20 | index = 19 | sort = 2 | 
+ 21 | index = 20 | sort = 2 | 
+ 22 | index = 21 | sort = 2 | 
+ 23 | index = 22 | sort = 2 | 
+ 24 | index = 23 | sort = 2 | 
+ 25 | index = 24 | sort = 2 | 
+ 26 | index = 25 | sort = 2 | 
+ 27 | index = 26 | sort = 2 | 
+ 28 | index = 27 | sort = 2 | 
+ 29 | index = 28 | sort = 2 | 
+ 30 | index = 29 | sort = 2 | 
+ 31 | index = 30 | sort = 2 | 
+ 32 | index = 31 | sort = 2 | 
+ 33 | index = 32 | sort = 2 | 
+ 34 | index = 33 | sort = 2 | 
+ 36 | index = 34 | sort = 2 | 
+ 37 | index = 35 | sort = 2 | 
+ 38 | index = 36 | sort = 2 | 
+ 39 | index = 37 | sort = 2 | 
+ 40 | index = 38 | sort = 2 | 
+ 41 | index = 39 | sort = 2 | 
+ 42 | index = 40 | sort = 2 | 
+ 43 | index = 41 | sort = 2 | 
+ 44 | index = 42 | sort = 2 | 
+ 45 | index = 43 | sort = 2 | 
+ 46 | index = 44 | sort = 2 | 
+ 47 | index = 45 | sort = 2 | 
+ 48 | index = 46 | sort = 2 | 
+ 49 | index = 47 | sort = 2 | 
+ 50 | index = 48 | sort = 2 | 
+ 51 | index = 49 | sort = 2 | 
+ 52 | index = 50 | sort = 2 | 
+ 53 | index = 51 | sort = 2 | 
+ 54 | index = 52 | sort = 2 | 
+ 55 | index = 53 | sort = 2 | 
+ 56 | index = 54 | sort = 2 | 
+ 57 | index = 55 | sort = 2 | 
+ 58 | index = 56 | sort = 2 | 
+ 59 | index = 57 | sort = 2 | 
+ 60 | index = 58 | sort = 2 | 
+ 61 | index = 59 | sort = 2 | 
+ 62 | index = 60 | sort = 2 | 
+ 63 | index = 61 | sort = 2 | 
+next_index = 62
+avant second insert
+stack_a           |           stack_b 
+ 100 | index = 98 | sort = 0 |   91  | index = 89 | sort = 1
+ 1 | index = 0 | sort = 2 |   99  | index = 97 | sort = 1
+ 2 | index = 1 | sort = 2 |   87  | index = 85 | sort = 1
+ 3 | index = 2 | sort = 2 |   88  | index = 86 | sort = 1
+ 4 | index = 3 | sort = 2 |   90  | index = 88 | sort = 1
+ 5 | index = 4 | sort = 2 |   86  | index = 84 | sort = 1
+ 6 | index = 5 | sort = 2 |   80  | index = 78 | sort = 1
+ 7 | index = 6 | sort = 2 |   82  | index = 80 | sort = 1
+ 8 | index = 7 | sort = 2 |   96  | index = 94 | sort = 1
+ 9 | index = 8 | sort = 2 |   92  | index = 90 | sort = 1
+ 10 | index = 9 | sort = 2 |   94  | index = 92 | sort = 1
+ 11 | index = 10 | sort = 2 |   98  | index = 96 | sort = 1
+ 12 | index = 11 | sort = 2 |   95  | index = 93 | sort = 1
+ 13 | index = 12 | sort = 2 |   89  | index = 87 | sort = 1
+ 14 | index = 13 | sort = 2 |   93  | index = 91 | sort = 1
+ 15 | index = 14 | sort = 2 |   83  | index = 81 | sort = 1
+ 16 | index = 15 | sort = 2 |   81  | index = 79 | sort = 1
+ 17 | index = 16 | sort = 2 |   84  | index = 82 | sort = 1
+ 18 | index = 17 | sort = 2 |   85  | index = 83 | sort = 1
+ 19 | index = 18 | sort = 2 |   97  | index = 95 | sort = 1
+ 20 | index = 19 | sort = 2 | 
+ 21 | index = 20 | sort = 2 | 
+ 22 | index = 21 | sort = 2 | 
+ 23 | index = 22 | sort = 2 | 
+ 24 | index = 23 | sort = 2 | 
+ 25 | index = 24 | sort = 2 | 
+ 26 | index = 25 | sort = 2 | 
+ 27 | index = 26 | sort = 2 | 
+ 28 | index = 27 | sort = 2 | 
+ 29 | index = 28 | sort = 2 | 
+ 30 | index = 29 | sort = 2 | 
+ 31 | index = 30 | sort = 2 | 
+ 32 | index = 31 | sort = 2 | 
+ 33 | index = 32 | sort = 2 | 
+ 34 | index = 33 | sort = 2 | 
+ 36 | index = 34 | sort = 2 | 
+ 37 | index = 35 | sort = 2 | 
+ 38 | index = 36 | sort = 2 | 
+ 39 | index = 37 | sort = 2 | 
+ 40 | index = 38 | sort = 2 | 
+ 41 | index = 39 | sort = 2 | 
+ 42 | index = 40 | sort = 2 | 
+ 43 | index = 41 | sort = 2 | 
+ 44 | index = 42 | sort = 2 | 
+ 45 | index = 43 | sort = 2 | 
+ 46 | index = 44 | sort = 2 | 
+ 47 | index = 45 | sort = 2 | 
+ 48 | index = 46 | sort = 2 | 
+ 49 | index = 47 | sort = 2 | 
+ 50 | index = 48 | sort = 2 | 
+ 51 | index = 49 | sort = 2 | 
+ 52 | index = 50 | sort = 2 | 
+ 53 | index = 51 | sort = 2 | 
+ 54 | index = 52 | sort = 2 | 
+ 55 | index = 53 | sort = 2 | 
+ 56 | index = 54 | sort = 2 | 
+ 57 | index = 55 | sort = 2 | 
+ 58 | index = 56 | sort = 2 | 
+ 59 | index = 57 | sort = 2 | 
+ 60 | index = 58 | sort = 2 | 
+ 61 | index = 59 | sort = 2 | 
+ 62 | index = 60 | sort = 2 | 
+ 63 | index = 61 | sort = 2 | 
+ 64 | index = 62 | sort = 2 | 
+ 65 | index = 63 | sort = 2 | 
+ 66 | index = 64 | sort = 2 | 
+ 67 | index = 65 | sort = 2 | 
+ 68 | index = 66 | sort = 2 | 
+ 69 | index = 67 | sort = 2 | 
+ 70 | index = 68 | sort = 2 | 
+ 71 | index = 69 | sort = 2 | 
+ 72 | ipa
+ra
+ra
+ra
+ra
+pa
+ra
+pa
+pa
+ra
+ra
+ra
+ra
+pa
+pa
+ra
+ra
+pa
+pa
+ra
+pa
+ra
+pa
+ra
+ra
+pa
+ra
+pa
+pa
+pa
+ra
+ra
+ra
+ra
+ra
+pa
+ra
+pa
+ra
+pa
+ra
+pa
+pa
+ra
+pa
+pa
+pa
+ra
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+ra
+pa
+ra
+ra
+pa
+ra
+ra
+pa
+ra
+ra
+ra
+pa
+ra
+pa
+pa
+pa
+pa
+ra
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+pa
+pa
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rb
+pa
+pa
+rb
+rb
+pa
+rb
+rb
+pa
+pa
+rb
+pa
+rb
+pa
+rb
+rb
+rb
+rb
+pa
+rb
+rb
+pa
+rb
+pa
+rb
+rb
+pa
+pa
+rb
+rb
+rb
+pa
+pa
+pa
+rb
+pa
+rb
+rb
+pa
+pa
+pa
+pa
+pa
+pa
+rb
+pa
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+rrb
+rrb
+rrb
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+pa
+rr
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+ra
+rrb
+rrb
+pa
+rr
+rb
+rb
+rb
+rb
+pa
+rb
+rb
+rb
+rb
+pa
+ra
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+ra
+pa
+rrb
+rrb
+rrb
+pa
+rb
+rb
+rb
+rb
+pa
+rb
+rb
+pa
+ra
+rrb
+rrb
+pa
+rr
+rb
+rb
+rb
+pa
+pa
+rr
+pa
+rr
+pa
+rb
+rb
+pa
+ra
+pa
+rb
+pa
+rrb
+pa
+pa
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+ra
+pa
+pa
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pa
+ra
+rrb
+pa
+rrb
+rrb
+rrb
+pa
+ra
+rrb
+pa
+rr
+rb
+rb
+rb
+rb
+pa
+rr
+rb
+pa
+rrb
+rrb
+pa
+rrb
+rrb
+rrb
+rrb
+pa
+ra
+rrb
+rrb
+rrb
+rrb
+pa
+rrb
+rrb
+pa
+ra
+rrb
+pa
+ra
+rrb
+rrb
+rrb
+rrb
+rrb
+pa
+pa
+rrb
+pa
+rr
+pa
+ra
+pa
+rb
+rb
+pa
+rb
+pa
+ra
+pa
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+rra
+rb
+pa
+pa
+pa
+pa
+rb
+pa
+pa
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+pa
+pa
+rb
+pa
+pa
+pa
+rb
+rb
+rb
+rb
+rb
+pa
+rb
+pa
+pa
+rb
+rb
+pa
+pa
+pa
+rb
+rb
+pa
+rb
+pa
+pa
+rb
+rb
+rb
+pa
+rb
+rb
+rb
+rrb
+pa
+rr
+rb
+rb
+rb
+rb
+pa
+pa
+rb
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+rr
+pa
+rr
+rb
+rb
+rb
+rb
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+rr
+pa
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pa
+rrb
+rrb
+rrb
+pa
+ra
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pa
+rb
+pa
+rrb
+pa
+rrb
+pa
+ra
+rrb
+rrb
+rrb
+pa
+ra
+rrb
+pa
+ra
+rrb
+rrb
+rrb
+pa
+rrb
+rrb
+rrb
+pa
+ra
+rrb
+pa
+rb
+pa
+ra
+pa
+pa
+rr
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+pa
+pa
+pa
+pa
+pa
+ra
+pa
+rb
+pa
+rb
+rb
+rb
+rb
+pa
+rr
+rb
+rb
+rb
+pa
+rb
+rb
+rb
+rb
+pa
+rr
+rb
+pa
+rb
+rb
+rb
+rb
+rb
+pa
+ra
+pa
+rb
+rb
+pa
+rrb
+pa
+rb
+pa
+pa
+ra
+pa
+ra
+pa
+ra
+rrb
+rrb
+pa
+rb
+pa
+rb
+rb
+pa
+pa
+ra
+pa
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ndex = 70 | sort = 2 | 
+ 73 | index = 71 | sort = 2 | 
+ 74 | index = 72 | sort = 2 | 
+ 75 | index = 73 | sort = 2 | 
+ 76 | index = 74 | sort = 2 | 
+ 77 | index = 75 | sort = 2 | 
+ 78 | index = 76 | sort = 2 | 
+ 79 | index = 77 | sort = 2 | 
 find min
-min = 7
+min = 78
 find max
-max = 7
+max = 97
 stack_a           |           stack_b 
  1 | index = 0 | sort = 2 | 
  2 | index = 1 | sort = 2 | 
  3 | index = 2 | sort = 2 | 
- 6 | index = 3 | sort = 2 | 
- 12 | index = 4 | sort = 2 | 
- 28 | index = 5 | sort = 2 | 
- 43 | index = 6 | sort = 2 | 
- 56 | index = 7 | sort = 2 | 
- 57 | index = 8 | sort = 0 | 
-operation = 46
+ 4 | index = 3 | sort = 2 | 
+ 5 | index = 4 | sort = 2 | 
+ 6 | index = 5 | sort = 2 | 
+ 7 | index = 6 | sort = 2 | 
+ 8 | index = 7 | sort = 2 | 
+ 9 | index = 8 | sort = 2 | 
+ 10 | index = 9 | sort = 2 | 
+ 11 | index = 10 | sort = 2 | 
+ 12 | index = 11 | sort = 2 | 
+ 13 | index = 12 | sort = 2 | 
+ 14 | index = 13 | sort = 2 | 
+ 15 | index = 14 | sort = 2 | 
+ 16 | index = 15 | sort = 2 | 
+ 17 | index = 16 | sort = 2 | 
+ 18 | index = 17 | sort = 2 | 
+ 19 | index = 18 | sort = 2 | 
+ 20 | index = 19 | sort = 2 | 
+ 21 | index = 20 | sort = 2 | 
+ 22 | index = 21 | sort = 2 | 
+ 23 | index = 22 | sort = 2 | 
+ 24 | index = 23 | sort = 2 | 
+ 25 | index = 24 | sort = 2 | 
+ 26 | index = 25 | sort = 2 | 
+ 27 | index = 26 | sort = 2 | 
+ 28 | index = 27 | sort = 2 | 
+ 29 | index = 28 | sort = 2 | 
+ 30 | index = 29 | sort = 2 | 
+ 31 | index = 30 | sort = 2 | 
+ 32 | index = 31 | sort = 2 | 
+ 33 | index = 32 | sort = 2 | 
+ 34 | index = 33 | sort = 2 | 
+ 36 | index = 34 | sort = 2 | 
+ 37 | index = 35 | sort = 2 | 
+ 38 | index = 36 | sort = 2 | 
+ 39 | index = 37 | sort = 2 | 
+ 40 | index = 38 | sort = 2 | 
+ 41 | index = 39 | sort = 2 | 
+ 42 | index = 40 | sort = 2 | 
+ 43 | index = 41 | sort = 2 | 
+ 44 | index = 42 | sort = 2 | 
+ 45 | index = 43 | sort = 2 | 
+ 46 | index = 44 | sort = 2 | 
+ 47 | index = 45 | sort = 2 | 
+ 48 | index = 46 | sort = 2 | 
+ 49 | index = 47 | sort = 2 | 
+ 50 | index = 48 | sort = 2 | 
+ 51 | index = 49 | sort = 2 | 
+ 52 | index = 50 | sort = 2 | 
+ 53 | index = 51 | sort = 2 | 
+ 54 | index = 52 | sort = 2 | 
+ 55 | index = 53 | sort = 2 | 
+ 56 | index = 54 | sort = 2 | 
+ 57 | index = 55 | sort = 2 | 
+ 58 | index = 56 | sort = 2 | 
+ 59 | index = 57 | sort = 2 | 
+ 60 | index = 58 | sort = 2 | 
+ 61 | index = 59 | sort = 2 | 
+ 62 | index = 60 | sort = 2 | 
+ 63 | index = 61 | sort = 2 | 
+ 64 | index = 62 | sort = 2 | 
+ 65 | index = 63 | sort = 2 | 
+ 66 | index = 64 | sort = 2 | 
+ 67 | index = 65 | sort = 2 | 
+ 68 | index = 66 | sort = 2 | 
+ 69 | index = 67 | sort = 2 | 
+ 70 | index = 68 | sort = 2 | 
+ 71 | index = 69 | sort = 2 | 
+ 72 | index = 70 | sort = 2 | 
+ 73 | index = 71 | sort = 2 | 
+ 74 | index = 72 | sort = 2 | 
+ 75 | index = 73 | sort = 2 | 
+ 76 | index = 74 | sort = 2 | 
+ 77 | index = 75 | sort = 2 | 
+ 78 | index = 76 | sort = 2 | 
+ 79 | index = 77 | sort = 2 | 
+ 80 | index = 78 | sort = 2 | 
+ 81 | index = 79 | sort = 2 | 
+ 82 | index = 80 | sort = 2 | 
+ 83 | index = 81 | sort = 2 | 
+ 84 | index = 82 | sort = 2 | 
+ 85 | index = 83 | sort = 2 | 
+ 86 | index = 84 | sort = 2 | 
+ 87 | index = 85 | sort = 2 | 
+ 88 | index = 86 | sort = 2 | 
+ 89 | index = 87 | sort = 2 | 
+ 90 | index = 88 | sort = 2 | 
+ 91 | index = 89 | sort = 2 | 
+ 92 | index = 90 | sort = 2 | 
+ 93 | index = 91 | sort = 2 | 
+ 94 | index = 92 | sort = 2 | 
+ 95 | index = 93 | sort = 2 | 
+ 96 | index = 94 | sort = 2 | 
+ 97 | index = 95 | sort = 2 | 
+ 98 | index = 96 | sort = 2 | 
+ 99 | index = 97 | sort = 2 | 
+ 100 | index = 98 | sort = 0 | 
+operation = 710

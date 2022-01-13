@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 17:30:22 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 18:32:59 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 
 int	__replace_for_second_insert(t_data *data,int next_index)
-{
+{	
+	
 	while(data->a->sort == 2)
+	{
+		next_index = data->a->index;
 		__ra(data);
+	}
+	next_index++;
 	while(data->a->sort == 1)
 	{
 		if (data->a->index == next_index)
 			{
+				printf("find next index second insert\n");
 				data->a->sort = 2;
 				__ra(data);
 				next_index++;
@@ -54,24 +60,23 @@ void	__create_next_chunks(t_data *data)
 	}
 }
 
-void	__create_chunks(t_data *data, int pivot, int size_chunks)
+void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 {
 	int len;
 	int size;
-	int next_index;
 	int rotate;
 	
 	size = __pivot_size(data->a);
 	__size_stack_ab(data);
 	rotate = 0;
 	len = 0;
-	next_index = __find_min(data->a);
 	if (size <= size_chunks)
 	{
 		while (data->a->sort != 2)
 		{
 			if (data->a->index == next_index && rotate == 0)
 			{
+				printf("find next index create chunks\n");
 				data->a->sort = 2;
 				__ra(data);
 				next_index++;
@@ -88,6 +93,7 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks)
 			break;
 		if (data->a->index == next_index && rotate == 0)
 		{
+			printf("find next index create chunks\n");
 			data->a->sort = 2;
 			__ra(data);
 			next_index++;
@@ -123,24 +129,18 @@ int __algo3(t_data *data)
 	
 	__index(data);
 	chunks = __size_chunks(data);
-	min = __find_min(data->a);	
+	min = __find_min(data->a);
+	next_index = -1;	
 	while (0 != data->a->index)
 	{
-		printf("-1\n");
 		pivot = __find_pivot_chunks(data, chunks);
-		printf("-2\n");
-		print_list(data->a, data->b);
-		__create_chunks(data, pivot, __size_chunks(data));
-		printf("-3\n");
-		print_list(data->a, data->b);
+		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);
 		next_index = __insert(data,__find_min(data->b), __find_max(data->b));
-		printf("-4\n");
-		__replace_for_second_insert(data, next_index);
-		printf("-5\n");
+		__replace_for_second_insert(data, next_index);	
 		next_index = __insert(data,__find_min(data->b),__find_max(data->b));
-		printf("-6\n");
 		while(data->a->sort == 2)
 		{
+			next_index = data->a->index;
 			if (data->a->index == 0)
 				break;
 			__ra(data);

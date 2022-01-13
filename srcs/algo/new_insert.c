@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 18:46:17 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 17:12:01 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,6 @@ int	__insert(t_data *data, int next_index, int max_index)
 		return (next_index);
 	min = 0;
 	max = 0;
-
 	if (__cost_index(data->b, next_index, max_index) == 1)
 		min = __insert_min(data, next_index);
 	else

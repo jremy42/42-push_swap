@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insert2.c                                          :+:      :+:    :+:   */
+/*   insert3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 18:46:17 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/13 19:07:11 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,11 +98,28 @@ int __insert_max(t_data *data, int max_index)
 		return (1);
 }
 
-int	__insert(t_data *data, int next_index, int max_index)
+void	__first_push(t_data *data, int next_index)
+{
+	__pa(data);
+	__pa(data);
+	if (data->a->nb > data->a->next->nb)
+		__sa(data);
+	return ;		
+}
+int	__insert_true(t_data *data, int next_index, int max_index)
 {
 	int min;
 	int max;
+	int a;
+	int b;
 
+	__first_push(data, next_index);
+	while (data->b != NULL)
+	{
+		a = __cost_stack_a(data);
+		b = __cost_stack_b(data)
+		
+	}
 	if (!data->b)
 		return (next_index);
 	min = 0;
