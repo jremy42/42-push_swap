@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 10:32:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 16:24:29 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	__find_min(t_stack *stack)
 	
 	tmp = stack;
 	min = tmp->index;
-	printf("find min\n");
+	//printf("find min\n");
 	while (tmp != NULL && tmp->sort != 2)
 	{
 		if(tmp->index < min)
 			min = tmp->index;
 		tmp = tmp->next;
 	}
-	printf("min = %d\n", min);
+	//printf("min = %d\n", min);
 	return (min);
 }
 

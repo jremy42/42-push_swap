@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 16:20:18 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 17:05:40 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,17 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 	__create_next_chunks(data);
 }
 
+int __under_50(t_data *data)
+{
+	//if (data->a->size < 6)
+		//__under_6(data);
+	while(data->a != NULL)
+		__pb(data);
+	print_list(data->a, data->b);
+	__insert_true(data,__find_min(data->b), __find_max(data->b));
+	return (1);	
+}
+
 int __algo4(t_data *data)
 {
 	int chunks;
@@ -138,20 +149,25 @@ int __algo4(t_data *data)
 	int next_index;
 	
 	__index(data);
-	if (data->size_a < 99)
-		chunks = data->size_a - 1;
+	if (data->size_a < 50)
+	{
+		__under_50(data);
+		//print_list(data->a, data->b);
+		print_cmd_lst(data->cmd);
+		return (0);
+	}
 	else 
 		chunks = __size_chunks(data);
 	min = __find_min(data->a);
 	next_index = -1;
 	while (0 != data->a->index)
 	{
+
 		pivot = __find_pivot_chunks(data, chunks);
-		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);	
+		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);
 		next_index = __insert_true(data,__find_min(data->b), __find_max(data->b));
 		__replace_for_second_insert(data, next_index);	
 		next_index = __insert_true(data,__find_min(data->b),__find_max(data->b));
-		print_list(data->a, data->b);
 		while(data->a->sort == 2)
 		{
 			next_index = data->a->index;
@@ -168,7 +184,7 @@ int __algo4(t_data *data)
 			break;
 		chunks += chunks;
 	}
-	print_list(data->a, data->b);
+	//print_list(data->a, data->b);
 	print_cmd_lst(data->cmd);
 	return (0);
 }

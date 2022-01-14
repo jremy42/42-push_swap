@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 15:18:29 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 16:23:26 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,5 @@ int		__insert(t_data *data, int last_index, int max_index);
 int		__algo4(t_data *data);
 int	__insert_true(t_data *data, int next_index, int max_index);
 void	__insert_sort_index(t_data *data, t_index *index);
-
-
 
 #endif 

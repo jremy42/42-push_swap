@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 16:11:00 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 16:46:31 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,7 +175,7 @@ int	__insert_true(t_data *data, int next_index, int max_index)
 	__cost_stack(data, &index);
 	__insert_sort_index(data, &index);
 	}
-	while (data->a->sort == 3)
+	while (data->a->sort == 3 && data->a->index != 0)
 		__ra(data);
 	tmp = data->a;
 	while (tmp->next != NULL)
