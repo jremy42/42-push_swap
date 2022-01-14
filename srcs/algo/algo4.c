@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo3.c                                            :+:      :+:    :+:   */
+/*   algo4.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 09:21:50 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 11:03:27 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 	__create_next_chunks(data);
 }
 
-int __algo3(t_data *data)
+int __algo4(t_data *data)
 {
 	int chunks;
 	int pivot;
@@ -136,7 +136,9 @@ int __algo3(t_data *data)
 		printf("chunks = %d \n", chunks);
 		pivot = __find_pivot_chunks(data, chunks);
 		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);
-		next_index = __insert(data,__find_min(data->b), __find_max(data->b));
+		
+		next_index = __insert_true(data,__find_min(data->b), __find_max(data->b));
+		
 		__replace_for_second_insert(data, next_index);	
 		next_index = __insert(data,__find_min(data->b),__find_max(data->b));
 		print_list(data->a, data->b);

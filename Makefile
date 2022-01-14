@@ -21,10 +21,9 @@ SRC = srcs/parsing/atol.c \
 		srcs/algo/cost_calculatore.c\
 		srcs/algo/algo2_utils.c\
 		srcs/algo/next_pivot.c\
-		srcs/algo/algo3.c\
+		srcs/algo/algo4.c\
+		srcs/algo/insert_true/insert3.c\
 		srcs/algo/insert2.c
-
-
 		
 IFLAGS = -I includes/
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3

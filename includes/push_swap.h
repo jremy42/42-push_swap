@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 18:40:19 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 11:00:59 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@
 # define RRR 8
 # define RR 9
 # define SS 10
-# define NB_CHUNKS 1
+# define NB_CHUNKS 2
 
 typedef struct s_stack
 {
 	int				index;
 	int				sort;
 	int				nb;
+	int				cost;
 	char			*cmd;
 	struct s_stack	*next;
 }	t_stack;
@@ -133,7 +134,9 @@ int		__size_chunks(t_data *data);
 int		__find_pivot_chunks(t_data *data, int chunks);
 int		__insert(t_data *data, int last_index, int max_index);
 
-
+//algo4
+int		__algo4(t_data *data);
+int	__insert_true(t_data *data, int next_index, int max_index);
 
 
 

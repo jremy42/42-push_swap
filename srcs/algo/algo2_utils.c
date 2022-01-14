@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 09:50:37 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 10:32:09 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,12 @@ int	__find_max(t_stack *stack)
 	
 	tmp = stack;
 	max = tmp->index;
-	printf("find max\n");
 	while (tmp != NULL && tmp->sort != 2)
 	{
 		if(tmp->index > max)
 			max = tmp->index;
 		tmp = tmp->next;
 	}
-	printf("max = %d\n", max);
 	return (max);
 }
 

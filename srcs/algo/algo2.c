@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 16:18:17 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 09:18:26 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ int __find_pivot_chunks(t_data *data, int chunks)
 	tmp = data->a;
 	while (tmp != NULL)
 	{
-		if(tmp->index == chunks - 1)
+		if(tmp->index == chunks)
 			return (tmp->nb);
 		tmp = tmp->next;
 	}
