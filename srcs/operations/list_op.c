@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 05:29:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 06:47:30 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 15:41:21 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,12 @@ void	print_cmd_lst(t_cmd *cmd)
 	int operation;
 
 	operation = 0;
-
+	if(!cmd)
+		return ;
 	tmp = cmd;
 	while(tmp->next != NULL)
 	{
+		/*
 		if(tmp->cmd == RA && tmp->next->cmd == RB)
 		{
 			print_cmd(RR);
@@ -100,10 +102,10 @@ void	print_cmd_lst(t_cmd *cmd)
 		}
 		else
 		{
+			*/
 			print_cmd(tmp->cmd);
 			tmp = tmp->next;
 			operation++;
-		}
 	}
 	printf("operation = %d\n", operation);
 }

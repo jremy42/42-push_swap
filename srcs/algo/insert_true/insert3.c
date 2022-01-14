@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 12:54:08 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 16:11:00 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int __find_max_inf(t_stack *stack, int to_find)
 		}
 		tmp = tmp->next;
 	}
-	//printf("min supp = %d\n",last_min_supp);
 	return (max_inf);
 }
 
@@ -57,7 +56,6 @@ int __find_min_supp(t_stack *stack, int to_find)
 	}
 		tmp = tmp->next;
 	}
-	//printf("min supp = %d\n",last_min_supp);
 	return (last_min_supp);
 }
 
@@ -105,41 +103,44 @@ int __is_max(t_stack *stack, int to_find)
 	return (1);
 }
 
-int __cost_stack(t_data *data)
+int __cost_stack(t_data *data, t_index *index)
 {
 	t_stack *tmp;
-	int index;
+	int n_index;
 	int last_cost;
 	int cost;
 	
 	tmp = data->b;
-	index = tmp->index;
+	n_index = tmp->index;
 	if (__is_max(data->a,tmp->index) == 1)
 	{
 		last_cost = (__cost_calculator(data->a, __find_max_inf(data->a, tmp->index))
-		+ __cost_calculator(tmp, tmp->index)) + 1;
+		+ __cost_calculator(tmp, tmp->index));
 	}
 	else
 	{
 		last_cost = (__cost_calculator(data->a, __find_min_supp(data->a, tmp->index))
 		+ __cost_calculator(tmp, tmp->index));
 	}
-	printf("last cost = %d\n", last_cost);	
 	while (tmp != NULL)
 	{
 		if (__is_max(data->a,tmp->index) == 1)
-			cost = (__cost_calculator(data->a, __find_max_inf(data->a, tmp->index)) + __cost_calculator(data->b, tmp->index)) + 1;
+			cost = (__cost_calculator(data->a, __find_max_inf(data->a, tmp->index)) + __cost_calculator(data->b, tmp->index));
 		else
 			cost = (__cost_calculator(data->a, __find_min_supp(data->a, tmp->index)) + __cost_calculator(data->b, tmp->index));	
-		printf("index = %d | cost = %d\n\n", tmp->index, cost);
-		if (cost <= last_cost && tmp->index < index)
+		if (cost <= last_cost && tmp->index < n_index)
 		{
-			index = tmp->index;
+			n_index = tmp->index;
 			last_cost = cost;
 		}
 		tmp = tmp->next;
 	}
-	return (index);
+	index->index_b = n_index;
+	if (__is_max(data->a,n_index) == 1)
+		index->index_a = __find_max_inf(data->a, n_index);
+	else
+		index->index_a = __find_min_supp(data->a, n_index);
+	return (1);
 }
 
 
@@ -158,26 +159,31 @@ void	__first_push(t_data *data)
 int	__insert_true(t_data *data, int next_index, int max_index)
 {
 	
-	int index;
+	t_index index;
 	t_stack *tmp;
-
+	
+	index.index_a = 0;
+	index.index_b = 0;
 	(void)next_index;
 	(void)max_index;
 	tmp = data->b;
-	__first_push(data);
-	index  = __cost_stack(data);
-			
 	if (!data->b)
 		return (next_index);
-	printf("index le moins cher = %d \n", index);
-	print_list(data->a, data->b);
-	exit(0);
-	/*
-
-	if (__cost_index(data->b, next_index, max_index) == 1)
-		min = __insert_min(data, next_index);
-	else
-		max = __insert_max(data, max_index);	
-	return (__insert(data, next_index + min, max_index - max));
-	*/
+	__first_push(data);
+	while (data->b != NULL)
+	{
+	__cost_stack(data, &index);
+	__insert_sort_index(data, &index);
+	}
+	while (data->a->sort == 3)
+		__ra(data);
+	tmp = data->a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->sort == 3)
+			tmp->sort = 2;
+		tmp = tmp->next;
+	}
+	tmp->sort = 2;
+	return (tmp->index + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 11:03:27 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/14 16:20:18 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	__replace_for_second_insert(t_data *data,int next_index)
 	{
 		if (data->a->index == next_index)
 			{
-				printf("find next index second insert\n");
 				data->a->sort = 2;
 				__ra(data);
 				next_index++;
@@ -46,7 +45,6 @@ void	__create_next_chunks(t_data *data)
 	size = __pivot_size(data->b);
 	__find_pivot_ab(data);
 	len = 0;
-	printf("pivot = %d\n", data->pivot_b);
 	while (len < size && __something_push_b(data->b, data->pivot_b))
 	{
 		if (data->b->nb > data->pivot_b)
@@ -58,6 +56,20 @@ void	__create_next_chunks(t_data *data)
 			__rb(data);
 		len++;
 	}
+}
+
+int __something_is_sort(t_stack *stack)
+{
+	t_stack *tmp;
+
+	tmp = stack;
+	while (tmp != NULL)
+	{
+		if (tmp->sort == 2)
+			return (1);
+		tmp = tmp->next;
+	}
+	return (0);
 }
 
 void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
@@ -76,7 +88,6 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 		{
 			if (data->a->index == next_index && rotate == 0)
 			{
-				printf("find next index create chunks\n");
 				data->a->sort = 2;
 				__ra(data);
 				next_index++;
@@ -93,7 +104,6 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 			break;
 		if (data->a->index == next_index && rotate == 0)
 		{
-			printf("find next index create chunks\n");
 			data->a->sort = 2;
 			__ra(data);
 			next_index++;
@@ -109,7 +119,7 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 
 		len++;
 	}
-	if (rotate > 0)
+	if (rotate > 0 && __something_is_sort(data->a) == 1)
 		{
 			while(rotate > 0)
 			{
@@ -128,19 +138,19 @@ int __algo4(t_data *data)
 	int next_index;
 	
 	__index(data);
-	chunks = __size_chunks(data);
+	if (data->size_a < 99)
+		chunks = data->size_a - 1;
+	else 
+		chunks = __size_chunks(data);
 	min = __find_min(data->a);
 	next_index = -1;
 	while (0 != data->a->index)
 	{
-		printf("chunks = %d \n", chunks);
 		pivot = __find_pivot_chunks(data, chunks);
-		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);
-		
+		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);	
 		next_index = __insert_true(data,__find_min(data->b), __find_max(data->b));
-		
 		__replace_for_second_insert(data, next_index);	
-		next_index = __insert(data,__find_min(data->b),__find_max(data->b));
+		next_index = __insert_true(data,__find_min(data->b),__find_max(data->b));
 		print_list(data->a, data->b);
 		while(data->a->sort == 2)
 		{
@@ -149,7 +159,6 @@ int __algo4(t_data *data)
 				break;
 			__ra(data);
 		}
-
 		if (data->a->next->index == 0)
 			{
 				__ra(data);

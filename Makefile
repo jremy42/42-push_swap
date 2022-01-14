@@ -23,6 +23,7 @@ SRC = srcs/parsing/atol.c \
 		srcs/algo/next_pivot.c\
 		srcs/algo/algo4.c\
 		srcs/algo/insert_true/insert3.c\
+		srcs/algo/insert_true/insert_index.c\
 		srcs/algo/insert2.c
 		
 IFLAGS = -I includes/
