@@ -55,7 +55,6 @@ typedef struct s_data
 	int pivot_b;
 	int	min;
 	int	max;
-	t_stack *median;
 	t_cmd *cmd;
 	t_stack	*a;
 	t_stack	*b;
