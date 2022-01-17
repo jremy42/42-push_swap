@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/11 18:45:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 11:01:25 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void	__quick_sort_a(t_data *data)
 		len++;
 	}
 	pivot = __stacknew(&data->pivot_a);
-	__stack_add_front(&data->median, pivot);
+	//__stack_add_front(&data->median, pivot);
 	__rotate_stack_a(data);
 	//print_list(data->a,data->b);
 	__quick_sort_a(data);

@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 16:23:26 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 10:49:35 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,4 +144,12 @@ int		__algo4(t_data *data);
 int	__insert_true(t_data *data, int next_index, int max_index);
 void	__insert_sort_index(t_data *data, t_index *index);
 
-#endif 
+//brut force
+
+void	__free_data(t_data *data);
+t_data	*__copy_data(t_data *data, t_data *new);
+t_cmd 	*__copy_cmd(t_cmd *cmd);
+t_stack *__copy_stack(t_stack *stack);
+int __under_6(t_data *data);
+
+#endif

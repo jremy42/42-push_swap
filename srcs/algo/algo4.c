@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 17:05:40 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 11:17:52 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,11 +132,13 @@ void	__create_chunks(t_data *data, int pivot, int size_chunks, int next_index)
 
 int __under_50(t_data *data)
 {
-	//if (data->a->size < 6)
-		//__under_6(data);
+	if (data->size_a < 6)
+	{
+		__under_6(data);
+		return (1);
+	}
 	while(data->a != NULL)
 		__pb(data);
-	print_list(data->a, data->b);
 	__insert_true(data,__find_min(data->b), __find_max(data->b));
 	return (1);	
 }
@@ -152,7 +154,7 @@ int __algo4(t_data *data)
 	if (data->size_a < 50)
 	{
 		__under_50(data);
-		//print_list(data->a, data->b);
+		print_list(data->a, data->b);
 		print_cmd_lst(data->cmd);
 		return (0);
 	}
