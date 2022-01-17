@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:52:38 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/13 10:04:22 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 17:55:21 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	__exit(char**str, t_data *data)
 	}
 	(void)data;
 	printf("Error \n");
-	exit(0);
+	exit(1);
 }
 
 int	__check(char **str, t_data *data)
@@ -38,7 +38,6 @@ int	__check(char **str, t_data *data)
 	i = 0;
 	while (str[i])
 	{
-			////printf("=> %d\n",i);
 		if (__atol(str[i], data) == -1)
 			return (-1);
 		i++;
@@ -65,4 +64,10 @@ void	__parsing(char **input, t_data *data)
 	i = 0;
 	if (__check(&split_tmp[i], data) == -1)
 		__exit(split_tmp, data);
+	while (split_tmp[i])
+	{
+		free(split_tmp[i]);
+		i++;
+	}
+	free(split_tmp);
 }

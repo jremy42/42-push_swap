@@ -8,26 +8,24 @@ SRC = srcs/parsing/atol.c \
 		srcs/operations/rotate.c\
 		srcs/operations/revrot.c\
 		srcs/operations/list_op.c\
-		srcs/algo/algo2.c\
-		srcs/algo/algo_utils.c\
-		srcs/algo/index.c\
-		srcs/algo/median.c\
-		srcs/algo/stack_sort_a.c\
-		srcs/algo/stack_sort_b.c\
-		srcs/algo/insert.c\
-		srcs/algo/cost_calculatore.c\
-		srcs/algo/algo2_utils.c\
-		srcs/algo/next_pivot.c\
-		srcs/algo/algo4.c\
 		srcs/algo/insert_true/insert3.c\
 		srcs/algo/insert_true/insert_index.c\
-		srcs/algo/insert2.c\
+		srcs/algo/algo_utils.c\
+		srcs/algo/algo.c\
 		srcs/algo/brut_force_utils.c\
-		srcs/algo/brut_force.c
+		srcs/algo/brut_force.c\
+		srcs/algo/chunks_utils.c\
+		srcs/algo/cost_calculatore.c\
+		srcs/algo/cost_utils.c\
+		srcs/algo/index.c\
+		srcs/algo/median.c\
+		srcs/algo/insert2.c\
+		srcs/algo/next_pivot.c\
+		srcs/exit.c
 
 		
-IFLAGS = -I includes/
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+IFLAGS = -I includes/ -I libft/
+CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))
 HEADER = includes/push_swap.h
@@ -44,7 +42,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) ${HEADER} ${LIBFT}
 		@make -C ${LIBFT}
-		@cp libft/libft.a  ./libft.a
+		#@cp libft/libft.a  ./libft.a
 		$(CC) $(CFLAGS) ${OBJ} -Llibft -lft -o $(NAME)
 
 clean:

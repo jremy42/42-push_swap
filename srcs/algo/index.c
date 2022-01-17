@@ -6,15 +6,15 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:13:19 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 14:58:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 18:05:41 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void __insert_index(t_data *data, int *tab)
+void	__insert_index(t_data *data, int *tab)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	int		i;
 
 	i = 0;
@@ -23,24 +23,23 @@ void __insert_index(t_data *data, int *tab)
 	data->max = tab[data->size_a - 1];
 	while (tmp != NULL)
 	{
-		while(i < data->size_a)
+		while (i < data->size_a)
 		{
-			if(tmp->nb == tab[i])
+			if (tmp->nb == tab[i])
 				tmp->index = i;
 			i++;
 		}
 		i = 0;
 		tmp = tmp->next;
 	}
-
 }
 
-void __sort(t_data *data, int *tab)
+void	__sort(t_data *data, int *tab)
 {
-	int i;
-	int j;
-	int tmp;
-	int size;
+	int	i;
+	int	j;
+	int	tmp;
+	int	size;
 
 	size = data->size_a;
 	i = 0;
@@ -50,13 +49,13 @@ void __sort(t_data *data, int *tab)
 	{
 		while (j < size - 1)
 		{
-			if(tab[j] > tab[j + 1])
+			if (tab[j] > tab[j + 1])
 			{
 				tmp = tab[j];
 				tab[j] = tab[j + 1];
 				tab[j + 1] = tmp;
 			}
-		j++;
+			j++;
 		}
 		j = 0;
 		i++;
@@ -64,11 +63,11 @@ void __sort(t_data *data, int *tab)
 	__insert_index(data, tab);
 }
 
-int __index(t_data *data)
+int	__index(t_data *data)
 {
-	int i;
-	int *tab;
-	t_stack *tmp;
+	int		i;
+	int		*tab;
+	t_stack	*tmp;
 
 	i = 0;
 	if (!data->a)
@@ -84,7 +83,7 @@ int __index(t_data *data)
 		tmp = tmp->next;
 		i++;
 	}
-	__sort(data,tab);
+	__sort(data, tab);
 	free(tab);
 	return (0);
 }

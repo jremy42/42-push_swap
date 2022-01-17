@@ -6,22 +6,20 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/14 16:46:31 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 18:40:25 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int __find_max_inf(t_stack *stack, int to_find)
+int	__find_max_inf(t_stack *stack, int to_find)
 {
-	t_stack *tmp;
-	int max_inf;
-	
+	t_stack	*tmp;
+	int		max_inf;
+
 	tmp = stack;
 	(void)to_find;
 	max_inf = __find_max(stack);
-
 	while (tmp != NULL)
 	{
 		if (tmp->sort != 3)
@@ -33,16 +31,15 @@ int __find_max_inf(t_stack *stack, int to_find)
 	return (max_inf);
 }
 
-int __find_min_supp(t_stack *stack, int to_find)
+int	__find_min_supp(t_stack *stack, int to_find)
 {
-	t_stack *tmp;
-	int last_min_supp;
-	int min_supp;
-	
+	t_stack	*tmp;
+	int		last_min_supp;
+	int		min_supp;
+
 	min_supp = -1;
 	tmp = stack;
 	last_min_supp = __find_max(stack);
-
 	while (tmp != NULL)
 	{
 		if (tmp->sort == 3)
@@ -50,20 +47,20 @@ int __find_min_supp(t_stack *stack, int to_find)
 			if (tmp->index > to_find)
 			{
 				min_supp = tmp->index;
-				if( min_supp < last_min_supp)
+				if (min_supp < last_min_supp)
 					last_min_supp = min_supp;
 			}
-	}
+		}
 		tmp = tmp->next;
 	}
 	return (last_min_supp);
 }
 
-int __cost_calculator(t_stack *stack,int to_find)
+int	__cost_calculator(t_stack *stack, int to_find)
 {
-	int r;
-	int rr;
-	t_stack *tmp;
+	int		r;
+	int		rr;
+	t_stack	*tmp;
 
 	r = 0;
 	rr = 0;
@@ -71,7 +68,7 @@ int __cost_calculator(t_stack *stack,int to_find)
 	while (tmp != NULL)
 	{
 		if (tmp->index == to_find)
-			break;
+			break ;
 		r++;
 		tmp = tmp->next;
 	}
@@ -86,9 +83,9 @@ int __cost_calculator(t_stack *stack,int to_find)
 		return (rr);
 }
 
-int __is_max(t_stack *stack, int to_find)
+int	__is_max(t_stack *stack, int to_find)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	tmp = stack;
 	while (tmp != NULL)
@@ -103,13 +100,13 @@ int __is_max(t_stack *stack, int to_find)
 	return (1);
 }
 
-int __cost_stack(t_data *data, t_index *index)
+int	__cost_stack(t_data *data, t_index *index)
 {
-	t_stack *tmp;
-	int n_index;
-	int last_cost;
-	int cost;
-	
+	t_stack	*tmp;
+	int		n_index;
+	int		last_cost;
+	int		cost;
+
 	tmp = data->b;
 	n_index = tmp->index;
 	if (__is_max(data->a,tmp->index) == 1)
@@ -143,7 +140,6 @@ int __cost_stack(t_data *data, t_index *index)
 	return (1);
 }
 
-
 void	__first_push(t_data *data)
 {
 	data->b->sort = 3;
@@ -152,16 +148,14 @@ void	__first_push(t_data *data)
 	__pa(data);
 	if (data->a->nb > data->a->next->nb)
 		__sa(data);
-	return ;		
+	return ;
 }
-
 
 int	__insert_true(t_data *data, int next_index, int max_index)
 {
-	
-	t_index index;
-	t_stack *tmp;
-	
+	t_index	index;
+	t_stack	*tmp;
+
 	index.index_a = 0;
 	index.index_b = 0;
 	(void)next_index;
@@ -172,8 +166,8 @@ int	__insert_true(t_data *data, int next_index, int max_index)
 	__first_push(data);
 	while (data->b != NULL)
 	{
-	__cost_stack(data, &index);
-	__insert_sort_index(data, &index);
+		__cost_stack(data, &index);
+		__insert_sort_index(data, &index);
 	}
 	while (data->a->sort == 3 && data->a->index != 0)
 		__ra(data);

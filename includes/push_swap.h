@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 10:49:35 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:48:30 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include "../libft/libft.h"
+# include "libft.h"
 # define PA 0
 # define PB 1
 # define RRA 2
@@ -102,6 +102,12 @@ void	__stackadd_back(t_stack **alst, t_stack *new);
 void	__size_stack_ab(t_data *data);
 void	print_cmd(int cmd);
 void	print_cmd_lst(t_cmd *cmd);
+void	__exit_ps(t_data *data, int error);
+void	__free_stack(t_stack *stack);
+void	__free_cmd(t_data *data);
+void	__free_stack(t_stack *stack);
+
+
 
 
 //algo

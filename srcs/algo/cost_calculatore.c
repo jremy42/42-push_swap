@@ -6,16 +6,15 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 09:16:07 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/12 09:14:01 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 18:44:49 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-int __next_value(t_stack *stack, int last_index)
+int	__next_value(t_stack *stack, int last_index)
 {
-	t_stack *tmp; 
+	t_stack	*tmp; 
 
 	tmp = stack;
 	while (tmp != NULL)
@@ -27,11 +26,11 @@ int __next_value(t_stack *stack, int last_index)
 	return (-1);
 }
 
-int __cost_calculatore(t_stack *stack,int to_find)
+int	__cost_calculatore(t_stack *stack, int to_find)
 {
-	int r;
-	int rr;
-	t_stack *tmp;
+	int		r;
+	int		rr;
+	t_stack	*tmp;
 
 	r = 0;
 	rr = 0;
@@ -39,7 +38,7 @@ int __cost_calculatore(t_stack *stack,int to_find)
 	while (tmp != NULL)
 	{
 		if (tmp->index == to_find)
-			break;
+			break ;
 		tmp = tmp->next;
 		r++;
 	}
@@ -53,5 +52,3 @@ int __cost_calculatore(t_stack *stack,int to_find)
 	else
 		return (0);
 }
-
-

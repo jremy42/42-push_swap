@@ -45,5 +45,6 @@ char	*__strjoin(char const *s1, char const *s2)
 		return (NULL);
 	result = __strcpy(result, s1);
 	result = __strcat(result, s2);
+	free((char *)s1);
 	return (result);
 }

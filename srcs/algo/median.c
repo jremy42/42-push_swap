@@ -99,8 +99,8 @@ int __find_pivot_a(t_stack *stack, int size, t_data *data)
 
 int __find_pivot_b(t_stack *stack, int size, t_data *data)
 {
-	int i;
-	int *tab;
+	int		i;
+	int		*tab;
 	t_stack *tmp;
 
 	i = 0;
@@ -122,8 +122,8 @@ int __find_pivot_b(t_stack *stack, int size, t_data *data)
 
 int	__pivot_size(t_stack *stack)
 {
-	t_stack *tmp;
-	int i;
+	t_stack	*tmp;
+	int		i;
 
 	i = 0;
 	tmp = stack;
@@ -135,16 +135,12 @@ int	__pivot_size(t_stack *stack)
 	return (i);
 }
 
-int __find_pivot_ab(t_data *data)
+int	__find_pivot_ab(t_data *data)
 {
 	__size_stack_ab(data);
-	//printf("data->size_a %d et size_pivot %d \n",data->size_a,__pivot_size(data->a));
 	if (data->a)
 		__find_pivot_a(data->a, __pivot_size(data->a), data);
 	if (data->b)
 		__find_pivot_b(data->b, __pivot_size(data->b), data);
-	//print_list(data->a,data->b);
-	//printf("pivot a = %d\n",data->pivot_a);
-	//printf("pivot b = %d\n",data->pivot_b);
 	return (1);
 }

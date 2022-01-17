@@ -6,20 +6,23 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 16:51:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 13:09:21 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 18:44:04 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int __sort_bf(t_data *data)
+int	__sort_bf(t_data *data)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
+	if (!data)
+		return (0);	
 	if (!data->a)
 		return (0);
 	tmp = data->a;
+	if (data->b)
+		return (0);
 	if (tmp->index != 0)
 		return (0);
 	while (tmp->next != NULL)
@@ -28,14 +31,11 @@ int __sort_bf(t_data *data)
 			return (0);
 		tmp = tmp->next;
 	}
-	printf("sooooort\n");
-	print_list(data->a, data->b);
 	return (1);
 }
 
-void __op_bf(t_data *copy, int op)
+void	__op_bf(t_data *copy, int op)
 {
-	printf("op = %d\n",op);
 	if (op == RA)
 		__ra(copy);
 	if (op == RB)
@@ -52,82 +52,68 @@ void __op_bf(t_data *copy, int op)
 		__pb(copy);
 	if (op == PA)
 		__pa(copy);
-		
 }
 
-int __bf(t_data *data, int *op, int deep, int iterator)
+int	__bf(t_data *data, int *op, int deep, int iterator)
 {
-	t_data copy;
-	int 	i; 
+	t_data	copy;
+	int		i;
 
-	if (deep == iterator)
-		return (0);
 	if (__sort_bf(data) == 1)
 		return (1);
+	if (deep == iterator)
+		return (0);
 	i = 0;
 	__copy_data(data, &copy);
-	while ( i < 8)
+	while (i < 8)
 	{
-		print_list(copy.a, copy.b);
-		printf("deep = %d i = %d\n",deep, i);
-	git __op_bf(&copy, op[i]);
-	if (__bf(&copy, op, deep + 1, iterator) == 1)
-	{
-		__free_data(data);
-		__copy_data(&copy, data);
-		return (1);
-
-	}
-	else
-	{
+		__op_bf(&copy, op[i]);
+		if (__bf(&copy, op, deep + 1, iterator) == 1)
+		{
+			__free_data(data);
+			__copy_data(&copy, data);
+			__free_data(&copy);
+			return (1);
+		}
 		__free_data(&copy);
 		__copy_data(data, &copy);
+		i ++;
 	}
-	i ++;
-	}
-	return (0);	
+	return (0);
 }
 
-void __print_bf(t_data *data, t_data *copy)
+void	__print_bf(t_data *data, t_data *copy)
 {
 	__free_data(data);
 	data = copy;
-	print_list(data->a, data->b);
-	print_cmd_lst(data->cmd);
-	exit(0);
+	__exit_ps(data, 0);
 }
-int __under_6(t_data *data)
+
+int	__under_6(t_data *data)
 {
-	t_data copy;
-	static int op[8] = {RA, RB, SA, SB, RRA, RRB, PB, PA};
-	int 	i;
-	int		iterator;
+	t_data		copy;
+	static int	op[8] = {RA, SA, RRA, PB, SB, RB, RRB, PA};
+	int			i;
+	int			iterator;
 
 	i = 0;
 	iterator = 1;
+	__index(data);
 	__copy_data(data, &copy);
-	while (iterator < 8)
+	while (iterator < 10)
 	{	
-	while ( i < 8)
-	{
-	if (__sort_bf(&copy))
-		return (0);
-	__op_bf(&copy, op[i]);
-	if (__bf(&copy, op, 0, iterator) == 1)
-	{
-		__copy_data(&copy, data);
-		__print_bf(&copy, data);
+		if (__bf(&copy, op, 0, iterator) == 1)
+		{
+			__free_data(data);
+			__copy_data(&copy, data);
+			__print_bf(&copy, data);
+		}
+		else
+		{
+			__free_data(&copy);
+			__copy_data(data, &copy);
+		}
+		iterator++;
 	}
-		
-	else
-	{
-		__free_data(&copy);
-		__copy_data(data, &copy);
-	}
-	i ++;
-	}
-	iterator++;
-	}
-	print_list(data->a, data->b);
-	return (0);	
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 05:29:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 10:57:59 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/17 18:54:44 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_cmd	*__cmdnew(int cmd)
 	if (!newlst)
 		return (NULL);
 	newlst->cmd = cmd;
-	newlst->next = NULL;	
+	newlst->next = NULL;
 	return (newlst);
 }
 
@@ -39,73 +39,82 @@ void	__cmdadd_back(t_cmd **alst, t_cmd *new)
 	}
 }
 
-void __insert_cmd(t_data *data, int op)
+void	__insert_cmd(t_data *data, int op)
 {
-	t_cmd *new;
+	t_cmd	*new;
 
 	new = __cmdnew(op);
 	if (!new)
-		return;
+		return ;
 	__cmdadd_back(&data->cmd, new);
 }
 
 void	print_cmd(int cmd)
 {
-	if(cmd == PA)
+	if (cmd == PA)
 		__putstr_fd("pa\n", 1);
-	if(cmd == PB)
-		__putstr_fd("pa\n", 1);
-	if(cmd == RRA)
+	if (cmd == PB)
+		__putstr_fd("pb\n", 1);
+	if (cmd == RRA)
 		__putstr_fd("rra\n", 1);
-	if(cmd == RRB)
+	if (cmd == RRB)
 		__putstr_fd("rrb\n", 1);
-	if(cmd == RA)
+	if (cmd == RA)
 		__putstr_fd("ra\n", 1);
-	if(cmd == RB)
+	if (cmd == RB)
 		__putstr_fd("rb\n", 1);
-	if(cmd == SA)
+	if (cmd == SA)
 		__putstr_fd("sa\n", 1);
-	if(cmd == SB)
+	if (cmd == SB)
 		__putstr_fd("sb\n", 1);
-	if(cmd == RRR)
+	if (cmd == RRR)
 		__putstr_fd("rrr\n", 1);
-	if(cmd == RR)
+	if (cmd == RR)
 		__putstr_fd("rr\n", 1);
-	if(cmd == SS)
+	if (cmd == SS)
 		__putstr_fd("ss\n", 1);
 }
 
 void	print_cmd_lst(t_cmd *cmd)
 {
-	t_cmd *tmp;
-
-	int operation;
+	t_cmd	*tmp;
+	int		operation;
 
 	operation = 0;
-	if(!cmd)
+	if (!cmd)
 		return ;
 	tmp = cmd;
-	while(tmp->next != NULL)
+	while (tmp->next != NULL)
 	{
-		
-		if(tmp->cmd == RA && tmp->next->cmd == RB)
+		/*
+		if(tmp->cmd == RA && tmp->next->cmd == RB
+		&& tmp->next->next != NULL)
 		{
 			print_cmd(RR);
 			tmp = tmp->next->next;
 			operation++;
 		}
-		if(tmp->cmd == RB && tmp->next->cmd == RA)
+		if(tmp->cmd == RRB && tmp->next->cmd == RRA
+		&& tmp->next->next != NULL)
 		{
-			print_cmd(RR);
+			print_cmd(RRR);
 			tmp = tmp->next->next;
 			operation++;
 		}
 		else
 		{
+			*/
 			print_cmd(tmp->cmd);
 			tmp = tmp->next;
 			operation++;
+		//}
 	}
+	while (tmp != NULL)
+	{
+		print_cmd(tmp->cmd);
+		tmp = tmp->next;
+		operation++;	
 	}
-	printf("operation = %d\n", operation);
+	//fflush(stdout);
+//	printf("operation = %d\n", operation);
 }
