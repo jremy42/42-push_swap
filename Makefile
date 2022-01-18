@@ -9,19 +9,20 @@ SRC = srcs/parsing/atol.c \
 		srcs/operations/rotate.c\
 		srcs/operations/revrot.c\
 		srcs/operations/list_op.c\
-		srcs/algo/insert_true/insert3.c\
-		srcs/algo/insert_true/insert_index.c\
+		srcs/algo/insert/insert.c\
+		srcs/algo/insert/insert_utils.c\
+		srcs/algo/insert/insert_index.c\
 		srcs/algo/algo_utils.c\
 		srcs/algo/algo.c\
 		srcs/algo/brut_force_utils.c\
 		srcs/algo/brut_force.c\
 		srcs/algo/chunks_utils.c\
+		srcs/algo/chunks.c\
 		srcs/algo/cost_calculatore.c\
 		srcs/algo/cost_utils.c\
 		srcs/algo/index.c\
 		srcs/algo/median.c\
-		srcs/algo/insert2.c\
-		srcs/algo/next_pivot.c\
+		srcs/algo/median_utils.c\
 		srcs/exit.c
 
 SRC_CHECKER = srcs/parsing/atol.c \
@@ -41,17 +42,17 @@ SRC_CHECKER = srcs/parsing/atol.c \
 		srcs/algo/brut_force_utils.c\
 		srcs/algo/brut_force.c\
 		srcs/algo/chunks_utils.c\
+		srcs/algo/chunks.c\
 		srcs/algo/cost_calculatore.c\
 		srcs/algo/cost_utils.c\
 		srcs/algo/index.c\
 		srcs/algo/median.c\
-		srcs/algo/insert2.c\
-		srcs/algo/next_pivot.c\
-		srcs/exit.c \
+		srcs/algo/median_utils.c\
+		srcs/exit.c\
 		srcs/checker/checker.c
 
 IFLAGS = -I includes/ -I libft/includes
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))
 OBJ_CHECKER = $(addprefix $(OBJS_PATH_CHECKER), $(SRC_CHECKER:.c=.o))

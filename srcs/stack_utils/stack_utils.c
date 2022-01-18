@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 09:58:42 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 14:47:08 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 18:35:22 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,3 @@ int	__insert_cmd(t_data *data, int op)
 	__cmdadd_back(&data->cmd, new);
 	return (0);
 }
-

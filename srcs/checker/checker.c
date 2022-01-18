@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:01:17 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 15:17:03 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 16:38:53 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,13 @@ int	__convert(char *str)
 
 int	__read_input(t_data *data)
 {
-	char	*read;	
-	int		i;
+	char	*read;
 
-	i = 0;
 	while (1)
 	{
 		read = get_next_line(0);
 		if (read == NULL)
-			break;
+			break ;
 		if (__convert(read) == -1)
 		{
 			get_next_line(-1);
@@ -65,12 +63,11 @@ int	__read_input(t_data *data)
 			}
 			free(read);
 		}
-		i++;
 	}
 	return (0);
 }
 
-int __do_instruct(t_data *data)
+int	__do_instruct(t_data *data)
 {
 	t_cmd	*tmp;
 
@@ -78,7 +75,7 @@ int __do_instruct(t_data *data)
 	tmp = __copy_cmd(data->cmd);
 	while (tmp != NULL)
 	{
-		__op_bf(data, tmp->cmd);	
+		__op_bf(data, tmp->cmd);
 		tmp = tmp->next;
 	}
 	if (__sort_bf(data) == 1)
@@ -98,6 +95,4 @@ int	main(int ac, char **av)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
-	//print_list(data.a, data.b);
-	//print_cmd_lst(data.cmd);
 }

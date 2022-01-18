@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 16:51:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 15:28:11 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 17:21:57 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	__sort_bf(t_data *data)
 	t_stack	*tmp;
 
 	if (!data)
-		return (0);	
+		return (0);
 	if (!data->a)
 		return (0);
 	tmp = data->a;
@@ -31,7 +31,6 @@ int	__sort_bf(t_data *data)
 			return (0);
 		tmp = tmp->next;
 	}
-	printf("data->max = %d\n",data->max);
 	return (1);
 }
 
@@ -55,7 +54,7 @@ void	__op_bf(t_data *copy, int op)
 		__pa(copy);
 	if (op == RRR)
 		__rrr(copy);
-	if (op == RR )
+	if (op == RR)
 		__rr(copy);
 	if (op == SS)
 		__ss(copy);
@@ -93,6 +92,7 @@ void	__print_bf(t_data *data, t_data *copy)
 {
 	__free_data(data);
 	data = copy;
+	print_cmd_lst(data->cmd);
 	__exit_ps(data, 0);
 }
 

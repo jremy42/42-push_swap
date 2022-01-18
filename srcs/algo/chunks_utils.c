@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo2.c                                            :+:      :+:    :+:   */
+/*   chunks_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 18:14:06 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 17:17:32 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,28 @@ int	__size_chunks(t_data *data)
 	data->size_final = i;
 	size = i / NB_CHUNKS;
 	return (size);
+}
+
+void	__rotate_chunks(t_data *data, int rotate)
+{
+	while (rotate > 0)
+	{
+		__rra(data);
+		rotate--;
+	}
+}
+
+int	__rotate_index(t_data *data, int next_index)
+{
+	data->a->sort = 2;
+	__ra(data);
+	next_index++;
+	return (next_index);
+}
+
+int	__rotate_a(t_data *data, int rotate)
+{
+	__ra(data);
+	rotate++;
+	return (rotate);
 }

@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 16:17:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 14:45:53 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 16:46:01 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	__error(char *error, t_data *data)
 	int	len;
 
 	len = __strlen(error);
-	write(1, error, len);
+	write(2, error, len);
 	__exit_ps(data, 1);
 }
 
@@ -43,9 +43,7 @@ void	__exit_ps(t_data *data, int error)
 	if (data->b)
 		__free_stack(data->b);
 	if (data->cmd)
-	{
-		print_cmd_lst(data->cmd);
 		__free_cmd(data);
-	}
+	//system("leaks checker");
 	exit(error);
 }
