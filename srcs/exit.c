@@ -6,13 +6,22 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 16:17:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 18:55:09 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 10:08:20 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void __free_stack(t_stack *stack)
+void	__error(char *error, t_data *data)
+{
+	int	len;
+
+	len = __strlen(error);
+	write(1, error, len);
+	__exit_ps(data, 1);
+}
+
+void	__free_stack(t_stack *stack)
 {
 	t_stack	*tmp;
 
@@ -27,7 +36,7 @@ void __free_stack(t_stack *stack)
 	return ;
 }
 
-void __exit_ps(t_data *data, int error)
+void	__exit_ps(t_data *data, int error)
 {
 	//print_list(data->a, data->b);
 	if (data->a)

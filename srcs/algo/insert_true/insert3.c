@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 18:40:25 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 11:49:22 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,5 +179,5 @@ int	__insert_true(t_data *data, int next_index, int max_index)
 		tmp = tmp->next;
 	}
 	tmp->sort = 2;
-	return (tmp->index + 1);
+	return (tmp->index);
 }

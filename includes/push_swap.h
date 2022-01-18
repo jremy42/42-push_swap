@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 16:48:30 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 11:16:06 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	__rr(t_data *data);
 void	__rra(t_data *data);
 void	__rrb(t_data *data);
 void	__rrr(t_data *data);
-void __insert_cmd(t_data *data,int op);
+int __insert_cmd(t_data *data,int op);
 void	__cmdadd_back(t_cmd **alst, t_cmd *new);
 t_cmd	*__cmdnew(int cmd);
 
@@ -106,6 +106,7 @@ void	__exit_ps(t_data *data, int error);
 void	__free_stack(t_stack *stack);
 void	__free_cmd(t_data *data);
 void	__free_stack(t_stack *stack);
+void	__error(char *error, t_data *data);
 
 
 
@@ -157,5 +158,8 @@ t_data	*__copy_data(t_data *data, t_data *new);
 t_cmd 	*__copy_cmd(t_cmd *cmd);
 t_stack *__copy_stack(t_stack *stack);
 int __under_6(t_data *data);
+void __op_bf(t_data *copy, int op);
+int	__sort_bf(t_data *data);
+
 
 #endif

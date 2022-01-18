@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 16:51:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 18:44:04 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 11:09:32 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,12 @@ void	__op_bf(t_data *copy, int op)
 		__pb(copy);
 	if (op == PA)
 		__pa(copy);
+	if (op == RRR)
+		__rrr(copy);
+	if (op == RR )
+		__rr(copy);
+	if (op == SS)
+		__ss(copy);
 }
 
 int	__bf(t_data *data, int *op, int deep, int iterator)

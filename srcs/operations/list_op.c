@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 05:29:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 18:54:44 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 10:28:05 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,15 @@ void	__cmdadd_back(t_cmd **alst, t_cmd *new)
 	}
 }
 
-void	__insert_cmd(t_data *data, int op)
+int	__insert_cmd(t_data *data, int op)
 {
 	t_cmd	*new;
 
 	new = __cmdnew(op);
 	if (!new)
-		return ;
+		return (-1);
 	__cmdadd_back(&data->cmd, new);
+	return (0);
 }
 
 void	print_cmd(int cmd)
