@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 11:16:06 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 15:52:42 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ typedef struct s_stack
 	int				index;
 	int				sort;
 	int				nb;
-	int				cost;
-	char			*cmd;
+	int				cost;	
 	struct s_stack	*next;
 }	t_stack;
 
@@ -107,10 +106,6 @@ void	__free_stack(t_stack *stack);
 void	__free_cmd(t_data *data);
 void	__free_stack(t_stack *stack);
 void	__error(char *error, t_data *data);
-
-
-
-
 //algo
 int		__algo(t_data *data);
 int		__find_pivot_ab(t_data *data);
@@ -148,7 +143,7 @@ int		__insert(t_data *data, int last_index, int max_index);
 
 //algo4
 int		__algo4(t_data *data);
-int	__insert_true(t_data *data, int next_index, int max_index);
+int		__insert_true(t_data *data);
 void	__insert_sort_index(t_data *data, t_index *index);
 
 //brut force
@@ -160,6 +155,4 @@ t_stack *__copy_stack(t_stack *stack);
 int __under_6(t_data *data);
 void __op_bf(t_data *copy, int op);
 int	__sort_bf(t_data *data);
-
-
 #endif

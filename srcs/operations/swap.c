@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 12:10:39 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 10:33:29 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 15:21:03 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	__sa(t_data *data)
 {
 	t_stack	*tmp;
 
-	//printf("sa\n");
 	if (!data->a || !data->a->next)
 		return ;
 	__insert_cmd(data, SA);
@@ -31,7 +30,6 @@ void	__sb(t_data *data)
 {
 	t_stack	*tmp;
 
-	//printf("sb\n");
 	if (!data->b || !data->b->next)
 		return ;
 	__insert_cmd(data, SB);
@@ -45,6 +43,7 @@ void	__sb(t_data *data)
 void	__ss_a(t_data *data)
 {
 	t_stack	*tmp;
+
 	if (!data->a || !data->a->next)
 		return ;
 	tmp = data->a;
@@ -69,8 +68,6 @@ void	__ss_b(t_data *data)
 
 void	__ss(t_data *data)
 {
-	//printf("ss\n");
-	//print_list(data->a, data->b);
 	__ss_a(data);
 	__ss_b(data);
 	return ;

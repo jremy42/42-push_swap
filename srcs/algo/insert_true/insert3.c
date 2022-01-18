@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 14:09:45 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 16:01:01 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ int	__cost_stack(t_data *data, t_index *index)
 	while (tmp != NULL)
 	{
 		if (__is_max(data->a,tmp->index) == 1)
-			cost = (__cost_calculator(data->a, __find_max_inf(data->a, tmp->index)) + __cost_calculator(data->b, tmp->index));
+			cost = (__cost_calculator(data->a, __find_max_inf(data->a, tmp->index)) + __cost_calculator(data->git b, tmp->index));
 		else
 			cost = (__cost_calculator(data->a, __find_min_supp(data->a, tmp->index)) + __cost_calculator(data->b, tmp->index));	
 		if (cost <= last_cost && tmp->index < n_index)
@@ -149,19 +149,18 @@ void	__first_push(t_data *data)
 	return ;
 }
 
-int	__insert_true(t_data *data, int next_index, int max_index)
+int	__insert_true(t_data *data)
 {
 	t_index	index;
 	t_stack	*tmp;
 
 	index.index_a = 0;
 	index.index_b = 0;
-	(void)next_index;
-	(void)max_index;
 	tmp = data->b;
 	if (!data->b)
-		return (next_index);
-	__first_push(data);
+		return (0);
+	if (data->b->next)
+		__first_push(data);
 	while (data->b != NULL)
 	{
 		__cost_stack(data, &index);
@@ -176,6 +175,7 @@ int	__insert_true(t_data *data, int next_index, int max_index)
 			tmp->sort = 2;
 		tmp = tmp->next;
 	}
-	tmp->sort = 2;
+	if (tmp->sort == 3)
+		tmp->sort = 2;
 	return (tmp->index);
 }

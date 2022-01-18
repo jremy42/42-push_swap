@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 09:04:50 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 18:10:58 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 15:47:49 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int	__find_min(t_stack *stack)
 	t_stack	*tmp;
 	int		min;
 
+	if (!stack)
+		return (0);
 	tmp = stack;
 	min = tmp->index;
 	while (tmp != NULL && tmp->sort != 2)
@@ -76,6 +78,8 @@ int	__find_max(t_stack *stack)
 	t_stack	*tmp;
 	int		max;
 
+	if (!stack)
+		return (0);
 	tmp = stack;
 	max = tmp->index;
 	while (tmp != NULL && tmp->sort != 2)

@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:01:17 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 14:30:06 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 15:17:03 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,7 @@ int __do_instruct(t_data *data)
 	tmp = __copy_cmd(data->cmd);
 	while (tmp != NULL)
 	{
-		__op_bf(data, tmp->cmd);
-		//print_list(data->a, data->b);
+		__op_bf(data, tmp->cmd);	
 		tmp = tmp->next;
 	}
 	if (__sort_bf(data) == 1)

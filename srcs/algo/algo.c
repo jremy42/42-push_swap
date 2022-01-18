@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 14:26:52 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 15:53:27 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,7 @@ int	__under_50(t_data *data)
 		__pb(data);
 		size--;
 	}
-	__insert_true(data, __find_min(data->b), __find_max(data->b));
+	__insert_true(data);
 	return (1);
 }
 
@@ -170,9 +170,9 @@ int	__algo4(t_data *data)
 	{
 		pivot = __find_pivot_chunks(data, chunks);
 		__create_chunks(data, pivot, __size_chunks(data), next_index + 1);
-		next_index = __insert_true(data, __find_min(data->b), __find_max(data->b));
+		next_index = __insert_true(data);
 		__replace_for_second_insert(data, next_index);	
-		next_index = __insert_true(data, __find_min(data->b),__find_max(data->b));
+		next_index = __insert_true(data);
 		while (data->a->sort == 2)
 		{
 			next_index = data->a->index;

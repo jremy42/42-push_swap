@@ -1,4 +1,1225 @@
+----1------
+stack_a           |           stack_b 
+ 844 | index = 96 | sort = 0 | 
+ 584 | index = 85 | sort = 0 | 
+ -141 | index = 47 | sort = 0 | 
+ -135 | index = 49 | sort = 0 | 
+ -422 | index = 33 | sort = 0 | 
+ -61 | index = 55 | sort = 0 | 
+ -62 | index = 54 | sort = 0 | 
+ -971 | index = 2 | sort = 0 | 
+ 858 | index = 97 | sort = 0 | 
+ -956 | index = 5 | sort = 0 | 
+ 675 | index = 90 | sort = 0 | 
+ -663 | index = 18 | sort = 0 | 
+ 716 | index = 91 | sort = 0 | 
+ -277 | index = 42 | sort = 0 | 
+ -472 | index = 30 | sort = 0 | 
+ -193 | index = 46 | sort = 0 | 
+ 649 | index = 88 | sort = 0 | 
+ 143 | index = 62 | sort = 0 | 
+ -973 | index = 1 | sort = 0 | 
+ -920 | index = 6 | sort = 0 | 
+ -407 | index = 35 | sort = 0 | 
+ 508 | index = 80 | sort = 0 | 
+ 270 | index = 73 | sort = 0 | 
+ -332 | index = 38 | sort = 0 | 
+ -521 | index = 25 | sort = 0 | 
+ -649 | index = 19 | sort = 0 | 
+ -432 | index = 32 | sort = 0 | 
+ 534 | index = 83 | sort = 0 | 
+ 198 | index = 66 | sort = 0 | 
+ 196 | index = 65 | sort = 0 | 
+ -879 | index = 10 | sort = 0 | 
+ -275 | index = 43 | sort = 0 | 
+ -293 | index = 41 | sort = 0 | 
+ -880 | index = 9 | sort = 0 | 
+ 36 | index = 56 | sort = 0 | 
+ 258 | index = 72 | sort = 0 | 
+ 98 | index = 60 | sort = 0 | 
+ 154 | index = 63 | sort = 0 | 
+ -589 | index = 20 | sort = 0 | 
+ -984 | index = 0 | sort = 0 | 
+ 89 | index = 59 | sort = 0 | 
+ 518 | index = 81 | sort = 0 | 
+ -434 | index = 31 | sort = 0 | 
+ -550 | index = 23 | sort = 0 | 
+ 580 | index = 84 | sort = 0 | 
+ -406 | index = 36 | sort = 0 | 
+ -583 | index = 21 | sort = 0 | 
+ 734 | index = 92 | sort = 0 | 
+ 814 | index = 95 | sort = 0 | 
+ -884 | index = 8 | sort = 0 | 
+ 404 | index = 75 | sort = 0 | 
+ -200 | index = 45 | sort = 0 | 
+ 352 | index = 74 | sort = 0 | 
+ 672 | index = 89 | sort = 0 | 
+ 527 | index = 82 | sort = 0 | 
+ -789 | index = 14 | sort = 0 | 
+ -694 | index = 16 | sort = 0 | 
+ 901 | index = 98 | sort = 0 | 
+ -548 | index = 24 | sort = 0 | 
+ -320 | index = 39 | sort = 0 | 
+ -299 | index = 40 | sort = 0 | 
+ 741 | index = 93 | sort = 0 | 
+ -492 | index = 27 | sort = 0 | 
+ -121 | index = 51 | sort = 0 | 
+ 407 | index = 76 | sort = 0 | 
+ -73 | index = 53 | sort = 0 | 
+ 206 | index = 68 | sort = 0 | 
+ 742 | index = 94 | sort = 0 | 
+ 477 | index = 79 | sort = 0 | 
+ -491 | index = 28 | sort = 0 | 
+ 200 | index = 67 | sort = 0 | 
+ 40 | index = 57 | sort = 0 | 
+ -418 | index = 34 | sort = 0 | 
+ 245 | index = 70 | sort = 0 | 
+ -667 | index = 17 | sort = 0 | 
+ 470 | index = 78 | sort = 0 | 
+ -495 | index = 26 | sort = 0 | 
+ 138 | index = 61 | sort = 0 | 
+ 255 | index = 71 | sort = 0 | 
+ -864 | index = 11 | sort = 0 | 
+ -488 | index = 29 | sort = 0 | 
+ -128 | index = 50 | sort = 0 | 
+ -907 | index = 7 | sort = 0 | 
+ -719 | index = 15 | sort = 0 | 
+ -580 | index = 22 | sort = 0 | 
+ 975 | index = 99 | sort = 0 | 
+ -140 | index = 48 | sort = 0 | 
+ 644 | index = 86 | sort = 0 | 
+ 220 | index = 69 | sort = 0 | 
+ -99 | index = 52 | sort = 0 | 
+ 67 | index = 58 | sort = 0 | 
+ -850 | index = 12 | sort = 0 | 
+ 446 | index = 77 | sort = 0 | 
+ -963 | index = 3 | sort = 0 | 
+ -247 | index = 44 | sort = 0 | 
+ -826 | index = 13 | sort = 0 | 
+ 186 | index = 64 | sort = 0 | 
+ -957 | index = 4 | sort = 0 | 
+ 648 | index = 87 | sort = 0 | 
+ -384 | index = 37 | sort = 0 | 
+----2------
+stack_a           |           stack_b 
+ -141 | index = 47 | sort = 1 |   -957  | index = 4 | sort = 0
+ -135 | index = 49 | sort = 1 |   -826  | index = 13 | sort = 0
+ -422 | index = 33 | sort = 1 |   -963  | index = 3 | sort = 0
+ -277 | index = 42 | sort = 1 |   -850  | index = 12 | sort = 0
+ -472 | index = 30 | sort = 1 |   -580  | index = 22 | sort = 0
+ -193 | index = 46 | sort = 1 |   -719  | index = 15 | sort = 0
+ -407 | index = 35 | sort = 1 |   -907  | index = 7 | sort = 0
+ -332 | index = 38 | sort = 1 |   -864  | index = 11 | sort = 0
+ -432 | index = 32 | sort = 1 |   -667  | index = 17 | sort = 0
+ -275 | index = 43 | sort = 1 |   -548  | index = 24 | sort = 0
+ -293 | index = 41 | sort = 1 |   -694  | index = 16 | sort = 0
+ -434 | index = 31 | sort = 1 |   -789  | index = 14 | sort = 0
+ -406 | index = 36 | sort = 1 |   -884  | index = 8 | sort = 0
+ -200 | index = 45 | sort = 1 |   -583  | index = 21 | sort = 0
+ -320 | index = 39 | sort = 1 |   -550  | index = 23 | sort = 0
+ -299 | index = 40 | sort = 1 |   -984  | index = 0 | sort = 0
+ -492 | index = 27 | sort = 1 |   -589  | index = 20 | sort = 0
+ -491 | index = 28 | sort = 1 |   -880  | index = 9 | sort = 0
+ -418 | index = 34 | sort = 1 |   -879  | index = 10 | sort = 0
+ -495 | index = 26 | sort = 1 |   -649  | index = 19 | sort = 0
+ -488 | index = 29 | sort = 1 |   -521  | index = 25 | sort = 0
+ -128 | index = 50 | sort = 1 |   -920  | index = 6 | sort = 0
+ -140 | index = 48 | sort = 1 |   -973  | index = 1 | sort = 0
+ -247 | index = 44 | sort = 1 |   -663  | index = 18 | sort = 0
+ -384 | index = 37 | sort = 1 |   -956  | index = 5 | sort = 0
+ 844 | index = 96 | sort = 0 |   -971  | index = 2 | sort = 0
+ 584 | index = 85 | sort = 0 | 
+ -61 | index = 55 | sort = 0 | 
+ -62 | index = 54 | sort = 0 | 
+ 858 | index = 97 | sort = 0 | 
+ 675 | index = 90 | sort = 0 | 
+ 716 | index = 91 | sort = 0 | 
+ 649 | index = 88 | sort = 0 | 
+ 143 | index = 62 | sort = 0 | 
+ 508 | index = 80 | sort = 0 | 
+ 270 | index = 73 | sort = 0 | 
+ 534 | index = 83 | sort = 0 | 
+ 198 | index = 66 | sort = 0 | 
+ 196 | index = 65 | sort = 0 | 
+ 36 | index = 56 | sort = 0 | 
+ 258 | index = 72 | sort = 0 | 
+ 98 | index = 60 | sort = 0 | 
+ 154 | index = 63 | sort = 0 | 
+ 89 | index = 59 | sort = 0 | 
+ 518 | index = 81 | sort = 0 | 
+ 580 | index = 84 | sort = 0 | 
+ 734 | index = 92 | sort = 0 | 
+ 814 | index = 95 | sort = 0 | 
+ 404 | index = 75 | sort = 0 | 
+ 352 | index = 74 | sort = 0 | 
+ 672 | index = 89 | sort = 0 | 
+ 527 | index = 82 | sort = 0 | 
+ 901 | index = 98 | sort = 0 | 
+ 741 | index = 93 | sort = 0 | 
+ -121 | index = 51 | sort = 0 | 
+ 407 | index = 76 | sort = 0 | 
+ -73 | index = 53 | sort = 0 | 
+ 206 | index = 68 | sort = 0 | 
+ 742 | index = 94 | sort = 0 | 
+ 477 | index = 79 | sort = 0 | 
+ 200 | index = 67 | sort = 0 | 
+ 40 | index = 57 | sort = 0 | 
+ 245 | index = 70 | sort = 0 | 
+ 470 | index = 78 | sort = 0 | 
+ 138 | index = 61 | sort = 0 | 
+ 255 | index = 71 | sort = 0 | 
+ 975 | index = 99 | sort = 0 | 
+ 644 | index = 86 | sort = 0 | 
+ 220 | index = 69 | sort = 0 | 
+ -99 | index = 52 | sort = 0 | 
+ 67 | index = 58 | sort = 0 | 
+ 446 | index = 77 | sort = 0 | 
+ 186 | index = 64 | sort = 0 | 
+ 648 | index = 87 | sort = 0 | 
+----3------
+stack_a           |           stack_b 
+ -984 | index = 0 | sort = 2 | 
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -141 | index = 47 | sort = 1 | 
+ -135 | index = 49 | sort = 1 | 
+ -422 | index = 33 | sort = 1 | 
+ -277 | index = 42 | sort = 1 | 
+ -472 | index = 30 | sort = 1 | 
+ -193 | index = 46 | sort = 1 | 
+ -407 | index = 35 | sort = 1 | 
+ -332 | index = 38 | sort = 1 | 
+ -432 | index = 32 | sort = 1 | 
+ -275 | index = 43 | sort = 1 | 
+ -293 | index = 41 | sort = 1 | 
+ -434 | index = 31 | sort = 1 | 
+ -406 | index = 36 | sort = 1 | 
+ -200 | index = 45 | sort = 1 | 
+ -320 | index = 39 | sort = 1 | 
+ -299 | index = 40 | sort = 1 | 
+ -492 | index = 27 | sort = 1 | 
+ -491 | index = 28 | sort = 1 | 
+ -418 | index = 34 | sort = 1 | 
+ -495 | index = 26 | sort = 1 | 
+ -488 | index = 29 | sort = 1 | 
+ -128 | index = 50 | sort = 1 | 
+ -140 | index = 48 | sort = 1 | 
+ -247 | index = 44 | sort = 1 | 
+ -384 | index = 37 | sort = 1 | 
+ 844 | index = 96 | sort = 0 | 
+ 584 | index = 85 | sort = 0 | 
+ -61 | index = 55 | sort = 0 | 
+ -62 | index = 54 | sort = 0 | 
+ 858 | index = 97 | sort = 0 | 
+ 675 | index = 90 | sort = 0 | 
+ 716 | index = 91 | sort = 0 | 
+ 649 | index = 88 | sort = 0 | 
+ 143 | index = 62 | sort = 0 | 
+ 508 | index = 80 | sort = 0 | 
+ 270 | index = 73 | sort = 0 | 
+ 534 | index = 83 | sort = 0 | 
+ 198 | index = 66 | sort = 0 | 
+ 196 | index = 65 | sort = 0 | 
+ 36 | index = 56 | sort = 0 | 
+ 258 | index = 72 | sort = 0 | 
+ 98 | index = 60 | sort = 0 | 
+ 154 | index = 63 | sort = 0 | 
+ 89 | index = 59 | sort = 0 | 
+ 518 | index = 81 | sort = 0 | 
+ 580 | index = 84 | sort = 0 | 
+ 734 | index = 92 | sort = 0 | 
+ 814 | index = 95 | sort = 0 | 
+ 404 | index = 75 | sort = 0 | 
+ 352 | index = 74 | sort = 0 | 
+ 672 | index = 89 | sort = 0 | 
+ 527 | index = 82 | sort = 0 | 
+ 901 | index = 98 | sort = 0 | 
+ 741 | index = 93 | sort = 0 | 
+ -121 | index = 51 | sort = 0 | 
+ 407 | index = 76 | sort = 0 | 
+ -73 | index = 53 | sort = 0 | 
+ 206 | index = 68 | sort = 0 | 
+ 742 | index = 94 | sort = 0 | 
+ 477 | index = 79 | sort = 0 | 
+ 200 | index = 67 | sort = 0 | 
+ 40 | index = 57 | sort = 0 | 
+ 245 | index = 70 | sort = 0 | 
+ 470 | index = 78 | sort = 0 | 
+ 138 | index = 61 | sort = 0 | 
+ 255 | index = 71 | sort = 0 | 
+ 975 | index = 99 | sort = 0 | 
+ 644 | index = 86 | sort = 0 | 
+ 220 | index = 69 | sort = 0 | 
+ -99 | index = 52 | sort = 0 | 
+ 67 | index = 58 | sort = 0 | 
+ 446 | index = 77 | sort = 0 | 
+ 186 | index = 64 | sort = 0 | 
+ 648 | index = 87 | sort = 2 | 
+----4------
+stack_a           |           stack_b 
+ 844 | index = 96 | sort = 0 |   -384  | index = 37 | sort = 1
+ 584 | index = 85 | sort = 0 |   -247  | index = 44 | sort = 1
+ -61 | index = 55 | sort = 0 |   -140  | index = 48 | sort = 1
+ -62 | index = 54 | sort = 0 |   -128  | index = 50 | sort = 1
+ 858 | index = 97 | sort = 0 |   -488  | index = 29 | sort = 1
+ 675 | index = 90 | sort = 0 |   -418  | index = 34 | sort = 1
+ 716 | index = 91 | sort = 0 |   -491  | index = 28 | sort = 1
+ 649 | index = 88 | sort = 0 |   -492  | index = 27 | sort = 1
+ 143 | index = 62 | sort = 0 |   -299  | index = 40 | sort = 1
+ 508 | index = 80 | sort = 0 |   -320  | index = 39 | sort = 1
+ 270 | index = 73 | sort = 0 |   -200  | index = 45 | sort = 1
+ 534 | index = 83 | sort = 0 |   -406  | index = 36 | sort = 1
+ 198 | index = 66 | sort = 0 |   -434  | index = 31 | sort = 1
+ 196 | index = 65 | sort = 0 |   -293  | index = 41 | sort = 1
+ 36 | index = 56 | sort = 0 |   -275  | index = 43 | sort = 1
+ 258 | index = 72 | sort = 0 |   -432  | index = 32 | sort = 1
+ 98 | index = 60 | sort = 0 |   -332  | index = 38 | sort = 1
+ 154 | index = 63 | sort = 0 |   -407  | index = 35 | sort = 1
+ 89 | index = 59 | sort = 0 |   -193  | index = 46 | sort = 1
+ 518 | index = 81 | sort = 0 |   -472  | index = 30 | sort = 1
+ 580 | index = 84 | sort = 0 |   -277  | index = 42 | sort = 1
+ 734 | index = 92 | sort = 0 |   -422  | index = 33 | sort = 1
+ 814 | index = 95 | sort = 0 |   -135  | index = 49 | sort = 1
+ 404 | index = 75 | sort = 0 |   -141  | index = 47 | sort = 1
+ 352 | index = 74 | sort = 0 | 
+ 672 | index = 89 | sort = 0 | 
+ 527 | index = 82 | sort = 0 | 
+ 901 | index = 98 | sort = 0 | 
+ 741 | index = 93 | sort = 0 | 
+ -121 | index = 51 | sort = 0 | 
+ 407 | index = 76 | sort = 0 | 
+ -73 | index = 53 | sort = 0 | 
+ 206 | index = 68 | sort = 0 | 
+ 742 | index = 94 | sort = 0 | 
+ 477 | index = 79 | sort = 0 | 
+ 200 | index = 67 | sort = 0 | 
+ 40 | index = 57 | sort = 0 | 
+ 245 | index = 70 | sort = 0 | 
+ 470 | index = 78 | sort = 0 | 
+ 138 | index = 61 | sort = 0 | 
+ 255 | index = 71 | sort = 0 | 
+ 975 | index = 99 | sort = 0 | 
+ 644 | index = 86 | sort = 0 | 
+ 220 | index = 69 | sort = 0 | 
+ -99 | index = 52 | sort = 0 | 
+ 67 | index = 58 | sort = 0 | 
+ 446 | index = 77 | sort = 0 | 
+ 186 | index = 64 | sort = 0 | 
+ 648 | index = 87 | sort = 2 | 
+ -984 | index = 0 | sort = 2 | 
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+----5------
+stack_a           |           stack_b 
+ 844 | index = 96 | sort = 0 | 
+ 584 | index = 85 | sort = 0 | 
+ -61 | index = 55 | sort = 0 | 
+ -62 | index = 54 | sort = 0 | 
+ 858 | index = 97 | sort = 0 | 
+ 675 | index = 90 | sort = 0 | 
+ 716 | index = 91 | sort = 0 | 
+ 649 | index = 88 | sort = 0 | 
+ 143 | index = 62 | sort = 0 | 
+ 508 | index = 80 | sort = 0 | 
+ 270 | index = 73 | sort = 0 | 
+ 534 | index = 83 | sort = 0 | 
+ 198 | index = 66 | sort = 0 | 
+ 196 | index = 65 | sort = 0 | 
+ 36 | index = 56 | sort = 0 | 
+ 258 | index = 72 | sort = 0 | 
+ 98 | index = 60 | sort = 0 | 
+ 154 | index = 63 | sort = 0 | 
+ 89 | index = 59 | sort = 0 | 
+ 518 | index = 81 | sort = 0 | 
+ 580 | index = 84 | sort = 0 | 
+ 734 | index = 92 | sort = 0 | 
+ 814 | index = 95 | sort = 0 | 
+ 404 | index = 75 | sort = 0 | 
+ 352 | index = 74 | sort = 0 | 
+ 672 | index = 89 | sort = 0 | 
+ 527 | index = 82 | sort = 0 | 
+ 901 | index = 98 | sort = 0 | 
+ 741 | index = 93 | sort = 0 | 
+ -121 | index = 51 | sort = 0 | 
+ 407 | index = 76 | sort = 0 | 
+ -73 | index = 53 | sort = 0 | 
+ 206 | index = 68 | sort = 0 | 
+ 742 | index = 94 | sort = 0 | 
+ 477 | index = 79 | sort = 0 | 
+ 200 | index = 67 | sort = 0 | 
+ 40 | index = 57 | sort = 0 | 
+ 245 | index = 70 | sort = 0 | 
+ 470 | index = 78 | sort = 0 | 
+ 138 | index = 61 | sort = 0 | 
+ 255 | index = 71 | sort = 0 | 
+ 975 | index = 99 | sort = 0 | 
+ 644 | index = 86 | sort = 0 | 
+ 220 | index = 69 | sort = 0 | 
+ -99 | index = 52 | sort = 0 | 
+ 67 | index = 58 | sort = 0 | 
+ 446 | index = 77 | sort = 0 | 
+ 186 | index = 64 | sort = 0 | 
+ 648 | index = 87 | sort = 2 | 
+ -984 | index = 0 | sort = 2 | 
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+----1------
+stack_a           |           stack_b 
+ 844 | index = 96 | sort = 0 | 
+ 584 | index = 85 | sort = 0 | 
+ -61 | index = 55 | sort = 0 | 
+ -62 | index = 54 | sort = 0 | 
+ 858 | index = 97 | sort = 0 | 
+ 675 | index = 90 | sort = 0 | 
+ 716 | index = 91 | sort = 0 | 
+ 649 | index = 88 | sort = 0 | 
+ 143 | index = 62 | sort = 0 | 
+ 508 | index = 80 | sort = 0 | 
+ 270 | index = 73 | sort = 0 | 
+ 534 | index = 83 | sort = 0 | 
+ 198 | index = 66 | sort = 0 | 
+ 196 | index = 65 | sort = 0 | 
+ 36 | index = 56 | sort = 0 | 
+ 258 | index = 72 | sort = 0 | 
+ 98 | index = 60 | sort = 0 | 
+ 154 | index = 63 | sort = 0 | 
+ 89 | index = 59 | sort = 0 | 
+ 518 | index = 81 | sort = 0 | 
+ 580 | index = 84 | sort = 0 | 
+ 734 | index = 92 | sort = 0 | 
+ 814 | index = 95 | sort = 0 | 
+ 404 | index = 75 | sort = 0 | 
+ 352 | index = 74 | sort = 0 | 
+ 672 | index = 89 | sort = 0 | 
+ 527 | index = 82 | sort = 0 | 
+ 901 | index = 98 | sort = 0 | 
+ 741 | index = 93 | sort = 0 | 
+ -121 | index = 51 | sort = 0 | 
+ 407 | index = 76 | sort = 0 | 
+ -73 | index = 53 | sort = 0 | 
+ 206 | index = 68 | sort = 0 | 
+ 742 | index = 94 | sort = 0 | 
+ 477 | index = 79 | sort = 0 | 
+ 200 | index = 67 | sort = 0 | 
+ 40 | index = 57 | sort = 0 | 
+ 245 | index = 70 | sort = 0 | 
+ 470 | index = 78 | sort = 0 | 
+ 138 | index = 61 | sort = 0 | 
+ 255 | index = 71 | sort = 0 | 
+ 975 | index = 99 | sort = 0 | 
+ 644 | index = 86 | sort = 0 | 
+ 220 | index = 69 | sort = 0 | 
+ -99 | index = 52 | sort = 0 | 
+ 67 | index = 58 | sort = 0 | 
+ 446 | index = 77 | sort = 0 | 
+ 186 | index = 64 | sort = 0 | 
+ 648 | index = 87 | sort = 2 | 
+ -984 | index = 0 | sort = 2 | 
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+----2------
+stack_a           |           stack_b 
+ 844 | index = 96 | sort = 1 |   186  | index = 64 | sort = 0
+ 584 | index = 85 | sort = 1 |   67  | index = 58 | sort = 0
+ 858 | index = 97 | sort = 1 |   220  | index = 69 | sort = 0
+ 675 | index = 90 | sort = 1 |   255  | index = 71 | sort = 0
+ 716 | index = 91 | sort = 1 |   138  | index = 61 | sort = 0
+ 649 | index = 88 | sort = 1 |   245  | index = 70 | sort = 0
+ 508 | index = 80 | sort = 1 |   40  | index = 57 | sort = 0
+ 534 | index = 83 | sort = 1 |   200  | index = 67 | sort = 0
+ 518 | index = 81 | sort = 1 |   206  | index = 68 | sort = 0
+ 580 | index = 84 | sort = 1 |   -73  | index = 53 | sort = 0
+ 734 | index = 92 | sort = 1 |   407  | index = 76 | sort = 0
+ 814 | index = 95 | sort = 1 |   352  | index = 74 | sort = 0
+ 672 | index = 89 | sort = 1 |   404  | index = 75 | sort = 0
+ 527 | index = 82 | sort = 1 |   89  | index = 59 | sort = 0
+ 901 | index = 98 | sort = 1 |   154  | index = 63 | sort = 0
+ 741 | index = 93 | sort = 1 |   98  | index = 60 | sort = 0
+ 742 | index = 94 | sort = 1 |   258  | index = 72 | sort = 0
+ 477 | index = 79 | sort = 1 |   36  | index = 56 | sort = 0
+ 470 | index = 78 | sort = 1 |   196  | index = 65 | sort = 0
+ 975 | index = 99 | sort = 1 |   198  | index = 66 | sort = 0
+ 644 | index = 86 | sort = 1 |   270  | index = 73 | sort = 0
+ 446 | index = 77 | sort = 1 |   143  | index = 62 | sort = 0
+ 648 | index = 87 | sort = 2 |   -62  | index = 54 | sort = 0
+ -984 | index = 0 | sort = 2 |   -61  | index = 55 | sort = 0
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+ -121 | index = 51 | sort = 2 | 
+ -99 | index = 52 | sort = 2 | 
+----3------
+stack_a           |           stack_b 
+ 844 | index = 96 | sort = 1 | 
+ 584 | index = 85 | sort = 1 | 
+ 858 | index = 97 | sort = 1 | 
+ 675 | index = 90 | sort = 1 | 
+ 716 | index = 91 | sort = 1 | 
+ 649 | index = 88 | sort = 1 | 
+ 508 | index = 80 | sort = 1 | 
+ 534 | index = 83 | sort = 1 | 
+ 518 | index = 81 | sort = 1 | 
+ 580 | index = 84 | sort = 1 | 
+ 734 | index = 92 | sort = 1 | 
+ 814 | index = 95 | sort = 1 | 
+ 672 | index = 89 | sort = 1 | 
+ 527 | index = 82 | sort = 1 | 
+ 901 | index = 98 | sort = 1 | 
+ 741 | index = 93 | sort = 1 | 
+ 742 | index = 94 | sort = 1 | 
+ 477 | index = 79 | sort = 1 | 
+ 470 | index = 78 | sort = 1 | 
+ 975 | index = 99 | sort = 1 | 
+ 644 | index = 86 | sort = 1 | 
+ 446 | index = 77 | sort = 1 | 
+ 648 | index = 87 | sort = 2 | 
+ -984 | index = 0 | sort = 2 | 
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+ -121 | index = 51 | sort = 2 | 
+ -99 | index = 52 | sort = 2 | 
+ -73 | index = 53 | sort = 2 | 
+ -62 | index = 54 | sort = 2 | 
+ -61 | index = 55 | sort = 2 | 
+ 36 | index = 56 | sort = 2 | 
+ 40 | index = 57 | sort = 2 | 
+ 67 | index = 58 | sort = 2 | 
+ 89 | index = 59 | sort = 2 | 
+ 98 | index = 60 | sort = 2 | 
+ 138 | index = 61 | sort = 2 | 
+ 143 | index = 62 | sort = 2 | 
+ 154 | index = 63 | sort = 2 | 
+ 186 | index = 64 | sort = 2 | 
+ 196 | index = 65 | sort = 2 | 
+ 198 | index = 66 | sort = 2 | 
+ 200 | index = 67 | sort = 2 | 
+ 206 | index = 68 | sort = 2 | 
+ 220 | index = 69 | sort = 2 | 
+ 245 | index = 70 | sort = 2 | 
+ 255 | index = 71 | sort = 2 | 
+ 258 | index = 72 | sort = 2 | 
+ 270 | index = 73 | sort = 2 | 
+ 352 | index = 74 | sort = 2 | 
+ 404 | index = 75 | sort = 2 | 
+ 407 | index = 76 | sort = 2 | 
+----4------
+stack_a           |           stack_b 
+ 648 | index = 87 | sort = 2 |   644  | index = 86 | sort = 1
+ -984 | index = 0 | sort = 2 |   975  | index = 99 | sort = 1
+ -973 | index = 1 | sort = 2 |   470  | index = 78 | sort = 1
+ -971 | index = 2 | sort = 2 |   477  | index = 79 | sort = 1
+ -963 | index = 3 | sort = 2 |   742  | index = 94 | sort = 1
+ -957 | index = 4 | sort = 2 |   741  | index = 93 | sort = 1
+ -956 | index = 5 | sort = 2 |   901  | index = 98 | sort = 1
+ -920 | index = 6 | sort = 2 |   527  | index = 82 | sort = 1
+ -907 | index = 7 | sort = 2 |   672  | index = 89 | sort = 1
+ -884 | index = 8 | sort = 2 |   814  | index = 95 | sort = 1
+ -880 | index = 9 | sort = 2 |   734  | index = 92 | sort = 1
+ -879 | index = 10 | sort = 2 |   580  | index = 84 | sort = 1
+ -864 | index = 11 | sort = 2 |   518  | index = 81 | sort = 1
+ -850 | index = 12 | sort = 2 |   534  | index = 83 | sort = 1
+ -826 | index = 13 | sort = 2 |   508  | index = 80 | sort = 1
+ -789 | index = 14 | sort = 2 |   649  | index = 88 | sort = 1
+ -719 | index = 15 | sort = 2 |   716  | index = 91 | sort = 1
+ -694 | index = 16 | sort = 2 |   675  | index = 90 | sort = 1
+ -667 | index = 17 | sort = 2 |   858  | index = 97 | sort = 1
+ -663 | index = 18 | sort = 2 |   584  | index = 85 | sort = 1
+ -649 | index = 19 | sort = 2 |   844  | index = 96 | sort = 1
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+ -121 | index = 51 | sort = 2 | 
+ -99 | index = 52 | sort = 2 | 
+ -73 | index = 53 | sort = 2 | 
+ -62 | index = 54 | sort = 2 | 
+ -61 | index = 55 | sort = 2 | 
+ 36 | index = 56 | sort = 2 | 
+ 40 | index = 57 | sort = 2 | 
+ 67 | index = 58 | sort = 2 | 
+ 89 | index = 59 | sort = 2 | 
+ 98 | index = 60 | sort = 2 | 
+ 138 | index = 61 | sort = 2 | 
+ 143 | index = 62 | sort = 2 | 
+ 154 | index = 63 | sort = 2 | 
+ 186 | index = 64 | sort = 2 | 
+ 196 | index = 65 | sort = 2 | 
+ 198 | index = 66 | sort = 2 | 
+ 200 | index = 67 | sort = 2 | 
+ 206 | index = 68 | sort = 2 | 
+ 220 | index = 69 | sort = 2 | 
+ 245 | index = 70 | sort = 2 | 
+ 255 | index = 71 | sort = 2 | 
+ 258 | index = 72 | sort = 2 | 
+ 270 | index = 73 | sort = 2 | 
+ 352 | index = 74 | sort = 2 | 
+ 404 | index = 75 | sort = 2 | 
+ 407 | index = 76 | sort = 2 | 
+ 446 | index = 77 | sort = 2 | 
+----5------
+stack_a           |           stack_b 
+ 648 | index = 87 | sort = 2 | 
+ -984 | index = 0 | sort = 2 | 
+ -973 | index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+ -121 | index = 51 | sort = 2 | 
+ -99 | index = 52 | sort = 2 | 
+ -73 | index = 53 | sort = 2 | 
+ -62 | index = 54 | sort = 2 | 
+ -61 | index = 55 | sort = 2 | 
+ 36 | index = 56 | sort = 2 | 
+ 40 | index = 57 | sort = 2 | 
+ 67 | index = 58 | sort = 2 | 
+ 89 | index = 59 | sort = 2 | 
+ 98 | index = 60 | sort = 2 | 
+ 138 | index = 61 | sort = 2 | 
+ 143 | index = 62 | sort = 2 | 
+ 154 | index = 63 | sort = 2 | 
+ 186 | index = 64 | sort = 2 | 
+ 196 | index = 65 | sort = 2 | 
+ 198 | index = 66 | sort = 2 | 
+ 200 | index = 67 | sort = 2 | 
+ 206 | index = 68 | sort = 2 | 
+ 220 | index = 69 | sort = 2 | 
+ 245 | index = 70 | sort = 2 | 
+ 255 | index = 71 | sort = 2 | 
+ 258 | index = 72 | sort = 2 | 
+ 270 | index = 73 | sort = 2 | 
+ 352 | index = 74 | sort = 2 | 
+ 404 | index = 75 | sort = 2 | 
+ 407 | index = 76 | sort = 2 | 
+ 446 | index = 77 | sort = 2 | 
+ 470 | index = 78 | sort = 2 | 
+ 477 | index = 79 | sort = 2 | 
+ 508 | index = 80 | sort = 2 | 
+ 518 | index = 81 | sort = 2 | 
+ 527 | index = 82 | sort = 2 | 
+ 534 | index = 83 | sort = 2 | 
+ 580 | index = 84 | sort = 2 | 
+ 584 | index = 85 | sort = 2 | 
+ 644 | index = 86 | sort = 2 | 
+ 649 | index = 88 | sort = 2 | 
+ 672 | index = 89 | sort = 2 | 
+ 675 | index = 90 | sort = 2 | 
+ 716 | index = 91 | sort = 2 | 
+ 734 | index = 92 | sort = 2 | 
+ 741 | index = 93 | sort = 2 | 
+ 742 | index = 94 | sort = 2 | 
+ 814 | index = 95 | sort = 2 | 
+ 844 | index = 96 | sort = 2 | 
+ 858 | index = 97 | sort = 2 | 
+ 901 | index = 98 | sort = 2 | 
+ 975 | index = 99 | sort = 2 | 
+stack_a           |           stack_b 
+ -984 | index = 0 | sort = 2 | 
+ -973 |ra
+ra
 pb
+pb
+pb
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+pb
+pb
+ra
+ra
+pb
+pb
+pb
+pb
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+ra
+ra
+ra
+ra
+pb
+pb
+ra
+ra
+pb
+pb
+ra
+pb
+pb
+ra
+ra
+pb
+ra
+pb
+ra
+ra
+ra
+pb
+pb
+ra
+pb
+pb
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+pb
+ra
+pb
+ra
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+ra
+pb
+ra
+ra
+ra
+ra
+pb
+ra
+pb
+pb
+pb
+ra
+pb
+ra
+pb
+pa
+rb
+rb
+pa
+rb
+rb
+pa
+rb
+rb
+rb
+pa
+pa
+rb
+pa
+rb
+pa
+pa
+pa
+pa
+pa
+rb
+rb
+rb
+pa
+rb
+rb
+pa
+rb
+pa
+rb
+rb
+rb
+pa
+pa
+rb
+pa
+rb
+rb
+pa
+pa
+rb
+rb
+pa
+pa
+pa
+rb
+rb
+rb
+pa
+pa
+pa
+pa
+pa
+sa
+pa
+rrb
+pa
+rrb
+rrb
+rrb
+pa
+rr
+ra
+ra
+ra
+pa
+ra
+pa
+rrb
+rrb
+pa
+ra
+ra
+ra
+pa
+rb
+pa
+rra
+rra
+pa
+ra
+pa
+rb
+rb
+rb
+rb
+pa
+rr
+rb
+rb
+rb
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+ra
+pa
+pa
+rra
+rra
+pa
+rb
+pa
+rra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+rb
+rb
+pa
+ra
+ra
+ra
+pa
+pa
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+ra
 pb
 pb
 pb
@@ -6,44 +1227,451 @@ pb
 pb
 pa
 pa
+sa
+rb
+rb
 pa
-pa
+rb
 pa
 pa
 ra
-stack_a           |           stack_b 
-                           |   10  | index = 4 | sort = 0
-                           |   9  | index = 3 | sort = 0
-                           |   7  | index = 2 | sort = 0
-                           |   6  | index = 1 | sort = 0
-                           |   5  | index = 0 | sort = 0
-                           |   33  | index = 5 | sort = 0
-stack_a           |           stack_b 
- 7 | index = 2 | sort = 3 |   6  | index = 1 | sort = 0
- 9 | index = 3 | sort = 3 |   5  | index = 0 | sort = 0
- 10 | index = 4 | sort = 3 |   33  | index = 5 | sort = 0
-stack_a           |           stack_b 
- 6 | index = 1 | sort = 3 |   5  | index = 0 | sort = 0
- 7 | index = 2 | sort = 3 |   33  | index = 5 | sort = 0
- 9 | index = 3 | sort = 3 | 
- 10 | index = 4 | sort = 3 | 
-stack_a           |           stack_b 
- 5 | index = 0 | sort = 3 |   33  | index = 5 | sort = 0
- 6 | index = 1 | sort = 3 | 
- 7 | index = 2 | sort = 3 | 
- 9 | index = 3 | sort = 3 | 
- 10 | index = 4 | sort = 3 | 
-stack_a           |           stack_b 
- 33 | index = 5 | sort = 3 | 
- 5 | index = 0 | sort = 3 | 
- 6 | index = 1 | sort = 3 | 
- 7 | index = 2 | sort = 3 | 
- 9 | index = 3 | sort = 3 | 
- 10 | index = 4 | sort = 3 | 
-stack_a           |           stack_b 
- 5 | index = 0 | sort = 2 | 
- 6 | index = 1 | sort = 2 | 
- 7 | index = 2 | sort = 2 | 
- 9 | index = 3 | sort = 2 | 
- 10 | index = 4 | sort = 2 | 
- 33 | index = 5 | sort = 2 | 
+ra
+ra
+rrb
+pa
+ra
+ra
+pa
+pa
+rra
+rb
+pa
+rra
+pa
+rr
+rb
+pa
+rr
+ra
+pa
+rra
+rra
+rra
+rb
+pa
+rr
+ra
+ra
+pa
+ra
+ra
+ra
+ra
+ra
+rrb
+rrb
+rrb
+pa
+rr
+ra
+ra
+pa
+ra
+ra
+pa
+pa
+rrb
+pa
+rra
+rrb
+pa
+rra
+rrb
+pa
+ra
+ra
+ra
+ra
+rrb
+pa
+ra
+ra
+ra
+pa
+ra
+ra
+pa
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+ra
+pb
+pb
+pb
+rb
+pa
+rb
+rb
+pa
+pa
+rb
+rb
+pa
+rb
+rb
+rb
+pa
+pa
+rb
+rb
+rb
+pa
+pa
+pa
+pa
+rb
+rb
+pa
+pa
+pa
+pa
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+pa
+rb
+pa
+rb
+pa
+pa
+pa
+pa
+rb
+rb
+pa
+pa
+pa
+pa
+rrb
+rrb
+pa
+ra
+pa
+ra
+ra
+rrb
+pa
+rb
+rb
+pa
+rra
+rb
+pa
+rra
+rra
+rb
+rb
+pa
+rr
+ra
+rb
+rr
+ra
+ra
+pa
+rr
+pa
+rra
+rra
+rra
+rb
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+ra
+pa
+ra
+pa
+pa
+ra
+pa
+pa
+rra
+pa
+ra
+pa
+ra
+ra
+ra
+ra
+rrb
+pa
+ra
+ra
+pa
+pa
+ra
+pa
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+rra
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+ra
+pa
+pa
+sa
+pa
+ra
+pa
+ra
+ra
+pa
+pa
+rra
+rb
+pa
+ra
+ra
+pa
+rr
+pa
+rra
+rra
+pa
+rra
+pa
+rb
+pa
+ra
+ra
+ra
+rrb
+pa
+ra
+ra
+ra
+pa
+ra
+ra
+pa
+pa
+rra
+rra
+rra
+rb
+pa
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+ra
+pa
+rb
+pa
+ra
+ra
+pa
+ra
+pa
+ra
+ra
+ra
+ index = 1 | sort = 2 | 
+ -971 | index = 2 | sort = 2 | 
+ -963 | index = 3 | sort = 2 | 
+ -957 | index = 4 | sort = 2 | 
+ -956 | index = 5 | sort = 2 | 
+ -920 | index = 6 | sort = 2 | 
+ -907 | index = 7 | sort = 2 | 
+ -884 | index = 8 | sort = 2 | 
+ -880 | index = 9 | sort = 2 | 
+ -879 | index = 10 | sort = 2 | 
+ -864 | index = 11 | sort = 2 | 
+ -850 | index = 12 | sort = 2 | 
+ -826 | index = 13 | sort = 2 | 
+ -789 | index = 14 | sort = 2 | 
+ -719 | index = 15 | sort = 2 | 
+ -694 | index = 16 | sort = 2 | 
+ -667 | index = 17 | sort = 2 | 
+ -663 | index = 18 | sort = 2 | 
+ -649 | index = 19 | sort = 2 | 
+ -589 | index = 20 | sort = 2 | 
+ -583 | index = 21 | sort = 2 | 
+ -580 | index = 22 | sort = 2 | 
+ -550 | index = 23 | sort = 2 | 
+ -548 | index = 24 | sort = 2 | 
+ -521 | index = 25 | sort = 2 | 
+ -495 | index = 26 | sort = 2 | 
+ -492 | index = 27 | sort = 2 | 
+ -491 | index = 28 | sort = 2 | 
+ -488 | index = 29 | sort = 2 | 
+ -472 | index = 30 | sort = 2 | 
+ -434 | index = 31 | sort = 2 | 
+ -432 | index = 32 | sort = 2 | 
+ -422 | index = 33 | sort = 2 | 
+ -418 | index = 34 | sort = 2 | 
+ -407 | index = 35 | sort = 2 | 
+ -406 | index = 36 | sort = 2 | 
+ -384 | index = 37 | sort = 2 | 
+ -332 | index = 38 | sort = 2 | 
+ -320 | index = 39 | sort = 2 | 
+ -299 | index = 40 | sort = 2 | 
+ -293 | index = 41 | sort = 2 | 
+ -277 | index = 42 | sort = 2 | 
+ -275 | index = 43 | sort = 2 | 
+ -247 | index = 44 | sort = 2 | 
+ -200 | index = 45 | sort = 2 | 
+ -193 | index = 46 | sort = 2 | 
+ -141 | index = 47 | sort = 2 | 
+ -140 | index = 48 | sort = 2 | 
+ -135 | index = 49 | sort = 2 | 
+ -128 | index = 50 | sort = 2 | 
+ -121 | index = 51 | sort = 2 | 
+ -99 | index = 52 | sort = 2 | 
+ -73 | index = 53 | sort = 2 | 
+ -62 | index = 54 | sort = 2 | 
+ -61 | index = 55 | sort = 2 | 
+ 36 | index = 56 | sort = 2 | 
+ 40 | index = 57 | sort = 2 | 
+ 67 | index = 58 | sort = 2 | 
+ 89 | index = 59 | sort = 2 | 
+ 98 | index = 60 | sort = 2 | 
+ 138 | index = 61 | sort = 2 | 
+ 143 | index = 62 | sort = 2 | 
+ 154 | index = 63 | sort = 2 | 
+ 186 | index = 64 | sort = 2 | 
+ 196 | index = 65 | sort = 2 | 
+ 198 | index = 66 | sort = 2 | 
+ 200 | index = 67 | sort = 2 | 
+ 206 | index = 68 | sort = 2 | 
+ 220 | index = 69 | sort = 2 | 
+ 245 | index = 70 | sort = 2 | 
+ 255 | index = 71 | sort = 2 | 
+ 258 | index = 72 | sort = 2 | 
+ 270 | index = 73 | sort = 2 | 
+ 352 | index = 74 | sort = 2 | 
+ 404 | index = 75 | sort = 2 | 
+ 407 | index = 76 | sort = 2 | 
+ 446 | index = 77 | sort = 2 | 
+ 470 | index = 78 | sort = 2 | 
+ 477 | index = 79 | sort = 2 | 
+ 508 | index = 80 | sort = 2 | 
+ 518 | index = 81 | sort = 2 | 
+ 527 | index = 82 | sort = 2 | 
+ 534 | index = 83 | sort = 2 | 
+ 580 | index = 84 | sort = 2 | 
+ 584 | index = 85 | sort = 2 | 
+ 644 | index = 86 | sort = 2 | 
+ 649 | index = 88 | sort = 2 | 
+ 672 | index = 89 | sort = 2 | 
+ 675 | index = 90 | sort = 2 | 
+ 716 | index = 91 | sort = 2 | 
+ 734 | index = 92 | sort = 2 | 
+ 741 | index = 93 | sort = 2 | 
+ 742 | index = 94 | sort = 2 | 
+ 814 | index = 95 | sort = 2 | 
+ 844 | index = 96 | sort = 2 | 
+ 858 | index = 97 | sort = 2 | 
+ 901 | index = 98 | sort = 2 | 
+ 975 | index = 99 | sort = 2 | 
+ 648 | index = 87 | sort = 2 | 

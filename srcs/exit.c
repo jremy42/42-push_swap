@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 16:17:48 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 10:08:20 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 14:45:53 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	__free_stack(t_stack *stack)
 
 void	__exit_ps(t_data *data, int error)
 {
-	//print_list(data->a, data->b);
 	if (data->a)
 		__free_stack(data->a);
 	if (data->b)
@@ -48,6 +47,5 @@ void	__exit_ps(t_data *data, int error)
 		print_cmd_lst(data->cmd);
 		__free_cmd(data);
 	}
-	//system("leaks push_swap");
 	exit(error);
 }

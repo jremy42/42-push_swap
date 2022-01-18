@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 16:51:25 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 11:09:32 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 15:28:11 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	__sort_bf(t_data *data)
 			return (0);
 		tmp = tmp->next;
 	}
+	printf("data->max = %d\n",data->max);
 	return (1);
 }
 

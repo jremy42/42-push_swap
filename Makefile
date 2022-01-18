@@ -3,6 +3,7 @@ SRC = srcs/parsing/atol.c \
 		srcs/push_swap.c\
 		srcs/debug_list.c\
 		srcs/stack_utils/stack_utils.c\
+		srcs/stack_utils/stack_utils2.c\
 		srcs/operations/swap.c\
 		srcs/operations/push.c\
 		srcs/operations/rotate.c\
@@ -27,6 +28,7 @@ SRC_CHECKER = srcs/parsing/atol.c \
 		srcs/parsing/parsing.c\
 		srcs/debug_list.c\
 		srcs/stack_utils/stack_utils.c\
+		srcs/stack_utils/stack_utils2.c\
 		srcs/operations/swap.c\
 		srcs/operations/push.c\
 		srcs/operations/rotate.c\
@@ -49,7 +51,7 @@ SRC_CHECKER = srcs/parsing/atol.c \
 		srcs/checker/checker.c
 
 IFLAGS = -I includes/ -I libft/includes
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
 CC = gcc
 OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))
 OBJ_CHECKER = $(addprefix $(OBJS_PATH_CHECKER), $(SRC_CHECKER:.c=.o))
