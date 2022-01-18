@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:01:17 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 12:12:31 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 14:30:06 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 
-	if (ac < 1)
+	if (ac == 1)
 		__putstr_fd("Error\n Needs input", 0);
 	__parsing(av, &data);
 	__read_input(&data);

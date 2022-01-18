@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:52:38 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/17 17:55:21 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 14:31:19 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	__parsing(char **input, t_data *data)
 	}
 	split_tmp = __split(tmp, ' ');
 	free(tmp);
+	if (!split_tmp[0])
+		exit(0);
 	i = 0;
 	if (__check(&split_tmp[i], data) == -1)
 		__exit(split_tmp, data);

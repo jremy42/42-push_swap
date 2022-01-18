@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 09:58:42 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/10 17:41:14 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 14:33:28 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_stack	*__stacknew(int *content)
 	newlst = malloc(sizeof(t_stack));
 	if (!newlst)
 		return (NULL);
-	newlst->nb = *content;	
+	newlst->nb = *content;
 	newlst->index = 0;
 	newlst->sort = 0;
 	newlst->cmd = NULL;
@@ -30,7 +30,7 @@ t_stack	*__stacknew(int *content)
 int	is_present(int nb, t_stack *stack)
 {
 	if (!stack)
-		return(0);
+		return (0);
 	while (stack != NULL)
 	{
 		if (stack->nb == nb)
