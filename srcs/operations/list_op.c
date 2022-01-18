@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 05:29:14 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 10:28:05 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 12:41:09 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,46 +76,54 @@ void	print_cmd(int cmd)
 		__putstr_fd("ss\n", 1);
 }
 
+int __size_cmd(t_cmd *cmd)
+{
+	t_cmd *tmp;
+	int len;
+
+	tmp = cmd;
+	len = 0;
+	while (tmp->next != NULL)
+	{
+		len++;
+		tmp = tmp->next;
+	}
+	return (len);
+}
+
 void	print_cmd_lst(t_cmd *cmd)
 {
 	t_cmd	*tmp;
-	int		operation;
 
-	operation = 0;
 	if (!cmd)
 		return ;
 	tmp = cmd;
-	while (tmp->next != NULL)
+	if (__size_cmd(cmd) > 50)
 	{
-		/*
-		if(tmp->cmd == RA && tmp->next->cmd == RB
-		&& tmp->next->next != NULL)
+		while (tmp->next != NULL)
 		{
-			print_cmd(RR);
-			tmp = tmp->next->next;
-			operation++;
+			if (tmp->cmd == RA && tmp->next->cmd == RB
+				&& tmp->next->next != NULL)
+			{
+				print_cmd(RR);
+				tmp = tmp->next->next;
+			}
+			if (tmp->cmd == RRB && tmp->next->cmd == RRA
+				&& tmp->next->next != NULL)
+			{
+				print_cmd(RRR);
+				tmp = tmp->next->next;
+			}
+			else
+			{
+				print_cmd(tmp->cmd);
+				tmp = tmp->next;
+			}
 		}
-		if(tmp->cmd == RRB && tmp->next->cmd == RRA
-		&& tmp->next->next != NULL)
-		{
-			print_cmd(RRR);
-			tmp = tmp->next->next;
-			operation++;
-		}
-		else
-		{
-			*/
-			print_cmd(tmp->cmd);
-			tmp = tmp->next;
-			operation++;
-		//}
 	}
 	while (tmp != NULL)
 	{
 		print_cmd(tmp->cmd);
 		tmp = tmp->next;
-		operation++;	
 	}
-	//fflush(stdout);
-//	printf("operation = %d\n", operation);
 }

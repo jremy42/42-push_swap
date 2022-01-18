@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:01:17 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 11:50:03 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 12:12:31 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,6 @@ int	main(int ac, char **av)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
-	print_list(data.a, data.b);
+	//print_list(data.a, data.b);
 	//print_cmd_lst(data.cmd);
 }

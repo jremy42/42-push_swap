@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 10:46:04 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 11:42:48 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 12:53:02 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,9 @@ int	__under_50(t_data *data)
 	}
 	while (data->a != NULL)
 		__pb(data);
+	//print_list(data->a, data->b);
 	__insert_true(data, __find_min(data->b), __find_max(data->b));
+	//print_list(data->a, data->b);
 	return (1);
 }
 

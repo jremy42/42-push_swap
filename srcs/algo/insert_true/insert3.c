@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 10:13:09 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 11:49:22 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/18 12:53:36 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 int	__find_max_inf(t_stack *stack, int to_find)
 {
 	t_stack	*tmp;
-	int		max_inf;
 
 	tmp = stack;
 	(void)to_find;
-	max_inf = __find_max(stack);
 	while (tmp != NULL)
 	{
 		if (tmp->sort != 3)
@@ -28,7 +26,7 @@ int	__find_max_inf(t_stack *stack, int to_find)
 		}
 		tmp = tmp->next;
 	}
-	return (max_inf);
+	return (0);
 }
 
 int	__find_min_supp(t_stack *stack, int to_find)
