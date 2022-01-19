@@ -16,6 +16,9 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 
+	data.a = NULL;
+	data.b = NULL;
+	data.cmd = NULL;
 	if (ac == 1)
 	{
 		__putstr_fd("Error\n Needs input", 0);

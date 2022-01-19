@@ -90,7 +90,6 @@ int	__algo4(t_data *data)
 {
 	int	chunks;
 	int	pivot;
-	int	min;
 	int	next_index;
 
 	__index(data);
@@ -100,7 +99,6 @@ int	__algo4(t_data *data)
 		__under_50(data);
 	else
 		chunks = __size_chunks(data);
-	min = __find_min(data->a);
 	next_index = -1;
 	__insert_algo(data, chunks, next_index, pivot);
 	print_cmd_lst(data->cmd);

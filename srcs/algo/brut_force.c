@@ -85,6 +85,7 @@ int	__bf(t_data *data, int *op, int deep, int iterator)
 		__copy_data(data, &copy);
 		i ++;
 	}
+	__free_data(&copy);
 	return (0);
 }
 
@@ -100,10 +101,8 @@ int	__under_6(t_data *data)
 {
 	t_data		copy;
 	static int	op[8] = {RA, SA, RRA, PB, SB, RB, RRB, PA};
-	int			i;
 	int			iterator;
 
-	i = 0;
 	iterator = 1;
 	__index(data);
 	__copy_data(data, &copy);

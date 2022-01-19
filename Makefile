@@ -53,7 +53,7 @@ SRC_CHECKER =srcs/parsing/atol.c \
 		srcs/checker/checker.c
 
 IFLAGS = -I includes/ -I libft/includes
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 CC = gcc
 OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))
 OBJ_CHECKER = $(addprefix $(OBJS_PATH_CHECKER), $(SRC_CHECKER:.c=.o))
@@ -84,7 +84,7 @@ checker: $(OBJ_CHECKER) ${HEADER} ${LIBFT}
 $(NAME): $(OBJ) ${HEADER} ${LIBFT}
 		@make -C ${LIBFT}
 		#@cp libft/libft.a  ./libft.a
-		$(CC) $(CFLAGS) ${OBJ} -Llibft -lft -o $(NAME)
+		$(CC) $(CFLAGS) -fsanitize=address -g3 ${OBJ} -Llibft -lft -o $(NAME)
 
 
 clean:

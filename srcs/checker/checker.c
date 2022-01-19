@@ -51,14 +51,16 @@ int	__read_input(t_data *data)
 			break ;
 		if (__convert(read) == -1)
 		{
-			get_next_line(-1);
+			if (read && get_next_line(-1) == NULL)
+				free(read);
 			__error("Error\n", data);
 		}
 		else
 		{
 			if (__insert_cmd(data, __convert(read)))
 			{
-				get_next_line(-1);
+				if (read && get_next_line(-1) == NULL)
+					free(read);
 				__error("Malloc Error\n", data);
 			}
 			free(read);
@@ -70,13 +72,21 @@ int	__read_input(t_data *data)
 int	__do_instruct(t_data *data)
 {
 	t_cmd	*tmp;
+	t_cmd	*tmp2;
 
 	__index(data);
 	tmp = __copy_cmd(data->cmd);
+	tmp2 = tmp;
 	while (tmp != NULL)
 	{
 		__op_bf(data, tmp->cmd);
 		tmp = tmp->next;
+	}
+	while (tmp2 != NULL)
+	{
+		tmp = tmp2->next;
+		free(tmp2);
+		tmp2 = tmp;
 	}
 	if (__sort_bf(data) == 1)
 		return (1);
@@ -87,6 +97,9 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 
+	data.a = NULL;
+	data.b = NULL;
+	data.cmd = NULL;
 	if (ac == 1)
 		__putstr_fd("Error\n Needs input", 0);
 	__parsing(av, &data);
@@ -95,4 +108,5 @@ int	main(int ac, char **av)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
+	__exit_ps(&data, 0);
 }

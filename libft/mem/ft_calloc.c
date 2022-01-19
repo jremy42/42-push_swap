@@ -15,9 +15,7 @@
 void	*__calloc(size_t count, size_t size)
 {
 	void	*result;
-	size_t	i;
 
-	i = 0;
 	result = malloc(count * size);
 	if (!result)
 		return (NULL);

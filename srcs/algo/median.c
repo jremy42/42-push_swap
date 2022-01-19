@@ -114,6 +114,7 @@ int	__find_pivot_b(t_stack *stack, int size, t_data *data)
 		i++;
 	}
 	data->pivot_b = __pivot_b(tab, size);
+	free(tab);
 	return (0);
 }
 
