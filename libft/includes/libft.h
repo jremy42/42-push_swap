@@ -6,22 +6,23 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 15:17:36 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 10:44:45 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/19 09:19:44 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIB__H
-# define LIB__H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
-
 # define BUFFER_SIZE 1
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 int		__isalpha(int c);
 int		__isdigit(int c);
 int		__isalnum(int c);

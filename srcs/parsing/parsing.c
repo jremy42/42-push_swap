@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:52:38 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/18 14:31:19 by jremy            ###   ########.fr       */
+/*   Updated: 2022/01/19 09:17:52 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	__exit(char**str, t_data *data)
 		free(str);
 	}
 	(void)data;
-	write(2,"Error\n",6);
+	write(2, "Error\n", 6);
 	exit(1);
 }
 
