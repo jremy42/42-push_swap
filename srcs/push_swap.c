@@ -21,8 +21,10 @@ int	main(int ac, char **av)
 	data.cmd = NULL;
 	if (ac == 1)
 	{
-		__putstr_fd("Error\n Needs input", 0);
+		__putstr_fd("Error\n", 0);
+		return (1);
 	}
 	__parsing(av, &data);
 	__algo4(&data);
+	return (0);
 }

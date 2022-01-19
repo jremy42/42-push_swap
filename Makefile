@@ -1,7 +1,6 @@
 SRC = srcs/parsing/atol.c \
 		srcs/parsing/parsing.c\
 		srcs/push_swap.c\
-		srcs/debug_list.c\
 		srcs/stack_utils/stack_utils.c\
 		srcs/stack_utils/stack_utils2.c\
 		srcs/operations/swap.c\
@@ -27,7 +26,6 @@ SRC = srcs/parsing/atol.c \
 
 SRC_CHECKER =srcs/parsing/atol.c \
 		srcs/parsing/parsing.c\
-		srcs/debug_list.c\
 		srcs/stack_utils/stack_utils.c\
 		srcs/stack_utils/stack_utils2.c\
 		srcs/operations/swap.c\
@@ -84,15 +82,16 @@ checker: $(OBJ_CHECKER) ${HEADER} ${LIBFT}
 $(NAME): $(OBJ) ${HEADER} ${LIBFT}
 		@make -C ${LIBFT}
 		#@cp libft/libft.a  ./libft.a
-		$(CC) $(CFLAGS) -fsanitize=address -g3 ${OBJ} -Llibft -lft -o $(NAME)
+		$(CC) $(CFLAGS) ${OBJ} -Llibft -lft -o $(NAME)
 
 
 clean:
 	rm -rf ${OBJS_PATH}
-	#@make clean -C $(LIBFT)
+	@make clean -C $(LIBFT)
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f ./checker
 	rm -f libft.a
 	@make fclean -C $(LIBFT)
 
