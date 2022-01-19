@@ -92,7 +92,8 @@ int	__algo4(t_data *data)
 	int	pivot;
 	int	next_index;
 
-	__index(data);
+	if (__index(data) == -1)
+		__error("Malloc error", data);
 	chunks = 0;
 	pivot = 0;
 	if (data->size_a < 50)

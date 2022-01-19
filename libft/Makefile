@@ -55,7 +55,7 @@ OBJBONUS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 		ar rc $(NAME) $(OBJ)
 
 bonus : $(OBJ) $(OBJBONUS)

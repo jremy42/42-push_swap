@@ -104,7 +104,8 @@ int	__under_6(t_data *data)
 	int			iterator;
 
 	iterator = 1;
-	__index(data);
+	if (__index(data) == -1)
+		__error("Malloc error", data);
 	__copy_data(data, &copy);
 	while (iterator < 10)
 	{	

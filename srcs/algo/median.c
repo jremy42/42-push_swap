@@ -122,8 +122,10 @@ int	__find_pivot_ab(t_data *data)
 {
 	__size_stack_ab(data);
 	if (data->a)
-		__find_pivot_a(data->a, __pivot_size(data->a), data);
+		if (__find_pivot_a(data->a, __pivot_size(data->a), data) == -1)
+			__error("Malloc error\n", data);
 	if (data->b)
-		__find_pivot_b(data->b, __pivot_size(data->b), data);
+		if (__find_pivot_b(data->b, __pivot_size(data->b), data) == -1)
+			__error("Malloc error\n", data);
 	return (1);
 }

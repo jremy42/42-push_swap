@@ -53,10 +53,34 @@ int	__size_cmd(t_cmd *cmd)
 	return (len);
 }
 
+t_cmd	*__print_papb(t_cmd *tmp)
+{
+	t_cmd	*tmp2;
+
+	tmp2 = tmp;
+	if (tmp2->cmd == PB)
+	{
+		tmp2 = tmp2->next;
+		if (tmp2->cmd == PB)
+		{	
+			tmp2 = tmp2->next;
+			if (tmp2->cmd == PA)
+			{
+				tmp2 = tmp2->next;
+				if (tmp2->cmd == PA)
+					return (tmp2->next);
+			}
+		}
+	}
+	return (tmp);
+}
+
 t_cmd	*__print_doublon(t_cmd *tmp)
 {
 	while (tmp->next != NULL)
 	{
+		if (tmp->cmd == PB && __size_cmd(tmp) > 5)
+			tmp = __print_papb(tmp);
 		if (tmp->cmd == RA && tmp->next->cmd == RB
 			&& tmp->next->next != NULL)
 		{

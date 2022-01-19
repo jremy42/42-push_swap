@@ -74,7 +74,8 @@ int	__do_instruct(t_data *data)
 	t_cmd	*tmp;
 	t_cmd	*tmp2;
 
-	__index(data);
+	if (__index(data) == -1)
+		__error("Malloc error", data);
 	tmp = __copy_cmd(data->cmd);
 	tmp2 = tmp;
 	while (tmp != NULL)

@@ -109,7 +109,7 @@ int		__find_max(t_stack *stack);
 int		__algo4(t_data *data);
 
 // bf utils
-t_stack	*__copy_stack(t_stack *stack);
+t_stack	*__copy_stack(t_stack *stack, t_data *data);
 t_cmd	*__copy_cmd(t_cmd *cmd);
 t_data	*__copy_data(t_data *data, t_data *new);
 void	__free_cmd(t_data *data);

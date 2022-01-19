@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_stack	*__copy_stack(t_stack *stack)
+t_stack	*__copy_stack(t_stack *stack, t_data *data)
 {
 	t_stack	*new;
 	t_stack	*tmp;
@@ -23,9 +23,9 @@ t_stack	*__copy_stack(t_stack *stack)
 	while (stack != NULL)
 	{
 		tmp = __stacknew(&stack->nb);
-		tmp->index = stack->index;
 		if (!tmp)
-			return (NULL);
+			__error("Malloc Error", data);
+		tmp->index = stack->index;
 		__stackadd_back(&new, tmp);
 		stack = stack->next;
 	}
@@ -41,7 +41,7 @@ t_cmd	*__copy_cmd(t_cmd *cmd)
 	if (!cmd)
 		return (NULL);
 	while (cmd != NULL)
-	{	
+	{
 		tmp = __cmdnew(cmd->cmd);
 		if (!tmp)
 			return (NULL);
@@ -54,8 +54,8 @@ t_cmd	*__copy_cmd(t_cmd *cmd)
 t_data	*__copy_data(t_data *data, t_data *new)
 {
 	new->size_a = data->size_a;
-	new->a = __copy_stack(data->a);
-	new->b = __copy_stack(data->b);
+	new->a = __copy_stack(data->a, data);
+	new->b = __copy_stack(data->b, data);
 	new->cmd = __copy_cmd(data->cmd);
 	return (new);
 }
