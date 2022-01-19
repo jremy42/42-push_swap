@@ -44,6 +44,6 @@ void	__exit_ps(t_data *data, int error)
 		__free_stack(data->b);
 	if (data->cmd)
 		__free_cmd(data);
-	//system("leaks checker");
+	//system("leaks push_swap");
 	exit(error);
 }

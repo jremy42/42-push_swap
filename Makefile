@@ -25,7 +25,7 @@ SRC = srcs/parsing/atol.c \
 		srcs/algo/median_utils.c\
 		srcs/exit.c
 
-SRC_CHECKER = srcs/parsing/atol.c \
+SRC_CHECKER =srcs/parsing/atol.c \
 		srcs/parsing/parsing.c\
 		srcs/debug_list.c\
 		srcs/stack_utils/stack_utils.c\
@@ -35,8 +35,9 @@ SRC_CHECKER = srcs/parsing/atol.c \
 		srcs/operations/rotate.c\
 		srcs/operations/revrot.c\
 		srcs/operations/list_op.c\
-		srcs/algo/insert_true/insert3.c\
-		srcs/algo/insert_true/insert_index.c\
+		srcs/algo/insert/insert.c\
+		srcs/algo/insert/insert_utils.c\
+		srcs/algo/insert/insert_index.c\
 		srcs/algo/algo_utils.c\
 		srcs/algo/algo.c\
 		srcs/algo/brut_force_utils.c\

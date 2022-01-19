@@ -27,7 +27,7 @@ void	__exit(char**str, t_data *data)
 		free(str);
 	}
 	(void)data;
-	printf("Error \n");
+	write(2,"Error\n",6);
 	exit(1);
 }
 

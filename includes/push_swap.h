@@ -114,6 +114,7 @@ t_cmd	*__copy_cmd(t_cmd *cmd);
 t_data	*__copy_data(t_data *data, t_data *new);
 void	__free_cmd(t_data *data);
 void	__free_data(t_data *data);
+void	__op_bf(t_data *copy, int op);
 
 //bf
 int		__under_6(t_data *data);
