@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	__exit(char**str, t_data *data)
+void	__exit(char**str, t_data *data, int error)
 {
 	int	i;
 
@@ -26,9 +26,9 @@ void	__exit(char**str, t_data *data)
 		}
 		free(str);
 	}
-	(void)data;
-	write(2, "Error\n", 6);
-	exit(1);
+	if (error == 1)
+		write(2, "Error\n", 6);
+	__exit_ps(data, error);
 }
 
 int	__check(char **str, t_data *data)
@@ -62,10 +62,12 @@ void	__parsing(char **input, t_data *data)
 	split_tmp = __split(tmp, ' ');
 	free(tmp);
 	if (!split_tmp[0])
-		exit(0);
+		__exit(split_tmp, data, 1);	
 	i = 0;
 	if (__check(&split_tmp[i], data) == -1)
-		__exit(split_tmp, data);
+		__exit(split_tmp, data, 1);
+	if (data->a == NULL)
+		__exit(split_tmp, data, 1);
 	while (split_tmp[i])
 	{
 		free(split_tmp[i]);

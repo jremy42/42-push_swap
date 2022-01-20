@@ -102,7 +102,7 @@ int	main(int ac, char **av)
 	data.b = NULL;
 	data.cmd = NULL;
 	if (ac == 1)
-		__putstr_fd("Error\n Needs input", 0);
+		return (1);
 	__parsing(av, &data);
 	__read_input(&data);
 	if (__do_instruct(&data) == 1)

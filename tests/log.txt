@@ -1,0 +1,41 @@
+[0mPARSING > [int_min] : 
+
+ test : ./push_swap -2147483649  
+    attendu : [Error
+]
+    retour : []  
+[0mPARSING > [int_min] : 
+
+ test : ./push_swap -2147483649  
+    attendu : [Error
+]
+    retour : []  
+[0mPARSING > [int_min] : 
+
+ test : ./push_swap -2147483649  
+    attendu : [Error
+]
+    retour : []  
+[0mPARSING > [int_min] : 
+
+ test : ./push_swap -2147483649  
+    attendu : [Error
+]
+    retour : []  
+[0mPARSING > [int_min] : 
+
+ test : ./push_swap -2147483649  
+    attendu : [Error
+]
+    retour : []  
+[0mPARSING > [int_min] : 
+
+ test : ./push_swap -2147483649  
+    attendu : [Error
+]
+    retour : []  
+[0mPARSING > [int_min] : 
+[0mPARSING > [int_min] : 
+PARSING > [int_min] : 
+[0mPARSING > [int_min] : 
+PARSING > [int_max] : 

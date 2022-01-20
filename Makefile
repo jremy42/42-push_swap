@@ -64,11 +64,11 @@ OBJS_PATH_CHECKER = ./objs/checker/
 NAME = push_swap
 
 # Create obj and dir
-$(OBJS_PATH)%.o: %.c
+$(OBJS_PATH)%.o: %.c $(HEADER)
 		mkdir -p $(dir $@)
 		$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
-$(OBJS_PATH_CHECKER)%.o: %.c
+$(OBJS_PATH_CHECKER)%.o: %.c $(HEADER)
 		mkdir -p $(dir $@)
 		$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
@@ -87,6 +87,7 @@ $(NAME): $(OBJ) ${HEADER} ${LIBFT}
 
 clean:
 	rm -rf ${OBJS_PATH}
+	rm -rf ${OBJS_PATH_CHECKER}
 	@make clean -C $(LIBFT)
 
 fclean: clean
