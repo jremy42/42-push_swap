@@ -50,7 +50,7 @@ SRC_CHECKER =srcs/parsing/atol.c \
 		srcs/exit.c\
 		srcs/checker/checker.c
 
-IFLAGS = -I includes/ -I libft/includes
+IFLAGS =  -I includes/ -I libft/includes
 CFLAGS = -Wall -Wextra -Werror 
 CC = gcc
 OBJ = $(addprefix $(OBJS_PATH), $(SRC:.c=.o))

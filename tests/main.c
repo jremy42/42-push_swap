@@ -19,8 +19,11 @@ int	main(void)
 
 	score.ok = 0;
 	score.total = 0;
+	__start();
 	if (FT_TESTED[0] == '1')
 		ft00_launcher(&score);
+	if (FT_TESTED[0] == '1')
+		ft01_launcher(&score);
 	__print_global_summary(score.ok, score.total);
 	if (score.ok == score.total)
 		return (0);

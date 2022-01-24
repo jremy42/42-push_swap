@@ -45,6 +45,19 @@ int	__check(char **str, t_data *data)
 	return (0);
 }
 
+static void __free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
+
 void	__parsing(char **input, t_data *data)
 {
 	int		i;
@@ -62,16 +75,11 @@ void	__parsing(char **input, t_data *data)
 	split_tmp = __split(tmp, ' ');
 	free(tmp);
 	if (!split_tmp[0])
-		__exit(split_tmp, data, 1);	
+		__exit(split_tmp, data, 1);
 	i = 0;
 	if (__check(&split_tmp[i], data) == -1)
 		__exit(split_tmp, data, 1);
 	if (data->a == NULL)
 		__exit(split_tmp, data, 1);
-	while (split_tmp[i])
-	{
-		free(split_tmp[i]);
-		i++;
-	}
-	free(split_tmp);
+	__free_split(split_tmp);
 }

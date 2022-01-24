@@ -13,32 +13,24 @@
 #include "libunit.h"
 #include "tests.h"
 
-int	ft00_launcher(t_score *score)
+int	ft01_launcher(t_score *score)
 {
 	t_utest	*testlist;
 	int		res;
 
+	res = 0;
 	testlist = NULL;
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "int_min", &__int_min);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "int_max", &__int_max);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "doublons", &__doublons);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "sort1", &__sort1);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "sort2", &__sort2);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "sort3", &__sort3);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "char", &__char);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "empty", &__empty);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "empty2", &__empty2);
-	if (FT00_TEST[0] == '1')
-		__loader(&testlist, "PARSING", "empty3", &__empty3);		
-	res = __launcher(testlist, score);
+	__loader(&testlist, "CHECKER", "int_min", &__int_min_c);
+	__loader(&testlist, "CHECKER", "int_max", &__int_max_c);
+	__loader(&testlist, "CHECKER", "doublons", &__doublons_c);
+	__loader(&testlist, "CHECKER", "input1", &__input1);
+	__loader(&testlist, "CHECKER", "input2", &__input2);
+	__loader(&testlist, "CHECKER", "input3", &__input3);
+	__loader(&testlist, "CHECKER", "input4", &__input4);
+	__loader(&testlist, "CHECKER", "char", &__char_c);
+	__loader(&testlist, "CHECKER", "empty", &__empty_c);
+	__loader(&testlist, "CHECKER", "empty2", &__empty2_c);
+	__loader(&testlist, "CHECKER", "empty3", &__empty3_c);		
+	__launcher(testlist, score);
 	return (res);
 }

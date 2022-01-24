@@ -28,5 +28,12 @@ int	__int_max(void)
 		return (-1);
 	}
 	else
-		return (0);
+	{
+		system("valgrind --log-file=\"leak\" ./push_swap 2147483649 2> res.txt");
+		file = open("leak", O_RDONLY, 0777);
+		if (__leaks(file) == 0)
+			return (0);
+		else 
+			return (69);
+	}
 }

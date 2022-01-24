@@ -12,24 +12,24 @@
 
 #include "tests.h"
 
-int	__int_min(void)
+int	__int_min_c(void)
 {
 	char buffer[BUFFER_SIZE];
 	int file;
 
 	bzero((void *)buffer, BUFFER_SIZE);
 	system("cd ..");
-	system("./push_swap -2147483649 2> res.txt");
+	system("./checker -2147483649 2> res.txt");
 	file = open("res.txt", O_RDONLY, 0777);
 	read(file, buffer, BUFFER_SIZE);
 	if (strcmp(buffer,"Error\n") != 0)
 	{
-		__log_test("./push_swap -2147483649", "Error\n", buffer);
+		__log_test("./checker -2147483649", "Error\n", buffer);
 		return (-1);
 	}
 	else
 	{
-			system("valgrind --log-file=\"leak\" ./push_swap -2147483649 2> res.txt");
+			system("valgrind --log-file=\"leak\" ./checker -2147483649 2> res.txt");
 			file = open("leak", O_RDONLY, 0777);
 			if (__leaks(file) == 0)
 				return (0);
