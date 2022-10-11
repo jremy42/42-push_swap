@@ -6,7 +6,7 @@
 /*   By: jremy <jremy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:42:55 by jremy             #+#    #+#             */
-/*   Updated: 2022/01/19 09:18:34 by jremy            ###   ########.fr       */
+/*   Updated: 2022/10/11 16:09:05 by jremy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int		__atol(const char *nb, t_data *data);
 void	__parsing(char **input, t_data *data);
 t_stack	*__stacknew(int *content);
 int		is_present(int nb, t_stack *stack);
+
 // algo insert 
 void	__insert_sort_index(t_data *data, t_index *index);
 int		__is_max(t_stack *stack, int to_find);
@@ -126,8 +127,10 @@ int		__rotate_index(t_data *data, int next_index);
 void	__rotate_chunks(t_data *data, int rotate);
 int		__size_chunks(t_data *data);
 int		__find_pivot_chunks(t_data *data, int chunks);
+
 //chunks
 void	__create_chunks(t_data *data, int pivot, int sc, int next_index);
+
 //cost_utils
 int		__cost_index(t_stack *stack, int next_index, int max_index);
 int		__cost_index_calculatore(t_stack *stack, int to_find);
