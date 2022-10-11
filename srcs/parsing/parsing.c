@@ -45,7 +45,7 @@ int	__check(char **str, t_data *data)
 	return (0);
 }
 
-static void __free_split(char **split)
+static void	__free_split(char **split)
 {
 	int	i;
 
